@@ -30,7 +30,7 @@ func NewItemCollaboratorsWithUsernameItemRequestBuilder(rawUrl string, requestAd
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/projects/collaborators#remove-user-as-a-collaborator
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/projects/collaborators#remove-user-as-a-collaborator
 func (m *ItemCollaboratorsWithUsernameItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -60,7 +60,7 @@ func (m *ItemCollaboratorsWithUsernameItemRequestBuilder) Permission()(*ItemColl
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/projects/collaborators#add-project-collaborator
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/projects/collaborators#add-project-collaborator
 func (m *ItemCollaboratorsWithUsernameItemRequestBuilder) Put(ctx context.Context, body ItemCollaboratorsItemWithUsernamePutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

@@ -12,9 +12,9 @@ type ItemActionsRunnerGroupsItemRepositoriesRequestBuilder struct {
 }
 // ItemActionsRunnerGroupsItemRepositoriesRequestBuilderGetQueryParameters lists the repositories with access to a self-hosted runner group configured in an organization.OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
 type ItemActionsRunnerGroupsItemRepositoriesRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByRepository_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.orgs.item.actions.runnerGroups.item.repositories.item collection
@@ -44,7 +44,7 @@ func NewItemActionsRunnerGroupsItemRepositoriesRequestBuilder(rawUrl string, req
 // returns a ItemActionsRunnerGroupsItemRepositoriesGetResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/self-hosted-runner-groups#list-repository-access-to-a-self-hosted-runner-group-in-an-organization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/self-hosted-runner-groups#list-repository-access-to-a-self-hosted-runner-group-in-an-organization
 func (m *ItemActionsRunnerGroupsItemRepositoriesRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemActionsRunnerGroupsItemRepositoriesRequestBuilderGetQueryParameters])(ItemActionsRunnerGroupsItemRepositoriesGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -62,7 +62,7 @@ func (m *ItemActionsRunnerGroupsItemRepositoriesRequestBuilder) Get(ctx context.
 // Put replaces the list of repositories that have access to a self-hosted runner group configured in an organization.OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/self-hosted-runner-groups#set-repository-access-for-a-self-hosted-runner-group-in-an-organization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/self-hosted-runner-groups#set-repository-access-for-a-self-hosted-runner-group-in-an-organization
 func (m *ItemActionsRunnerGroupsItemRepositoriesRequestBuilder) Put(ctx context.Context, body ItemActionsRunnerGroupsItemRepositoriesPutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

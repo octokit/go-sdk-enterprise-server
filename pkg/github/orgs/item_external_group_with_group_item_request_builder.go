@@ -23,11 +23,11 @@ func NewItemExternalGroupWithGroup_ItemRequestBuilder(rawUrl string, requestAdap
     urlParams["request-raw-url"] = rawUrl
     return NewItemExternalGroupWithGroup_ItemRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Get displays information about the specific group's usage.  Provides a list of the group's external members as well as a list of teams that this group is connected to.You can manage team membership with your identity provider using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see "[GitHub's products](https://docs.github.com/enterprise-server@3.10/github/getting-started-with-github/githubs-products)" in the GitHub Help documentation.
+// Get displays information about the specific group's usage.  Provides a list of the group's external members as well as a list of teams that this group is connected to.You can manage team membership with your identity provider using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see "[GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products)" in the GitHub Help documentation.
 // returns a ExternalGroupable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/teams/external-groups#get-an-external-group
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/teams/external-groups#get-an-external-group
 func (m *ItemExternalGroupWithGroup_ItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ExternalGroupable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -42,7 +42,7 @@ func (m *ItemExternalGroupWithGroup_ItemRequestBuilder) Get(ctx context.Context,
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ExternalGroupable), nil
 }
-// ToGetRequestInformation displays information about the specific group's usage.  Provides a list of the group's external members as well as a list of teams that this group is connected to.You can manage team membership with your identity provider using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see "[GitHub's products](https://docs.github.com/enterprise-server@3.10/github/getting-started-with-github/githubs-products)" in the GitHub Help documentation.
+// ToGetRequestInformation displays information about the specific group's usage.  Provides a list of the group's external members as well as a list of teams that this group is connected to.You can manage team membership with your identity provider using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see "[GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products)" in the GitHub Help documentation.
 // returns a *RequestInformation when successful
 func (m *ItemExternalGroupWithGroup_ItemRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

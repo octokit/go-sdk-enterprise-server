@@ -9,6 +9,8 @@ import (
 type TeamOrganization struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
+    // The archived_at property
+    archived_at *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time
     // The avatar_url property
     avatar_url *string
     // The billing_email property
@@ -123,6 +125,11 @@ func CreateTeamOrganizationFromDiscriminatorValue(parseNode i878a80d2330e89d2689
 func (m *TeamOrganization) GetAdditionalData()(map[string]any) {
     return m.additionalData
 }
+// GetArchivedAt gets the archived_at property value. The archived_at property
+// returns a *Time when successful
+func (m *TeamOrganization) GetArchivedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time) {
+    return m.archived_at
+}
 // GetAvatarUrl gets the avatar_url property value. The avatar_url property
 // returns a *string when successful
 func (m *TeamOrganization) GetAvatarUrl()(*string) {
@@ -182,6 +189,16 @@ func (m *TeamOrganization) GetEventsUrl()(*string) {
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
 func (m *TeamOrganization) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
     res := make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
+    res["archived_at"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
+        val, err := n.GetTimeValue()
+        if err != nil {
+            return err
+        }
+        if val != nil {
+            m.SetArchivedAt(val)
+        }
+        return nil
+    }
     res["avatar_url"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
         val, err := n.GetStringValue()
         if err != nil {
@@ -852,6 +869,12 @@ func (m *TeamOrganization) GetWebCommitSignoffRequired()(*bool) {
 // Serialize serializes information the current object
 func (m *TeamOrganization) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     {
+        err := writer.WriteTimeValue("archived_at", m.GetArchivedAt())
+        if err != nil {
+            return err
+        }
+    }
+    {
         err := writer.WriteStringValue("avatar_url", m.GetAvatarUrl())
         if err != nil {
             return err
@@ -1151,6 +1174,10 @@ func (m *TeamOrganization) Serialize(writer i878a80d2330e89d26896388a3f487eef27b
 func (m *TeamOrganization) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
+// SetArchivedAt sets the archived_at property value. The archived_at property
+func (m *TeamOrganization) SetArchivedAt(value *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)() {
+    m.archived_at = value
+}
 // SetAvatarUrl sets the avatar_url property value. The avatar_url property
 func (m *TeamOrganization) SetAvatarUrl(value *string)() {
     m.avatar_url = value
@@ -1346,6 +1373,7 @@ func (m *TeamOrganization) SetWebCommitSignoffRequired(value *bool)() {
 type TeamOrganizationable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.AdditionalDataHolder
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
+    GetArchivedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)
     GetAvatarUrl()(*string)
     GetBillingEmail()(*string)
     GetBlog()(*string)
@@ -1394,6 +1422,7 @@ type TeamOrganizationable interface {
     GetUpdatedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)
     GetUrl()(*string)
     GetWebCommitSignoffRequired()(*bool)
+    SetArchivedAt(value *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)()
     SetAvatarUrl(value *string)()
     SetBillingEmail(value *string)()
     SetBlog(value *string)()

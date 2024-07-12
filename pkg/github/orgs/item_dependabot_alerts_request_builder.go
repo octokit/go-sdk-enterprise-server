@@ -13,9 +13,9 @@ type ItemDependabotAlertsRequestBuilder struct {
 }
 // ItemDependabotAlertsRequestBuilderGetQueryParameters lists Dependabot alerts for an organization.The authenticated user must be an owner or security manager for the organization to use this endpoint.OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
 type ItemDependabotAlertsRequestBuilderGetQueryParameters struct {
-    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.10/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.13/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     After *string `uriparametername:"after"`
-    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.10/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.13/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Before *string `uriparametername:"before"`
     // The direction to sort the results by.
     Direction *i2a9b242c816cd3407964bab8573864203d494f3b0754df96c1843fd975098c4a.GetDirectionQueryParameterType `uriparametername:"direction"`
@@ -27,7 +27,7 @@ type ItemDependabotAlertsRequestBuilderGetQueryParameters struct {
     Last *int32 `uriparametername:"last"`
     // A comma-separated list of package names. If specified, only alerts for these packages will be returned.
     Package *string `uriparametername:"package"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     // The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
     Scope *i2a9b242c816cd3407964bab8573864203d494f3b0754df96c1843fd975098c4a.GetScopeQueryParameterType `uriparametername:"scope"`
@@ -59,7 +59,7 @@ func NewItemDependabotAlertsRequestBuilder(rawUrl string, requestAdapter i2ae418
 // returns a ValidationErrorSimple error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/dependabot/alerts#list-dependabot-alerts-for-an-organization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/dependabot/alerts#list-dependabot-alerts-for-an-organization
 func (m *ItemDependabotAlertsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemDependabotAlertsRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.DependabotAlertWithRepositoryable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

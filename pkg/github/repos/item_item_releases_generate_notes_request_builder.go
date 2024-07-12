@@ -23,12 +23,12 @@ func NewItemItemReleasesGenerateNotesRequestBuilder(rawUrl string, requestAdapte
     urlParams["request-raw-url"] = rawUrl
     return NewItemItemReleasesGenerateNotesRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Post generate a name and body describing a [release](https://docs.github.com/enterprise-server@3.10/rest/releases/releases#get-a-release). The body content will be markdown formatted and contain information like the changes since last release and users who contributed. The generated release notes are not saved anywhere. They are intended to be generated and used when creating a new release.
+// Post generate a name and body describing a [release](https://docs.github.com/enterprise-server@3.13/rest/releases/releases#get-a-release). The body content will be markdown formatted and contain information like the changes since last release and users who contributed. The generated release notes are not saved anywhere. They are intended to be generated and used when creating a new release.
 // returns a ReleaseNotesContentable when successful
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/releases/releases#generate-release-notes-content-for-a-release
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/releases/releases#generate-release-notes-content-for-a-release
 func (m *ItemItemReleasesGenerateNotesRequestBuilder) Post(ctx context.Context, body ItemItemReleasesGenerateNotesPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ReleaseNotesContentable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -46,7 +46,7 @@ func (m *ItemItemReleasesGenerateNotesRequestBuilder) Post(ctx context.Context, 
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ReleaseNotesContentable), nil
 }
-// ToPostRequestInformation generate a name and body describing a [release](https://docs.github.com/enterprise-server@3.10/rest/releases/releases#get-a-release). The body content will be markdown formatted and contain information like the changes since last release and users who contributed. The generated release notes are not saved anywhere. They are intended to be generated and used when creating a new release.
+// ToPostRequestInformation generate a name and body describing a [release](https://docs.github.com/enterprise-server@3.13/rest/releases/releases#get-a-release). The body content will be markdown formatted and contain information like the changes since last release and users who contributed. The generated release notes are not saved anywhere. They are intended to be generated and used when creating a new release.
 // returns a *RequestInformation when successful
 func (m *ItemItemReleasesGenerateNotesRequestBuilder) ToPostRequestInformation(ctx context.Context, body ItemItemReleasesGenerateNotesPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

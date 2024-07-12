@@ -28,7 +28,7 @@ func NewItemItemIssuesItemLockRequestBuilder(rawUrl string, requestAdapter i2ae4
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/issues/issues#unlock-an-issue
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/issues/issues#unlock-an-issue
 func (m *ItemItemIssuesItemLockRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -44,14 +44,14 @@ func (m *ItemItemIssuesItemLockRequestBuilder) Delete(ctx context.Context, reque
     }
     return nil
 }
-// Put users with push access can lock an issue or pull request's conversation.Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP method](https://docs.github.com/enterprise-server@3.10/rest/guides/getting-started-with-the-rest-api#http-method)."
+// Put users with push access can lock an issue or pull request's conversation.Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP method](https://docs.github.com/enterprise-server@3.13/rest/guides/getting-started-with-the-rest-api#http-method)."
 // returns a BasicError error when the service returns a 403 status code
 // returns a BasicError error when the service returns a 404 status code
 // returns a BasicError error when the service returns a 410 status code
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/issues/issues#lock-an-issue
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/issues/issues#lock-an-issue
 func (m *ItemItemIssuesItemLockRequestBuilder) Put(ctx context.Context, body ItemItemIssuesItemLockPutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -77,7 +77,7 @@ func (m *ItemItemIssuesItemLockRequestBuilder) ToDeleteRequestInformation(ctx co
     requestInfo.Headers.TryAdd("Accept", "application/json")
     return requestInfo, nil
 }
-// ToPutRequestInformation users with push access can lock an issue or pull request's conversation.Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP method](https://docs.github.com/enterprise-server@3.10/rest/guides/getting-started-with-the-rest-api#http-method)."
+// ToPutRequestInformation users with push access can lock an issue or pull request's conversation.Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP method](https://docs.github.com/enterprise-server@3.13/rest/guides/getting-started-with-the-rest-api#http-method)."
 // returns a *RequestInformation when successful
 func (m *ItemItemIssuesItemLockRequestBuilder) ToPutRequestInformation(ctx context.Context, body ItemItemIssuesItemLockPutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

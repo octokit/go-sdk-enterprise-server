@@ -13,6 +13,8 @@ type CodeScanningDefaultSetup struct {
     languages []CodeScanningDefaultSetup_languages
     // CodeQL query suite to be used.
     query_suite *CodeScanningDefaultSetup_query_suite
+    // The frequency of the periodic analysis.
+    schedule *CodeScanningDefaultSetup_schedule
     // Code scanning default setup has been configured or not.
     state *CodeScanningDefaultSetup_state
     // Timestamp of latest configuration update.
@@ -65,6 +67,16 @@ func (m *CodeScanningDefaultSetup) GetFieldDeserializers()(map[string]func(i878a
         }
         return nil
     }
+    res["schedule"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
+        val, err := n.GetEnumValue(ParseCodeScanningDefaultSetup_schedule)
+        if err != nil {
+            return err
+        }
+        if val != nil {
+            m.SetSchedule(val.(*CodeScanningDefaultSetup_schedule))
+        }
+        return nil
+    }
     res["state"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
         val, err := n.GetEnumValue(ParseCodeScanningDefaultSetup_state)
         if err != nil {
@@ -97,6 +109,11 @@ func (m *CodeScanningDefaultSetup) GetLanguages()([]CodeScanningDefaultSetup_lan
 func (m *CodeScanningDefaultSetup) GetQuerySuite()(*CodeScanningDefaultSetup_query_suite) {
     return m.query_suite
 }
+// GetSchedule gets the schedule property value. The frequency of the periodic analysis.
+// returns a *CodeScanningDefaultSetup_schedule when successful
+func (m *CodeScanningDefaultSetup) GetSchedule()(*CodeScanningDefaultSetup_schedule) {
+    return m.schedule
+}
 // GetState gets the state property value. Code scanning default setup has been configured or not.
 // returns a *CodeScanningDefaultSetup_state when successful
 func (m *CodeScanningDefaultSetup) GetState()(*CodeScanningDefaultSetup_state) {
@@ -118,6 +135,13 @@ func (m *CodeScanningDefaultSetup) Serialize(writer i878a80d2330e89d26896388a3f4
     if m.GetQuerySuite() != nil {
         cast := (*m.GetQuerySuite()).String()
         err := writer.WriteStringValue("query_suite", &cast)
+        if err != nil {
+            return err
+        }
+    }
+    if m.GetSchedule() != nil {
+        cast := (*m.GetSchedule()).String()
+        err := writer.WriteStringValue("schedule", &cast)
         if err != nil {
             return err
         }
@@ -155,6 +179,10 @@ func (m *CodeScanningDefaultSetup) SetLanguages(value []CodeScanningDefaultSetup
 func (m *CodeScanningDefaultSetup) SetQuerySuite(value *CodeScanningDefaultSetup_query_suite)() {
     m.query_suite = value
 }
+// SetSchedule sets the schedule property value. The frequency of the periodic analysis.
+func (m *CodeScanningDefaultSetup) SetSchedule(value *CodeScanningDefaultSetup_schedule)() {
+    m.schedule = value
+}
 // SetState sets the state property value. Code scanning default setup has been configured or not.
 func (m *CodeScanningDefaultSetup) SetState(value *CodeScanningDefaultSetup_state)() {
     m.state = value
@@ -168,10 +196,12 @@ type CodeScanningDefaultSetupable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetLanguages()([]CodeScanningDefaultSetup_languages)
     GetQuerySuite()(*CodeScanningDefaultSetup_query_suite)
+    GetSchedule()(*CodeScanningDefaultSetup_schedule)
     GetState()(*CodeScanningDefaultSetup_state)
     GetUpdatedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)
     SetLanguages(value []CodeScanningDefaultSetup_languages)()
     SetQuerySuite(value *CodeScanningDefaultSetup_query_suite)()
+    SetSchedule(value *CodeScanningDefaultSetup_schedule)()
     SetState(value *CodeScanningDefaultSetup_state)()
     SetUpdatedAt(value *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)()
 }

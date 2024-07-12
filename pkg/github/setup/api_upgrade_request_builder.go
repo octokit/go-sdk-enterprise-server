@@ -25,7 +25,7 @@ func NewApiUpgradeRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee263
 // Post this API upgrades your license and also triggers the configuration process.**Note:** The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/management-console#upgrade-a-license
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/management-console#upgrade-a-license
 func (m *ApiUpgradeRequestBuilder) Post(ctx context.Context, body i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.MultipartBody, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

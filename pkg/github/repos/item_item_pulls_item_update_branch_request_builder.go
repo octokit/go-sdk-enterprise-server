@@ -29,7 +29,7 @@ func NewItemItemPullsItemUpdateBranchRequestBuilder(rawUrl string, requestAdapte
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/pulls/pulls#update-a-pull-request-branch
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/pulls/pulls#update-a-pull-request-branch
 func (m *ItemItemPullsItemUpdateBranchRequestBuilder) Put(ctx context.Context, body ItemItemPullsItemUpdateBranchPutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ItemItemPullsItemUpdateBranchPutResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

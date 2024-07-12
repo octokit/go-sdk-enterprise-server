@@ -27,10 +27,10 @@ func NewUsersWithUsernameItemRequestBuilder(rawUrl string, requestAdapter i2ae41
     urlParams["request-raw-url"] = rawUrl
     return NewUsersWithUsernameItemRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Delete deleting a user will delete all their repositories, gists, applications, and personal settings. [Suspending a user](https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/users#suspend-a-user) is often a better option.You can delete any user account except your own.
+// Delete deleting a user will delete all their repositories, gists, applications, and personal settings. [Suspending a user](https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/users#suspend-a-user) is often a better option.You can delete any user account except your own.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/users#delete-a-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/users#delete-a-user
 func (m *UsersWithUsernameItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -46,7 +46,7 @@ func (m *UsersWithUsernameItemRequestBuilder) Delete(ctx context.Context, reques
 // returns a UsersItemWithUsernamePatchResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/users#update-the-username-for-a-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/users#update-the-username-for-a-user
 func (m *UsersWithUsernameItemRequestBuilder) Patch(ctx context.Context, body UsersItemWithUsernamePatchRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(UsersItemWithUsernamePatchResponseable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -61,7 +61,7 @@ func (m *UsersWithUsernameItemRequestBuilder) Patch(ctx context.Context, body Us
     }
     return res.(UsersItemWithUsernamePatchResponseable), nil
 }
-// ToDeleteRequestInformation deleting a user will delete all their repositories, gists, applications, and personal settings. [Suspending a user](https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/users#suspend-a-user) is often a better option.You can delete any user account except your own.
+// ToDeleteRequestInformation deleting a user will delete all their repositories, gists, applications, and personal settings. [Suspending a user](https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/users#suspend-a-user) is often a better option.You can delete any user account except your own.
 // returns a *RequestInformation when successful
 func (m *UsersWithUsernameItemRequestBuilder) ToDeleteRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DELETE, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

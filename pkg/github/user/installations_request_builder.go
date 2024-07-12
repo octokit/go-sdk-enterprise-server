@@ -13,9 +13,9 @@ type InstallationsRequestBuilder struct {
 }
 // InstallationsRequestBuilderGetQueryParameters lists installations of your GitHub App that the authenticated user has explicit permission (`:read`, `:write`, or `:admin`) to access.The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.You can find the permissions for the installation under the `permissions` key.
 type InstallationsRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByInstallation_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.user.installations.item collection
@@ -47,7 +47,7 @@ func NewInstallationsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee
 // returns a BasicError error when the service returns a 403 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/apps/installations#list-app-installations-accessible-to-the-user-access-token
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/apps/installations#list-app-installations-accessible-to-the-user-access-token
 func (m *InstallationsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[InstallationsRequestBuilderGetQueryParameters])(InstallationsGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

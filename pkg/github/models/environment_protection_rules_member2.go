@@ -11,6 +11,8 @@ type Environment_protection_rulesMember2 struct {
     id *int32
     // The node_id property
     node_id *string
+    // Whether deployments to this environment can be approved by the user who created the deployment.
+    prevent_self_review *bool
     // The people or teams that may approve jobs that reference the environment. You can list up to six users or teams as reviewers. The reviewers must have at least read access to the repository. Only one of the required reviewers needs to approve the job for it to proceed.
     reviewers []Environment_protection_rulesMember2_reviewersable
     // The type property
@@ -57,6 +59,16 @@ func (m *Environment_protection_rulesMember2) GetFieldDeserializers()(map[string
         }
         return nil
     }
+    res["prevent_self_review"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
+        val, err := n.GetBoolValue()
+        if err != nil {
+            return err
+        }
+        if val != nil {
+            m.SetPreventSelfReview(val)
+        }
+        return nil
+    }
     res["reviewers"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
         val, err := n.GetCollectionOfObjectValues(CreateEnvironment_protection_rulesMember2_reviewersFromDiscriminatorValue)
         if err != nil {
@@ -95,6 +107,11 @@ func (m *Environment_protection_rulesMember2) GetId()(*int32) {
 func (m *Environment_protection_rulesMember2) GetNodeId()(*string) {
     return m.node_id
 }
+// GetPreventSelfReview gets the prevent_self_review property value. Whether deployments to this environment can be approved by the user who created the deployment.
+// returns a *bool when successful
+func (m *Environment_protection_rulesMember2) GetPreventSelfReview()(*bool) {
+    return m.prevent_self_review
+}
 // GetReviewers gets the reviewers property value. The people or teams that may approve jobs that reference the environment. You can list up to six users or teams as reviewers. The reviewers must have at least read access to the repository. Only one of the required reviewers needs to approve the job for it to proceed.
 // returns a []Environment_protection_rulesMember2_reviewersable when successful
 func (m *Environment_protection_rulesMember2) GetReviewers()([]Environment_protection_rulesMember2_reviewersable) {
@@ -115,6 +132,12 @@ func (m *Environment_protection_rulesMember2) Serialize(writer i878a80d2330e89d2
     }
     {
         err := writer.WriteStringValue("node_id", m.GetNodeId())
+        if err != nil {
+            return err
+        }
+    }
+    {
+        err := writer.WriteBoolValue("prevent_self_review", m.GetPreventSelfReview())
         if err != nil {
             return err
         }
@@ -157,6 +180,10 @@ func (m *Environment_protection_rulesMember2) SetId(value *int32)() {
 func (m *Environment_protection_rulesMember2) SetNodeId(value *string)() {
     m.node_id = value
 }
+// SetPreventSelfReview sets the prevent_self_review property value. Whether deployments to this environment can be approved by the user who created the deployment.
+func (m *Environment_protection_rulesMember2) SetPreventSelfReview(value *bool)() {
+    m.prevent_self_review = value
+}
 // SetReviewers sets the reviewers property value. The people or teams that may approve jobs that reference the environment. You can list up to six users or teams as reviewers. The reviewers must have at least read access to the repository. Only one of the required reviewers needs to approve the job for it to proceed.
 func (m *Environment_protection_rulesMember2) SetReviewers(value []Environment_protection_rulesMember2_reviewersable)() {
     m.reviewers = value
@@ -170,10 +197,12 @@ type Environment_protection_rulesMember2able interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetId()(*int32)
     GetNodeId()(*string)
+    GetPreventSelfReview()(*bool)
     GetReviewers()([]Environment_protection_rulesMember2_reviewersable)
     GetTypeEscaped()(*string)
     SetId(value *int32)()
     SetNodeId(value *string)()
+    SetPreventSelfReview(value *bool)()
     SetReviewers(value []Environment_protection_rulesMember2_reviewersable)()
     SetTypeEscaped(value *string)()
 }

@@ -12,13 +12,13 @@ import (
 type ItemItemIssuesItemReactionsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ItemItemIssuesItemReactionsRequestBuilderGetQueryParameters list the reactions to an [issue](https://docs.github.com/enterprise-server@3.10/rest/issues/issues#get-an-issue).
+// ItemItemIssuesItemReactionsRequestBuilderGetQueryParameters list the reactions to an [issue](https://docs.github.com/enterprise-server@3.13/rest/issues/issues#get-an-issue).
 type ItemItemIssuesItemReactionsRequestBuilderGetQueryParameters struct {
-    // Returns a single [reaction type](https://docs.github.com/enterprise-server@3.10/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to an issue.
+    // Returns a single [reaction type](https://docs.github.com/enterprise-server@3.13/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to an issue.
     Content *i8a5daa8f7f9e57c6b4dc0d8983a565b7f182640fb87e4346a14aad4f65f0cf2e.GetContentQueryParameterType `uriparametername:"content"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByReaction_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.repos.item.item.issues.item.reactions.item collection
@@ -44,13 +44,13 @@ func NewItemItemIssuesItemReactionsRequestBuilder(rawUrl string, requestAdapter 
     urlParams["request-raw-url"] = rawUrl
     return NewItemItemIssuesItemReactionsRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Get list the reactions to an [issue](https://docs.github.com/enterprise-server@3.10/rest/issues/issues#get-an-issue).
+// Get list the reactions to an [issue](https://docs.github.com/enterprise-server@3.13/rest/issues/issues#get-an-issue).
 // returns a []Reactionable when successful
 // returns a BasicError error when the service returns a 404 status code
 // returns a BasicError error when the service returns a 410 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/reactions/reactions#list-reactions-for-an-issue
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/reactions/reactions#list-reactions-for-an-issue
 func (m *ItemItemIssuesItemReactionsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemIssuesItemReactionsRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Reactionable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -72,12 +72,12 @@ func (m *ItemItemIssuesItemReactionsRequestBuilder) Get(ctx context.Context, req
     }
     return val, nil
 }
-// Post create a reaction to an [issue](https://docs.github.com/enterprise-server@3.10/rest/issues/issues#get-an-issue). A response with an HTTP `200` status means that you already added the reaction type to this issue.
+// Post create a reaction to an [issue](https://docs.github.com/enterprise-server@3.13/rest/issues/issues#get-an-issue). A response with an HTTP `200` status means that you already added the reaction type to this issue.
 // returns a Reactionable when successful
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/reactions/reactions#create-reaction-for-an-issue
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/reactions/reactions#create-reaction-for-an-issue
 func (m *ItemItemIssuesItemReactionsRequestBuilder) Post(ctx context.Context, body ItemItemIssuesItemReactionsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Reactionable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -95,7 +95,7 @@ func (m *ItemItemIssuesItemReactionsRequestBuilder) Post(ctx context.Context, bo
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Reactionable), nil
 }
-// ToGetRequestInformation list the reactions to an [issue](https://docs.github.com/enterprise-server@3.10/rest/issues/issues#get-an-issue).
+// ToGetRequestInformation list the reactions to an [issue](https://docs.github.com/enterprise-server@3.13/rest/issues/issues#get-an-issue).
 // returns a *RequestInformation when successful
 func (m *ItemItemIssuesItemReactionsRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemIssuesItemReactionsRequestBuilderGetQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
@@ -103,7 +103,7 @@ func (m *ItemItemIssuesItemReactionsRequestBuilder) ToGetRequestInformation(ctx 
     requestInfo.Headers.TryAdd("Accept", "application/json")
     return requestInfo, nil
 }
-// ToPostRequestInformation create a reaction to an [issue](https://docs.github.com/enterprise-server@3.10/rest/issues/issues#get-an-issue). A response with an HTTP `200` status means that you already added the reaction type to this issue.
+// ToPostRequestInformation create a reaction to an [issue](https://docs.github.com/enterprise-server@3.13/rest/issues/issues#get-an-issue). A response with an HTTP `200` status means that you already added the reaction type to this issue.
 // returns a *RequestInformation when successful
 func (m *ItemItemIssuesItemReactionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body ItemItemIssuesItemReactionsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

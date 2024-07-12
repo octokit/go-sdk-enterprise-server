@@ -27,7 +27,7 @@ func NewItemGrantRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee2633
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/apps/oauth-applications#delete-an-app-authorization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/apps/oauth-applications#delete-an-app-authorization
 func (m *ItemGrantRequestBuilder) Delete(ctx context.Context, body ItemGrantDeleteRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

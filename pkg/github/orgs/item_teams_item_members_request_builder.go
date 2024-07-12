@@ -13,9 +13,9 @@ type ItemTeamsItemMembersRequestBuilder struct {
 }
 // ItemTeamsItemMembersRequestBuilderGetQueryParameters team members will include the members of child teams.To list members in a team, the team must be visible to the authenticated user.
 type ItemTeamsItemMembersRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     // Filters members returned by their role in the team.
     Role *ibb541096b0cd5e4f7f3d82e5f4b24b4e6d5814285c679a01f9f2e799627a9431.GetRoleQueryParameterType `uriparametername:"role"`
@@ -37,7 +37,7 @@ func NewItemTeamsItemMembersRequestBuilder(rawUrl string, requestAdapter i2ae418
 // returns a []SimpleUserable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/teams/members#list-team-members
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/teams/members#list-team-members
 func (m *ItemTeamsItemMembersRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemTeamsItemMembersRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.SimpleUserable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

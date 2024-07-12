@@ -414,13 +414,13 @@ func NewItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuild
     urlParams["request-raw-url"] = rawUrl
     return NewItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Delete protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.10/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
+// Delete protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 // returns a []string when successful
 // returns a BasicError error when the service returns a 404 status code
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/branches/branch-protection#remove-status-check-contexts
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/branches/branch-protection#remove-status-check-contexts
 func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuilder) Delete(ctx context.Context, body ContextsDeleteRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])([]string, error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -442,12 +442,12 @@ func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuil
     }
     return val, nil
 }
-// Get protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.10/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
+// Get protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 // returns a []string when successful
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/branches/branch-protection#get-all-status-check-contexts
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/branches/branch-protection#get-all-status-check-contexts
 func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])([]string, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -468,14 +468,14 @@ func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuil
     }
     return val, nil
 }
-// Post protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.10/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
+// Post protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 // returns a []string when successful
 // returns a BasicError error when the service returns a 403 status code
 // returns a BasicError error when the service returns a 404 status code
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/branches/branch-protection#add-status-check-contexts
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/branches/branch-protection#add-status-check-contexts
 func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuilder) Post(ctx context.Context, body ContextsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])([]string, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -498,13 +498,13 @@ func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuil
     }
     return val, nil
 }
-// Put protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.10/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
+// Put protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 // returns a []string when successful
 // returns a BasicError error when the service returns a 404 status code
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/branches/branch-protection#set-status-check-contexts
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/branches/branch-protection#set-status-check-contexts
 func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuilder) Put(ctx context.Context, body ContextsPutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])([]string, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -526,7 +526,7 @@ func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuil
     }
     return val, nil
 }
-// ToDeleteRequestInformation protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.10/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
+// ToDeleteRequestInformation protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 // returns a *RequestInformation when successful
 func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuilder) ToDeleteRequestInformation(ctx context.Context, body ContextsDeleteRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DELETE, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
@@ -538,7 +538,7 @@ func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuil
     }
     return requestInfo, nil
 }
-// ToGetRequestInformation protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.10/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
+// ToGetRequestInformation protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 // returns a *RequestInformation when successful
 func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
@@ -546,7 +546,7 @@ func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuil
     requestInfo.Headers.TryAdd("Accept", "application/json")
     return requestInfo, nil
 }
-// ToPostRequestInformation protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.10/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
+// ToPostRequestInformation protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 // returns a *RequestInformation when successful
 func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuilder) ToPostRequestInformation(ctx context.Context, body ContextsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
@@ -558,7 +558,7 @@ func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuil
     }
     return requestInfo, nil
 }
-// ToPutRequestInformation protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.10/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
+// ToPutRequestInformation protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 // returns a *RequestInformation when successful
 func (m *ItemItemBranchesItemProtectionRequired_status_checksContextsRequestBuilder) ToPutRequestInformation(ctx context.Context, body ContextsPutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

@@ -2,6 +2,7 @@ package repos
 
 import (
     "context"
+    i53ac87e8cb3cc9276228f74d38694a208cacb99bb8ceb705eeae99fb88d4d274 "strconv"
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
     ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207 "github.com/octokit/go-sdk-enterprise-server/pkg/github/models"
 )
@@ -9,6 +10,16 @@ import (
 // ItemItemPagesDeploymentsRequestBuilder builds and executes requests for operations under \repos\{owner-id}\{repo-id}\pages\deployments
 type ItemItemPagesDeploymentsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
+}
+// ByPages_deployment_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.repos.item.item.pages.deployments.item collection
+// returns a *ItemItemPagesDeploymentsWithPages_deployment_ItemRequestBuilder when successful
+func (m *ItemItemPagesDeploymentsRequestBuilder) ByPages_deployment_id(pages_deployment_id int32)(*ItemItemPagesDeploymentsWithPages_deployment_ItemRequestBuilder) {
+    urlTplParams := make(map[string]string)
+    for idx, item := range m.BaseRequestBuilder.PathParameters {
+        urlTplParams[idx] = item
+    }
+    urlTplParams["pages_deployment_id"] = i53ac87e8cb3cc9276228f74d38694a208cacb99bb8ceb705eeae99fb88d4d274.FormatInt(int64(pages_deployment_id), 10)
+    return NewItemItemPagesDeploymentsWithPages_deployment_ItemRequestBuilderInternal(urlTplParams, m.BaseRequestBuilder.RequestAdapter)
 }
 // NewItemItemPagesDeploymentsRequestBuilderInternal instantiates a new ItemItemPagesDeploymentsRequestBuilder and sets the default values.
 func NewItemItemPagesDeploymentsRequestBuilderInternal(pathParameters map[string]string, requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter)(*ItemItemPagesDeploymentsRequestBuilder) {
@@ -30,7 +41,7 @@ func NewItemItemPagesDeploymentsRequestBuilder(rawUrl string, requestAdapter i2a
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/pages/pages#create-a-github-pages-deployment
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/pages/pages#create-a-github-pages-deployment
 func (m *ItemItemPagesDeploymentsRequestBuilder) Post(ctx context.Context, body ItemItemPagesDeploymentsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.PageDeploymentable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

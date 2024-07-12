@@ -26,7 +26,7 @@ func NewItemItemStatsCode_frequencyRequestBuilder(rawUrl string, requestAdapter 
 // returns a []int32 when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/metrics/statistics#get-the-weekly-commit-activity
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/metrics/statistics#get-the-weekly-commit-activity
 func (m *ItemItemStatsCode_frequencyRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])([]int32, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

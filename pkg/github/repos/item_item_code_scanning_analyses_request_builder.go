@@ -16,9 +16,9 @@ type ItemItemCodeScanningAnalysesRequestBuilder struct {
 type ItemItemCodeScanningAnalysesRequestBuilderGetQueryParameters struct {
     // The direction to sort the results by.
     Direction *i28946bb8568c041f1c5556b91b3fd696a730699a2d05643ff6b069662bd098ab.GetDirectionQueryParameterType `uriparametername:"direction"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     // The Git reference for the analyses you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
     Ref *string `uriparametername:"ref"`
@@ -61,7 +61,7 @@ func NewItemItemCodeScanningAnalysesRequestBuilder(rawUrl string, requestAdapter
 // returns a Analyses503Error error when the service returns a 503 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/code-scanning/code-scanning#list-code-scanning-analyses-for-a-repository
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/code-scanning/code-scanning#list-code-scanning-analyses-for-a-repository
 func (m *ItemItemCodeScanningAnalysesRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemCodeScanningAnalysesRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CodeScanningAnalysisable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

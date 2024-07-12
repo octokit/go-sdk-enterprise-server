@@ -36,7 +36,7 @@ type OrganizationSecretScanningAlert struct {
     secret *string
     // The type of secret that secret scanning detected.
     secret_type *string
-    // User-friendly name for the detected secret, matching the `secret_type`.For a list of built-in patterns, see "[Secret scanning patterns](https://docs.github.com/enterprise-server@3.10/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)."
+    // User-friendly name for the detected secret, matching the `secret_type`.For a list of built-in patterns, see "[Secret scanning patterns](https://docs.github.com/enterprise-server@3.13/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)."
     secret_type_display_name *string
     // Sets the state of the secret scanning alert. You must provide `resolution` when you set the state to `resolved`.
     state *SecretScanningAlertState
@@ -44,6 +44,8 @@ type OrganizationSecretScanningAlert struct {
     updated_at *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time
     // The REST API URL of the alert resource.
     url *string
+    // The token status as of the latest validity check.
+    validity *OrganizationSecretScanningAlert_validity
 }
 // NewOrganizationSecretScanningAlert instantiates a new OrganizationSecretScanningAlert and sets the default values.
 func NewOrganizationSecretScanningAlert()(*OrganizationSecretScanningAlert) {
@@ -251,6 +253,16 @@ func (m *OrganizationSecretScanningAlert) GetFieldDeserializers()(map[string]fun
         }
         return nil
     }
+    res["validity"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
+        val, err := n.GetEnumValue(ParseOrganizationSecretScanningAlert_validity)
+        if err != nil {
+            return err
+        }
+        if val != nil {
+            m.SetValidity(val.(*OrganizationSecretScanningAlert_validity))
+        }
+        return nil
+    }
     return res
 }
 // GetHtmlUrl gets the html_url property value. The GitHub URL of the alert resource.
@@ -318,7 +330,7 @@ func (m *OrganizationSecretScanningAlert) GetSecret()(*string) {
 func (m *OrganizationSecretScanningAlert) GetSecretType()(*string) {
     return m.secret_type
 }
-// GetSecretTypeDisplayName gets the secret_type_display_name property value. User-friendly name for the detected secret, matching the `secret_type`.For a list of built-in patterns, see "[Secret scanning patterns](https://docs.github.com/enterprise-server@3.10/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)."
+// GetSecretTypeDisplayName gets the secret_type_display_name property value. User-friendly name for the detected secret, matching the `secret_type`.For a list of built-in patterns, see "[Secret scanning patterns](https://docs.github.com/enterprise-server@3.13/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)."
 // returns a *string when successful
 func (m *OrganizationSecretScanningAlert) GetSecretTypeDisplayName()(*string) {
     return m.secret_type_display_name
@@ -337,6 +349,11 @@ func (m *OrganizationSecretScanningAlert) GetUpdatedAt()(*i336074805fc853987abe6
 // returns a *string when successful
 func (m *OrganizationSecretScanningAlert) GetUrl()(*string) {
     return m.url
+}
+// GetValidity gets the validity property value. The token status as of the latest validity check.
+// returns a *OrganizationSecretScanningAlert_validity when successful
+func (m *OrganizationSecretScanningAlert) GetValidity()(*OrganizationSecretScanningAlert_validity) {
+    return m.validity
 }
 // Serialize serializes information the current object
 func (m *OrganizationSecretScanningAlert) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
@@ -420,6 +437,13 @@ func (m *OrganizationSecretScanningAlert) Serialize(writer i878a80d2330e89d26896
             return err
         }
     }
+    if m.GetValidity() != nil {
+        cast := (*m.GetValidity()).String()
+        err := writer.WriteStringValue("validity", &cast)
+        if err != nil {
+            return err
+        }
+    }
     {
         err := writer.WriteAdditionalData(m.GetAdditionalData())
         if err != nil {
@@ -488,7 +512,7 @@ func (m *OrganizationSecretScanningAlert) SetSecret(value *string)() {
 func (m *OrganizationSecretScanningAlert) SetSecretType(value *string)() {
     m.secret_type = value
 }
-// SetSecretTypeDisplayName sets the secret_type_display_name property value. User-friendly name for the detected secret, matching the `secret_type`.For a list of built-in patterns, see "[Secret scanning patterns](https://docs.github.com/enterprise-server@3.10/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)."
+// SetSecretTypeDisplayName sets the secret_type_display_name property value. User-friendly name for the detected secret, matching the `secret_type`.For a list of built-in patterns, see "[Secret scanning patterns](https://docs.github.com/enterprise-server@3.13/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)."
 func (m *OrganizationSecretScanningAlert) SetSecretTypeDisplayName(value *string)() {
     m.secret_type_display_name = value
 }
@@ -503,6 +527,10 @@ func (m *OrganizationSecretScanningAlert) SetUpdatedAt(value *i336074805fc853987
 // SetUrl sets the url property value. The REST API URL of the alert resource.
 func (m *OrganizationSecretScanningAlert) SetUrl(value *string)() {
     m.url = value
+}
+// SetValidity sets the validity property value. The token status as of the latest validity check.
+func (m *OrganizationSecretScanningAlert) SetValidity(value *OrganizationSecretScanningAlert_validity)() {
+    m.validity = value
 }
 type OrganizationSecretScanningAlertable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.AdditionalDataHolder
@@ -525,6 +553,7 @@ type OrganizationSecretScanningAlertable interface {
     GetState()(*SecretScanningAlertState)
     GetUpdatedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)
     GetUrl()(*string)
+    GetValidity()(*OrganizationSecretScanningAlert_validity)
     SetCreatedAt(value *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)()
     SetHtmlUrl(value *string)()
     SetLocationsUrl(value *string)()
@@ -543,4 +572,5 @@ type OrganizationSecretScanningAlertable interface {
     SetState(value *SecretScanningAlertState)()
     SetUpdatedAt(value *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)()
     SetUrl(value *string)()
+    SetValidity(value *OrganizationSecretScanningAlert_validity)()
 }

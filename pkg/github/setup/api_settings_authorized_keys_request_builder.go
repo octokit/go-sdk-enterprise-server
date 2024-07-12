@@ -27,7 +27,7 @@ func NewApiSettingsAuthorizedKeysRequestBuilder(rawUrl string, requestAdapter i2
 // returns a []SshKeyable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/management-console#remove-an-authorized-ssh-key
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/management-console#remove-an-authorized-ssh-key
 func (m *ApiSettingsAuthorizedKeysRequestBuilder) Delete(ctx context.Context, body ApiSettingsAuthorizedKeysDeleteRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.SshKeyable, error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -49,7 +49,7 @@ func (m *ApiSettingsAuthorizedKeysRequestBuilder) Delete(ctx context.Context, bo
 // returns a []SshKeyable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/management-console#get-all-authorized-ssh-keys
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/management-console#get-all-authorized-ssh-keys
 func (m *ApiSettingsAuthorizedKeysRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.SshKeyable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -71,7 +71,7 @@ func (m *ApiSettingsAuthorizedKeysRequestBuilder) Get(ctx context.Context, reque
 // returns a []SshKeyable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/management-console#add-an-authorized-ssh-key
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/management-console#add-an-authorized-ssh-key
 func (m *ApiSettingsAuthorizedKeysRequestBuilder) Post(ctx context.Context, body ApiSettingsAuthorizedKeysPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.SshKeyable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

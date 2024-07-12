@@ -26,7 +26,7 @@ func NewItemAnnouncementRequestBuilder(rawUrl string, requestAdapter i2ae4187f7d
 // Delete removes the announcement banner currently set for the organization.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/announcement-banners/organizations#remove-announcement-banner-from-organization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/announcement-banners/organizations#remove-announcement-banner-from-organization
 func (m *ItemAnnouncementRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -42,7 +42,7 @@ func (m *ItemAnnouncementRequestBuilder) Delete(ctx context.Context, requestConf
 // returns a AnnouncementBannerable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/announcement-banners/organizations#get-announcement-banner-for-organization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/announcement-banners/organizations#get-announcement-banner-for-organization
 func (m *ItemAnnouncementRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.AnnouncementBannerable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -61,7 +61,7 @@ func (m *ItemAnnouncementRequestBuilder) Get(ctx context.Context, requestConfigu
 // returns a AnnouncementBannerable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/announcement-banners/organizations#set-announcement-banner-for-organization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/announcement-banners/organizations#set-announcement-banner-for-organization
 func (m *ItemAnnouncementRequestBuilder) Patch(ctx context.Context, body ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Announcementable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.AnnouncementBannerable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

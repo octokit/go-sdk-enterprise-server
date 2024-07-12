@@ -26,7 +26,7 @@ func NewZenRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee263371cb1c
 // returns a *string when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/meta/meta#get-the-zen-of-github
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/meta/meta#get-the-zen-of-github
 func (m *ZenRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*string, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

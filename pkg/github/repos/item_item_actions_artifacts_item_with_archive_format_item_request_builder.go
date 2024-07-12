@@ -27,7 +27,7 @@ func NewItemItemActionsArtifactsItemWithArchive_formatItemRequestBuilder(rawUrl 
 // returns a BasicError error when the service returns a 410 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/artifacts#download-an-artifact
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/artifacts#download-an-artifact
 func (m *ItemItemActionsArtifactsItemWithArchive_formatItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

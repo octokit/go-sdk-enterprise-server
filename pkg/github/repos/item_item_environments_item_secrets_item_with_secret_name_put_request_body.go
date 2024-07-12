@@ -7,7 +7,7 @@ import (
 type ItemItemEnvironmentsItemSecretsItemWithSecret_namePutRequestBody struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an environment public key](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#get-an-environment-public-key) endpoint.
+    // Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an environment public key](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#get-an-environment-public-key) endpoint.
     encrypted_value *string
     // ID of the key you used to encrypt the secret.
     key_id *string
@@ -29,7 +29,7 @@ func CreateItemItemEnvironmentsItemSecretsItemWithSecret_namePutRequestBodyFromD
 func (m *ItemItemEnvironmentsItemSecretsItemWithSecret_namePutRequestBody) GetAdditionalData()(map[string]any) {
     return m.additionalData
 }
-// GetEncryptedValue gets the encrypted_value property value. Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an environment public key](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#get-an-environment-public-key) endpoint.
+// GetEncryptedValue gets the encrypted_value property value. Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an environment public key](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#get-an-environment-public-key) endpoint.
 // returns a *string when successful
 func (m *ItemItemEnvironmentsItemSecretsItemWithSecret_namePutRequestBody) GetEncryptedValue()(*string) {
     return m.encrypted_value
@@ -91,7 +91,7 @@ func (m *ItemItemEnvironmentsItemSecretsItemWithSecret_namePutRequestBody) Seria
 func (m *ItemItemEnvironmentsItemSecretsItemWithSecret_namePutRequestBody) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetEncryptedValue sets the encrypted_value property value. Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an environment public key](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#get-an-environment-public-key) endpoint.
+// SetEncryptedValue sets the encrypted_value property value. Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an environment public key](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#get-an-environment-public-key) endpoint.
 func (m *ItemItemEnvironmentsItemSecretsItemWithSecret_namePutRequestBody) SetEncryptedValue(value *string)() {
     m.encrypted_value = value
 }

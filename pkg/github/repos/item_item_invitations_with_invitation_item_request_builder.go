@@ -26,7 +26,7 @@ func NewItemItemInvitationsWithInvitation_ItemRequestBuilder(rawUrl string, requ
 // Delete delete a repository invitation
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/collaborators/invitations#delete-a-repository-invitation
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/collaborators/invitations#delete-a-repository-invitation
 func (m *ItemItemInvitationsWithInvitation_ItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -42,7 +42,7 @@ func (m *ItemItemInvitationsWithInvitation_ItemRequestBuilder) Delete(ctx contex
 // returns a RepositoryInvitationable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/collaborators/invitations#update-a-repository-invitation
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/collaborators/invitations#update-a-repository-invitation
 func (m *ItemItemInvitationsWithInvitation_ItemRequestBuilder) Patch(ctx context.Context, body ItemItemInvitationsItemWithInvitation_PatchRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryInvitationable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

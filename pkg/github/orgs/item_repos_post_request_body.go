@@ -17,6 +17,8 @@ type ItemReposPostRequestBody struct {
     allow_squash_merge *bool
     // Pass `true` to create an initial commit with empty README.
     auto_init *bool
+    // The custom properties for the new repository. The keys are the custom property names, and the values are the corresponding custom property values.
+    custom_properties ItemReposPostRequestBody_custom_propertiesable
     // Either `true` to allow automatically deleting head branches when pull requests are merged, or `false` to prevent automatic deletion. **The authenticated user must be an organization owner to set this property to `true`.**
     delete_branch_on_merge *bool
     // A short description of the repository.
@@ -35,7 +37,7 @@ type ItemReposPostRequestBody struct {
     homepage *string
     // Either `true` to make this repo available as a template repository or `false` to prevent it.
     is_template *bool
-    // Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://docs.github.com/enterprise-server@3.10/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
+    // Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://docs.github.com/enterprise-server@3.13/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
     license_template *string
     // The name of the repository.
     name *string
@@ -88,6 +90,11 @@ func (m *ItemReposPostRequestBody) GetAllowSquashMerge()(*bool) {
 // returns a *bool when successful
 func (m *ItemReposPostRequestBody) GetAutoInit()(*bool) {
     return m.auto_init
+}
+// GetCustomProperties gets the custom_properties property value. The custom properties for the new repository. The keys are the custom property names, and the values are the corresponding custom property values.
+// returns a ItemReposPostRequestBody_custom_propertiesable when successful
+func (m *ItemReposPostRequestBody) GetCustomProperties()(ItemReposPostRequestBody_custom_propertiesable) {
+    return m.custom_properties
 }
 // GetDeleteBranchOnMerge gets the delete_branch_on_merge property value. Either `true` to allow automatically deleting head branches when pull requests are merged, or `false` to prevent automatic deletion. **The authenticated user must be an organization owner to set this property to `true`.**
 // returns a *bool when successful
@@ -150,6 +157,16 @@ func (m *ItemReposPostRequestBody) GetFieldDeserializers()(map[string]func(i878a
         }
         if val != nil {
             m.SetAutoInit(val)
+        }
+        return nil
+    }
+    res["custom_properties"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
+        val, err := n.GetObjectValue(CreateItemReposPostRequestBody_custom_propertiesFromDiscriminatorValue)
+        if err != nil {
+            return err
+        }
+        if val != nil {
+            m.SetCustomProperties(val.(ItemReposPostRequestBody_custom_propertiesable))
         }
         return nil
     }
@@ -330,7 +347,7 @@ func (m *ItemReposPostRequestBody) GetHomepage()(*string) {
 func (m *ItemReposPostRequestBody) GetIsTemplate()(*bool) {
     return m.is_template
 }
-// GetLicenseTemplate gets the license_template property value. Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://docs.github.com/enterprise-server@3.10/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
+// GetLicenseTemplate gets the license_template property value. Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://docs.github.com/enterprise-server@3.13/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
 // returns a *string when successful
 func (m *ItemReposPostRequestBody) GetLicenseTemplate()(*string) {
     return m.license_template
@@ -384,6 +401,12 @@ func (m *ItemReposPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f4
     }
     {
         err := writer.WriteBoolValue("auto_init", m.GetAutoInit())
+        if err != nil {
+            return err
+        }
+    }
+    {
+        err := writer.WriteObjectValue("custom_properties", m.GetCustomProperties())
         if err != nil {
             return err
         }
@@ -504,6 +527,10 @@ func (m *ItemReposPostRequestBody) SetAllowSquashMerge(value *bool)() {
 func (m *ItemReposPostRequestBody) SetAutoInit(value *bool)() {
     m.auto_init = value
 }
+// SetCustomProperties sets the custom_properties property value. The custom properties for the new repository. The keys are the custom property names, and the values are the corresponding custom property values.
+func (m *ItemReposPostRequestBody) SetCustomProperties(value ItemReposPostRequestBody_custom_propertiesable)() {
+    m.custom_properties = value
+}
 // SetDeleteBranchOnMerge sets the delete_branch_on_merge property value. Either `true` to allow automatically deleting head branches when pull requests are merged, or `false` to prevent automatic deletion. **The authenticated user must be an organization owner to set this property to `true`.**
 func (m *ItemReposPostRequestBody) SetDeleteBranchOnMerge(value *bool)() {
     m.delete_branch_on_merge = value
@@ -540,7 +567,7 @@ func (m *ItemReposPostRequestBody) SetHomepage(value *string)() {
 func (m *ItemReposPostRequestBody) SetIsTemplate(value *bool)() {
     m.is_template = value
 }
-// SetLicenseTemplate sets the license_template property value. Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://docs.github.com/enterprise-server@3.10/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
+// SetLicenseTemplate sets the license_template property value. Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://docs.github.com/enterprise-server@3.13/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
 func (m *ItemReposPostRequestBody) SetLicenseTemplate(value *string)() {
     m.license_template = value
 }
@@ -569,6 +596,7 @@ type ItemReposPostRequestBodyable interface {
     GetAllowRebaseMerge()(*bool)
     GetAllowSquashMerge()(*bool)
     GetAutoInit()(*bool)
+    GetCustomProperties()(ItemReposPostRequestBody_custom_propertiesable)
     GetDeleteBranchOnMerge()(*bool)
     GetDescription()(*string)
     GetGitignoreTemplate()(*string)
@@ -588,6 +616,7 @@ type ItemReposPostRequestBodyable interface {
     SetAllowRebaseMerge(value *bool)()
     SetAllowSquashMerge(value *bool)()
     SetAutoInit(value *bool)()
+    SetCustomProperties(value ItemReposPostRequestBody_custom_propertiesable)()
     SetDeleteBranchOnMerge(value *bool)()
     SetDescription(value *string)()
     SetGitignoreTemplate(value *string)()

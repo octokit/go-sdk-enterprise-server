@@ -9,7 +9,7 @@ import (
 type AnnouncementBanner struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // The announcement text in GitHub Flavored Markdown. For more information about GitHub Flavored Markdown, see "[Basic writing and formatting syntax](https://docs.github.com/enterprise-server@3.10/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)."
+    // The announcement text in GitHub Flavored Markdown. For more information about GitHub Flavored Markdown, see "[Basic writing and formatting syntax](https://docs.github.com/enterprise-server@3.13/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)."
     announcement *string
     // The time at which the announcement expires. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. To set an announcement that never expires, omit this parameter, set it to `null`, or set it to an empty string.
     expires_at *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time
@@ -33,7 +33,7 @@ func CreateAnnouncementBannerFromDiscriminatorValue(parseNode i878a80d2330e89d26
 func (m *AnnouncementBanner) GetAdditionalData()(map[string]any) {
     return m.additionalData
 }
-// GetAnnouncement gets the announcement property value. The announcement text in GitHub Flavored Markdown. For more information about GitHub Flavored Markdown, see "[Basic writing and formatting syntax](https://docs.github.com/enterprise-server@3.10/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)."
+// GetAnnouncement gets the announcement property value. The announcement text in GitHub Flavored Markdown. For more information about GitHub Flavored Markdown, see "[Basic writing and formatting syntax](https://docs.github.com/enterprise-server@3.13/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)."
 // returns a *string when successful
 func (m *AnnouncementBanner) GetAnnouncement()(*string) {
     return m.announcement
@@ -116,7 +116,7 @@ func (m *AnnouncementBanner) Serialize(writer i878a80d2330e89d26896388a3f487eef2
 func (m *AnnouncementBanner) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetAnnouncement sets the announcement property value. The announcement text in GitHub Flavored Markdown. For more information about GitHub Flavored Markdown, see "[Basic writing and formatting syntax](https://docs.github.com/enterprise-server@3.10/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)."
+// SetAnnouncement sets the announcement property value. The announcement text in GitHub Flavored Markdown. For more information about GitHub Flavored Markdown, see "[Basic writing and formatting syntax](https://docs.github.com/enterprise-server@3.13/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)."
 func (m *AnnouncementBanner) SetAnnouncement(value *string)() {
     m.announcement = value
 }

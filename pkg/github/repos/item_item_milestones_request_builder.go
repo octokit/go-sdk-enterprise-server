@@ -16,9 +16,9 @@ type ItemItemMilestonesRequestBuilder struct {
 type ItemItemMilestonesRequestBuilderGetQueryParameters struct {
     // The direction of the sort. Either `asc` or `desc`.
     Direction *i158d2368c7280b10f1c6d8a86f6e2ae0e0ab01ce5ce9a5d8fba4ab999f60e91d.GetDirectionQueryParameterType `uriparametername:"direction"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     // What to sort results by. Either `due_on` or `completeness`.
     Sort *i158d2368c7280b10f1c6d8a86f6e2ae0e0ab01ce5ce9a5d8fba4ab999f60e91d.GetSortQueryParameterType `uriparametername:"sort"`
@@ -53,7 +53,7 @@ func NewItemItemMilestonesRequestBuilder(rawUrl string, requestAdapter i2ae4187f
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/issues/milestones#list-milestones
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/issues/milestones#list-milestones
 func (m *ItemItemMilestonesRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemMilestonesRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Milestoneable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -80,7 +80,7 @@ func (m *ItemItemMilestonesRequestBuilder) Get(ctx context.Context, requestConfi
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/issues/milestones#create-a-milestone
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/issues/milestones#create-a-milestone
 func (m *ItemItemMilestonesRequestBuilder) Post(ctx context.Context, body ItemItemMilestonesPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Milestoneable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

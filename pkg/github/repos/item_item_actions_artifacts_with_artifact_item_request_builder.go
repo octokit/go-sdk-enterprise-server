@@ -38,7 +38,7 @@ func NewItemItemActionsArtifactsWithArtifact_ItemRequestBuilder(rawUrl string, r
 // Delete deletes an artifact for a workflow run.OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/artifacts#delete-an-artifact
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/artifacts#delete-an-artifact
 func (m *ItemItemActionsArtifactsWithArtifact_ItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -54,7 +54,7 @@ func (m *ItemItemActionsArtifactsWithArtifact_ItemRequestBuilder) Delete(ctx con
 // returns a Artifactable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/artifacts#get-an-artifact
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/artifacts#get-an-artifact
 func (m *ItemItemActionsArtifactsWithArtifact_ItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Artifactable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

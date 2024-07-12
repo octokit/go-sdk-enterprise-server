@@ -32,7 +32,7 @@ func NewItemItemActionsPermissionsRequestBuilder(rawUrl string, requestAdapter i
 // returns a ActionsRepositoryPermissionsable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/permissions#get-github-actions-permissions-for-a-repository
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/permissions#get-github-actions-permissions-for-a-repository
 func (m *ItemItemActionsPermissionsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ActionsRepositoryPermissionsable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -50,7 +50,7 @@ func (m *ItemItemActionsPermissionsRequestBuilder) Get(ctx context.Context, requ
 // Put sets the GitHub Actions permissions policy for enabling GitHub Actions and allowed actions in the repository.If the repository belongs to an organization or enterprise that has set restrictive permissions at the organization or enterprise levels, such as `allowed_actions` to `selected` actions, then you cannot override them for the repository.OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/permissions#set-github-actions-permissions-for-a-repository
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/permissions#set-github-actions-permissions-for-a-repository
 func (m *ItemItemActionsPermissionsRequestBuilder) Put(ctx context.Context, body ItemItemActionsPermissionsPutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

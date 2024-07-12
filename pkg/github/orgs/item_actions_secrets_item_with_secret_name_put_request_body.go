@@ -7,11 +7,11 @@ import (
 type ItemActionsSecretsItemWithSecret_namePutRequestBody struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an organization public key](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#get-an-organization-public-key) endpoint.
+    // Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an organization public key](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#get-an-organization-public-key) endpoint.
     encrypted_value *string
     // ID of the key you used to encrypt the secret.
     key_id *string
-    // An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can manage the list of selected repositories using the [List selected repositories for an organization secret](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#list-selected-repositories-for-an-organization-secret), [Set selected repositories for an organization secret](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#set-selected-repositories-for-an-organization-secret), and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
+    // An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can manage the list of selected repositories using the [List selected repositories for an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#list-selected-repositories-for-an-organization-secret), [Set selected repositories for an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#set-selected-repositories-for-an-organization-secret), and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
     selected_repository_ids []int32
 }
 // NewItemActionsSecretsItemWithSecret_namePutRequestBody instantiates a new ItemActionsSecretsItemWithSecret_namePutRequestBody and sets the default values.
@@ -31,7 +31,7 @@ func CreateItemActionsSecretsItemWithSecret_namePutRequestBodyFromDiscriminatorV
 func (m *ItemActionsSecretsItemWithSecret_namePutRequestBody) GetAdditionalData()(map[string]any) {
     return m.additionalData
 }
-// GetEncryptedValue gets the encrypted_value property value. Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an organization public key](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#get-an-organization-public-key) endpoint.
+// GetEncryptedValue gets the encrypted_value property value. Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an organization public key](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#get-an-organization-public-key) endpoint.
 // returns a *string when successful
 func (m *ItemActionsSecretsItemWithSecret_namePutRequestBody) GetEncryptedValue()(*string) {
     return m.encrypted_value
@@ -83,7 +83,7 @@ func (m *ItemActionsSecretsItemWithSecret_namePutRequestBody) GetFieldDeserializ
 func (m *ItemActionsSecretsItemWithSecret_namePutRequestBody) GetKeyId()(*string) {
     return m.key_id
 }
-// GetSelectedRepositoryIds gets the selected_repository_ids property value. An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can manage the list of selected repositories using the [List selected repositories for an organization secret](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#list-selected-repositories-for-an-organization-secret), [Set selected repositories for an organization secret](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#set-selected-repositories-for-an-organization-secret), and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
+// GetSelectedRepositoryIds gets the selected_repository_ids property value. An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can manage the list of selected repositories using the [List selected repositories for an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#list-selected-repositories-for-an-organization-secret), [Set selected repositories for an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#set-selected-repositories-for-an-organization-secret), and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
 // returns a []int32 when successful
 func (m *ItemActionsSecretsItemWithSecret_namePutRequestBody) GetSelectedRepositoryIds()([]int32) {
     return m.selected_repository_ids
@@ -120,7 +120,7 @@ func (m *ItemActionsSecretsItemWithSecret_namePutRequestBody) Serialize(writer i
 func (m *ItemActionsSecretsItemWithSecret_namePutRequestBody) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetEncryptedValue sets the encrypted_value property value. Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an organization public key](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#get-an-organization-public-key) endpoint.
+// SetEncryptedValue sets the encrypted_value property value. Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an organization public key](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#get-an-organization-public-key) endpoint.
 func (m *ItemActionsSecretsItemWithSecret_namePutRequestBody) SetEncryptedValue(value *string)() {
     m.encrypted_value = value
 }
@@ -128,7 +128,7 @@ func (m *ItemActionsSecretsItemWithSecret_namePutRequestBody) SetEncryptedValue(
 func (m *ItemActionsSecretsItemWithSecret_namePutRequestBody) SetKeyId(value *string)() {
     m.key_id = value
 }
-// SetSelectedRepositoryIds sets the selected_repository_ids property value. An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can manage the list of selected repositories using the [List selected repositories for an organization secret](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#list-selected-repositories-for-an-organization-secret), [Set selected repositories for an organization secret](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#set-selected-repositories-for-an-organization-secret), and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-server@3.10/rest/actions/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
+// SetSelectedRepositoryIds sets the selected_repository_ids property value. An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can manage the list of selected repositories using the [List selected repositories for an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#list-selected-repositories-for-an-organization-secret), [Set selected repositories for an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#set-selected-repositories-for-an-organization-secret), and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
 func (m *ItemActionsSecretsItemWithSecret_namePutRequestBody) SetSelectedRepositoryIds(value []int32)() {
     m.selected_repository_ids = value
 }

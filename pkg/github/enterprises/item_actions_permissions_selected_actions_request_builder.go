@@ -27,7 +27,7 @@ func NewItemActionsPermissionsSelectedActionsRequestBuilder(rawUrl string, reque
 // returns a SelectedActionsable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/permissions#get-allowed-actions-and-reusable-workflows-for-an-enterprise
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/permissions#get-allowed-actions-and-reusable-workflows-for-an-enterprise
 func (m *ItemActionsPermissionsSelectedActionsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.SelectedActionsable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -45,7 +45,7 @@ func (m *ItemActionsPermissionsSelectedActionsRequestBuilder) Get(ctx context.Co
 // Put sets the actions that are allowed in an enterprise. To use this endpoint, the enterprise permission policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an enterprise](#set-github-actions-permissions-for-an-enterprise)."OAuth app tokens and personal access tokens (classic) need the `admin:enterprise` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/permissions#set-allowed-actions-and-reusable-workflows-for-an-enterprise
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/permissions#set-allowed-actions-and-reusable-workflows-for-an-enterprise
 func (m *ItemActionsPermissionsSelectedActionsRequestBuilder) Put(ctx context.Context, body ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.SelectedActionsable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

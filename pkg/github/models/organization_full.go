@@ -11,6 +11,8 @@ type OrganizationFull struct {
     additionalData map[string]any
     // Whether GitHub Advanced Security is enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
     advanced_security_enabled_for_new_repositories *bool
+    // The archived_at property
+    archived_at *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time
     // The avatar_url property
     avatar_url *string
     // The billing_email property
@@ -144,6 +146,11 @@ func (m *OrganizationFull) GetAdditionalData()(map[string]any) {
 func (m *OrganizationFull) GetAdvancedSecurityEnabledForNewRepositories()(*bool) {
     return m.advanced_security_enabled_for_new_repositories
 }
+// GetArchivedAt gets the archived_at property value. The archived_at property
+// returns a *Time when successful
+func (m *OrganizationFull) GetArchivedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time) {
+    return m.archived_at
+}
 // GetAvatarUrl gets the avatar_url property value. The avatar_url property
 // returns a *string when successful
 func (m *OrganizationFull) GetAvatarUrl()(*string) {
@@ -225,6 +232,16 @@ func (m *OrganizationFull) GetFieldDeserializers()(map[string]func(i878a80d2330e
         }
         if val != nil {
             m.SetAdvancedSecurityEnabledForNewRepositories(val)
+        }
+        return nil
+    }
+    res["archived_at"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
+        val, err := n.GetTimeValue()
+        if err != nil {
+            return err
+        }
+        if val != nil {
+            m.SetArchivedAt(val)
         }
         return nil
     }
@@ -994,6 +1011,12 @@ func (m *OrganizationFull) Serialize(writer i878a80d2330e89d26896388a3f487eef27b
         }
     }
     {
+        err := writer.WriteTimeValue("archived_at", m.GetArchivedAt())
+        if err != nil {
+            return err
+        }
+    }
+    {
         err := writer.WriteStringValue("avatar_url", m.GetAvatarUrl())
         if err != nil {
             return err
@@ -1339,6 +1362,10 @@ func (m *OrganizationFull) SetAdditionalData(value map[string]any)() {
 func (m *OrganizationFull) SetAdvancedSecurityEnabledForNewRepositories(value *bool)() {
     m.advanced_security_enabled_for_new_repositories = value
 }
+// SetArchivedAt sets the archived_at property value. The archived_at property
+func (m *OrganizationFull) SetArchivedAt(value *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)() {
+    m.archived_at = value
+}
 // SetAvatarUrl sets the avatar_url property value. The avatar_url property
 func (m *OrganizationFull) SetAvatarUrl(value *string)() {
     m.avatar_url = value
@@ -1563,6 +1590,7 @@ type OrganizationFullable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.AdditionalDataHolder
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetAdvancedSecurityEnabledForNewRepositories()(*bool)
+    GetArchivedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)
     GetAvatarUrl()(*string)
     GetBillingEmail()(*string)
     GetBlog()(*string)
@@ -1619,6 +1647,7 @@ type OrganizationFullable interface {
     GetUrl()(*string)
     GetWebCommitSignoffRequired()(*bool)
     SetAdvancedSecurityEnabledForNewRepositories(value *bool)()
+    SetArchivedAt(value *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)()
     SetAvatarUrl(value *string)()
     SetBillingEmail(value *string)()
     SetBlog(value *string)()

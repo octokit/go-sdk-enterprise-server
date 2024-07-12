@@ -12,9 +12,9 @@ type ItemActionsPermissionsRepositoriesRequestBuilder struct {
 }
 // ItemActionsPermissionsRepositoriesRequestBuilderGetQueryParameters lists the selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
 type ItemActionsPermissionsRepositoriesRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByRepository_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.orgs.item.actions.permissions.repositories.item collection
@@ -44,7 +44,7 @@ func NewItemActionsPermissionsRepositoriesRequestBuilder(rawUrl string, requestA
 // returns a ItemActionsPermissionsRepositoriesGetResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/permissions#list-selected-repositories-enabled-for-github-actions-in-an-organization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/permissions#list-selected-repositories-enabled-for-github-actions-in-an-organization
 func (m *ItemActionsPermissionsRepositoriesRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemActionsPermissionsRepositoriesRequestBuilderGetQueryParameters])(ItemActionsPermissionsRepositoriesGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -62,7 +62,7 @@ func (m *ItemActionsPermissionsRepositoriesRequestBuilder) Get(ctx context.Conte
 // Put replaces the list of selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/permissions#set-selected-repositories-enabled-for-github-actions-in-an-organization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/permissions#set-selected-repositories-enabled-for-github-actions-in-an-organization
 func (m *ItemActionsPermissionsRepositoriesRequestBuilder) Put(ctx context.Context, body ItemActionsPermissionsRepositoriesPutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

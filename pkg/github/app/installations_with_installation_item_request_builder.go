@@ -28,11 +28,11 @@ func NewInstallationsWithInstallation_ItemRequestBuilder(rawUrl string, requestA
     urlParams["request-raw-url"] = rawUrl
     return NewInstallationsWithInstallation_ItemRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Delete uninstalls a GitHub App on a user, organization, or business account. If you prefer to temporarily suspend an app's access to your account's resources, then we recommend the "[Suspend an app installation](https://docs.github.com/enterprise-server@3.10/rest/apps/apps#suspend-an-app-installation)" endpoint.You must use a [JWT](https://docs.github.com/enterprise-server@3.10/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
+// Delete uninstalls a GitHub App on a user, organization, or business account. If you prefer to temporarily suspend an app's access to your account's resources, then we recommend the "[Suspend an app installation](https://docs.github.com/enterprise-server@3.13/rest/apps/apps#suspend-an-app-installation)" endpoint.You must use a [JWT](https://docs.github.com/enterprise-server@3.13/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/apps/apps#delete-an-installation-for-the-authenticated-app
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/apps/apps#delete-an-installation-for-the-authenticated-app
 func (m *InstallationsWithInstallation_ItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -47,12 +47,12 @@ func (m *InstallationsWithInstallation_ItemRequestBuilder) Delete(ctx context.Co
     }
     return nil
 }
-// Get enables an authenticated GitHub App to find an installation's information using the installation id.You must use a [JWT](https://docs.github.com/enterprise-server@3.10/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
+// Get enables an authenticated GitHub App to find an installation's information using the installation id.You must use a [JWT](https://docs.github.com/enterprise-server@3.13/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
 // returns a Installationable when successful
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/apps/apps#get-an-installation-for-the-authenticated-app
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/apps/apps#get-an-installation-for-the-authenticated-app
 func (m *InstallationsWithInstallation_ItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Installationable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -75,7 +75,7 @@ func (m *InstallationsWithInstallation_ItemRequestBuilder) Get(ctx context.Conte
 func (m *InstallationsWithInstallation_ItemRequestBuilder) Suspended()(*InstallationsItemSuspendedRequestBuilder) {
     return NewInstallationsItemSuspendedRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
-// ToDeleteRequestInformation uninstalls a GitHub App on a user, organization, or business account. If you prefer to temporarily suspend an app's access to your account's resources, then we recommend the "[Suspend an app installation](https://docs.github.com/enterprise-server@3.10/rest/apps/apps#suspend-an-app-installation)" endpoint.You must use a [JWT](https://docs.github.com/enterprise-server@3.10/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
+// ToDeleteRequestInformation uninstalls a GitHub App on a user, organization, or business account. If you prefer to temporarily suspend an app's access to your account's resources, then we recommend the "[Suspend an app installation](https://docs.github.com/enterprise-server@3.13/rest/apps/apps#suspend-an-app-installation)" endpoint.You must use a [JWT](https://docs.github.com/enterprise-server@3.13/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
 // returns a *RequestInformation when successful
 func (m *InstallationsWithInstallation_ItemRequestBuilder) ToDeleteRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DELETE, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
@@ -83,7 +83,7 @@ func (m *InstallationsWithInstallation_ItemRequestBuilder) ToDeleteRequestInform
     requestInfo.Headers.TryAdd("Accept", "application/json")
     return requestInfo, nil
 }
-// ToGetRequestInformation enables an authenticated GitHub App to find an installation's information using the installation id.You must use a [JWT](https://docs.github.com/enterprise-server@3.10/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
+// ToGetRequestInformation enables an authenticated GitHub App to find an installation's information using the installation id.You must use a [JWT](https://docs.github.com/enterprise-server@3.13/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
 // returns a *RequestInformation when successful
 func (m *InstallationsWithInstallation_ItemRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

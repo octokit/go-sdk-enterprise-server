@@ -25,7 +25,7 @@ func NewItemItemActionsWorkflowsItemDisableRequestBuilder(rawUrl string, request
 // Put disables a workflow and sets the `state` of the workflow to `disabled_manually`. You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`.OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/workflows#disable-a-workflow
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/workflows#disable-a-workflow
 func (m *ItemItemActionsWorkflowsItemDisableRequestBuilder) Put(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, requestConfiguration);
     if err != nil {

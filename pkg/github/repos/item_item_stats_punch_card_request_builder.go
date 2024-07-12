@@ -26,7 +26,7 @@ func NewItemItemStatsPunch_cardRequestBuilder(rawUrl string, requestAdapter i2ae
 // returns a []int32 when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/metrics/statistics#get-the-hourly-commit-count-for-each-day
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/metrics/statistics#get-the-hourly-commit-count-for-each-day
 func (m *ItemItemStatsPunch_cardRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])([]int32, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

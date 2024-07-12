@@ -35,7 +35,7 @@ func NewItemItemGitTreesRequestBuilder(rawUrl string, requestAdapter i2ae4187f7d
     urlParams["request-raw-url"] = rawUrl
     return NewItemItemGitTreesRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Post the tree creation API accepts nested entries. If you specify both a tree and a nested path modifying that tree, this endpoint will overwrite the contents of the tree with the new path contents, and create a new tree structure.If you use this endpoint to add, delete, or modify the file contents in a tree, you will need to commit the tree and then update a branch to point to the commit. For more information see "[Create a commit](https://docs.github.com/enterprise-server@3.10/rest/git/commits#create-a-commit)" and "[Update a reference](https://docs.github.com/enterprise-server@3.10/rest/git/refs#update-a-reference)."Returns an error if you try to delete a file that does not exist.
+// Post the tree creation API accepts nested entries. If you specify both a tree and a nested path modifying that tree, this endpoint will overwrite the contents of the tree with the new path contents, and create a new tree structure.If you use this endpoint to add, delete, or modify the file contents in a tree, you will need to commit the tree and then update a branch to point to the commit. For more information see "[Create a commit](https://docs.github.com/enterprise-server@3.13/rest/git/commits#create-a-commit)" and "[Update a reference](https://docs.github.com/enterprise-server@3.13/rest/git/refs#update-a-reference)."Returns an error if you try to delete a file that does not exist.
 // returns a GitTreeable when successful
 // returns a BasicError error when the service returns a 403 status code
 // returns a BasicError error when the service returns a 404 status code
@@ -43,7 +43,7 @@ func NewItemItemGitTreesRequestBuilder(rawUrl string, requestAdapter i2ae4187f7d
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/git/trees#create-a-tree
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/git/trees#create-a-tree
 func (m *ItemItemGitTreesRequestBuilder) Post(ctx context.Context, body ItemItemGitTreesPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GitTreeable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -64,7 +64,7 @@ func (m *ItemItemGitTreesRequestBuilder) Post(ctx context.Context, body ItemItem
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GitTreeable), nil
 }
-// ToPostRequestInformation the tree creation API accepts nested entries. If you specify both a tree and a nested path modifying that tree, this endpoint will overwrite the contents of the tree with the new path contents, and create a new tree structure.If you use this endpoint to add, delete, or modify the file contents in a tree, you will need to commit the tree and then update a branch to point to the commit. For more information see "[Create a commit](https://docs.github.com/enterprise-server@3.10/rest/git/commits#create-a-commit)" and "[Update a reference](https://docs.github.com/enterprise-server@3.10/rest/git/refs#update-a-reference)."Returns an error if you try to delete a file that does not exist.
+// ToPostRequestInformation the tree creation API accepts nested entries. If you specify both a tree and a nested path modifying that tree, this endpoint will overwrite the contents of the tree with the new path contents, and create a new tree structure.If you use this endpoint to add, delete, or modify the file contents in a tree, you will need to commit the tree and then update a branch to point to the commit. For more information see "[Create a commit](https://docs.github.com/enterprise-server@3.13/rest/git/commits#create-a-commit)" and "[Update a reference](https://docs.github.com/enterprise-server@3.13/rest/git/refs#update-a-reference)."Returns an error if you try to delete a file that does not exist.
 // returns a *RequestInformation when successful
 func (m *ItemItemGitTreesRequestBuilder) ToPostRequestInformation(ctx context.Context, body ItemItemGitTreesPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

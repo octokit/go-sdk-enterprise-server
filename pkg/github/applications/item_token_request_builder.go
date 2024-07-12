@@ -27,7 +27,7 @@ func NewItemTokenRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee2633
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/apps/oauth-applications#delete-an-app-token
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/apps/oauth-applications#delete-an-app-token
 func (m *ItemTokenRequestBuilder) Delete(ctx context.Context, body ItemTokenDeleteRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -47,7 +47,7 @@ func (m *ItemTokenRequestBuilder) Delete(ctx context.Context, body ItemTokenDele
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/apps/oauth-applications#reset-a-token
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/apps/oauth-applications#reset-a-token
 func (m *ItemTokenRequestBuilder) Patch(ctx context.Context, body ItemTokenPatchRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Authorizationable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -71,7 +71,7 @@ func (m *ItemTokenRequestBuilder) Patch(ctx context.Context, body ItemTokenPatch
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/apps/oauth-applications#check-a-token
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/apps/oauth-applications#check-a-token
 func (m *ItemTokenRequestBuilder) Post(ctx context.Context, body ItemTokenPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Authorizationable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

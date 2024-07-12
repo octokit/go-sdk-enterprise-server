@@ -28,7 +28,7 @@ func NewInstallationsItemRepositoriesWithRepository_ItemRequestBuilder(rawUrl st
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/apps/installations#remove-a-repository-from-an-app-installation
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/apps/installations#remove-a-repository-from-an-app-installation
 func (m *InstallationsItemRepositoriesWithRepository_ItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -49,7 +49,7 @@ func (m *InstallationsItemRepositoriesWithRepository_ItemRequestBuilder) Delete(
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/apps/installations#add-a-repository-to-an-app-installation
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/apps/installations#add-a-repository-to-an-app-installation
 func (m *InstallationsItemRepositoriesWithRepository_ItemRequestBuilder) Put(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, requestConfiguration);
     if err != nil {

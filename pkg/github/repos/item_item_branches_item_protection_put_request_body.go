@@ -7,9 +7,9 @@ import (
 type ItemItemBranchesItemProtectionPutRequestBody struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // Allows deletion of the protected branch by anyone with write access to the repository. Set to `false` to prevent deletion of the protected branch. Default: `false`. For more information, see "[Enabling force pushes to a protected branch](https://docs.github.com/enterprise-server@3.10/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)" in the GitHub Help documentation.
+    // Allows deletion of the protected branch by anyone with write access to the repository. Set to `false` to prevent deletion of the protected branch. Default: `false`. For more information, see "[Enabling force pushes to a protected branch](https://docs.github.com/enterprise-server@3.13/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)" in the GitHub Help documentation.
     allow_deletions *bool
-    // Permits force pushes to the protected branch by anyone with write access to the repository. Set to `true` to allow force pushes. Set to `false` or `null` to block force pushes. Default: `false`. For more information, see "[Enabling force pushes to a protected branch](https://docs.github.com/enterprise-server@3.10/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)" in the GitHub Help documentation."
+    // Permits force pushes to the protected branch by anyone with write access to the repository. Set to `true` to allow force pushes. Set to `false` or `null` to block force pushes. Default: `false`. For more information, see "[Enabling force pushes to a protected branch](https://docs.github.com/enterprise-server@3.13/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)" in the GitHub Help documentation."
     allow_force_pushes *bool
     // Whether users can pull changes from upstream when the branch is locked. Set to `true` to allow fork syncing. Set to `false` to prevent fork syncing. Default: `false`.
     allow_fork_syncing *bool
@@ -21,7 +21,7 @@ type ItemItemBranchesItemProtectionPutRequestBody struct {
     lock_branch *bool
     // Requires all conversations on code to be resolved before a pull request can be merged into a branch that matches this rule. Set to `false` to disable. Default: `false`.
     required_conversation_resolution *bool
-    // Enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch. Set to `true` to enforce a linear commit history. Set to `false` to disable a linear commit Git history. Your repository must allow squash merging or rebase merging before you can enable a linear commit history. Default: `false`. For more information, see "[Requiring a linear commit history](https://docs.github.com/enterprise-server@3.10/github/administering-a-repository/requiring-a-linear-commit-history)" in the GitHub Help documentation.
+    // Enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch. Set to `true` to enforce a linear commit history. Set to `false` to disable a linear commit Git history. Your repository must allow squash merging or rebase merging before you can enable a linear commit history. Default: `false`. For more information, see "[Requiring a linear commit history](https://docs.github.com/enterprise-server@3.13/github/administering-a-repository/requiring-a-linear-commit-history)" in the GitHub Help documentation.
     required_linear_history *bool
     // Require at least one approving review on a pull request, before merging. Set to `null` to disable.
     required_pull_request_reviews ItemItemBranchesItemProtectionPutRequestBody_required_pull_request_reviewsable
@@ -47,12 +47,12 @@ func CreateItemItemBranchesItemProtectionPutRequestBodyFromDiscriminatorValue(pa
 func (m *ItemItemBranchesItemProtectionPutRequestBody) GetAdditionalData()(map[string]any) {
     return m.additionalData
 }
-// GetAllowDeletions gets the allow_deletions property value. Allows deletion of the protected branch by anyone with write access to the repository. Set to `false` to prevent deletion of the protected branch. Default: `false`. For more information, see "[Enabling force pushes to a protected branch](https://docs.github.com/enterprise-server@3.10/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)" in the GitHub Help documentation.
+// GetAllowDeletions gets the allow_deletions property value. Allows deletion of the protected branch by anyone with write access to the repository. Set to `false` to prevent deletion of the protected branch. Default: `false`. For more information, see "[Enabling force pushes to a protected branch](https://docs.github.com/enterprise-server@3.13/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)" in the GitHub Help documentation.
 // returns a *bool when successful
 func (m *ItemItemBranchesItemProtectionPutRequestBody) GetAllowDeletions()(*bool) {
     return m.allow_deletions
 }
-// GetAllowForcePushes gets the allow_force_pushes property value. Permits force pushes to the protected branch by anyone with write access to the repository. Set to `true` to allow force pushes. Set to `false` or `null` to block force pushes. Default: `false`. For more information, see "[Enabling force pushes to a protected branch](https://docs.github.com/enterprise-server@3.10/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)" in the GitHub Help documentation."
+// GetAllowForcePushes gets the allow_force_pushes property value. Permits force pushes to the protected branch by anyone with write access to the repository. Set to `true` to allow force pushes. Set to `false` or `null` to block force pushes. Default: `false`. For more information, see "[Enabling force pushes to a protected branch](https://docs.github.com/enterprise-server@3.13/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)" in the GitHub Help documentation."
 // returns a *bool when successful
 func (m *ItemItemBranchesItemProtectionPutRequestBody) GetAllowForcePushes()(*bool) {
     return m.allow_force_pushes
@@ -198,7 +198,7 @@ func (m *ItemItemBranchesItemProtectionPutRequestBody) GetLockBranch()(*bool) {
 func (m *ItemItemBranchesItemProtectionPutRequestBody) GetRequiredConversationResolution()(*bool) {
     return m.required_conversation_resolution
 }
-// GetRequiredLinearHistory gets the required_linear_history property value. Enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch. Set to `true` to enforce a linear commit history. Set to `false` to disable a linear commit Git history. Your repository must allow squash merging or rebase merging before you can enable a linear commit history. Default: `false`. For more information, see "[Requiring a linear commit history](https://docs.github.com/enterprise-server@3.10/github/administering-a-repository/requiring-a-linear-commit-history)" in the GitHub Help documentation.
+// GetRequiredLinearHistory gets the required_linear_history property value. Enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch. Set to `true` to enforce a linear commit history. Set to `false` to disable a linear commit Git history. Your repository must allow squash merging or rebase merging before you can enable a linear commit history. Default: `false`. For more information, see "[Requiring a linear commit history](https://docs.github.com/enterprise-server@3.13/github/administering-a-repository/requiring-a-linear-commit-history)" in the GitHub Help documentation.
 // returns a *bool when successful
 func (m *ItemItemBranchesItemProtectionPutRequestBody) GetRequiredLinearHistory()(*bool) {
     return m.required_linear_history
@@ -298,11 +298,11 @@ func (m *ItemItemBranchesItemProtectionPutRequestBody) Serialize(writer i878a80d
 func (m *ItemItemBranchesItemProtectionPutRequestBody) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetAllowDeletions sets the allow_deletions property value. Allows deletion of the protected branch by anyone with write access to the repository. Set to `false` to prevent deletion of the protected branch. Default: `false`. For more information, see "[Enabling force pushes to a protected branch](https://docs.github.com/enterprise-server@3.10/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)" in the GitHub Help documentation.
+// SetAllowDeletions sets the allow_deletions property value. Allows deletion of the protected branch by anyone with write access to the repository. Set to `false` to prevent deletion of the protected branch. Default: `false`. For more information, see "[Enabling force pushes to a protected branch](https://docs.github.com/enterprise-server@3.13/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)" in the GitHub Help documentation.
 func (m *ItemItemBranchesItemProtectionPutRequestBody) SetAllowDeletions(value *bool)() {
     m.allow_deletions = value
 }
-// SetAllowForcePushes sets the allow_force_pushes property value. Permits force pushes to the protected branch by anyone with write access to the repository. Set to `true` to allow force pushes. Set to `false` or `null` to block force pushes. Default: `false`. For more information, see "[Enabling force pushes to a protected branch](https://docs.github.com/enterprise-server@3.10/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)" in the GitHub Help documentation."
+// SetAllowForcePushes sets the allow_force_pushes property value. Permits force pushes to the protected branch by anyone with write access to the repository. Set to `true` to allow force pushes. Set to `false` or `null` to block force pushes. Default: `false`. For more information, see "[Enabling force pushes to a protected branch](https://docs.github.com/enterprise-server@3.13/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)" in the GitHub Help documentation."
 func (m *ItemItemBranchesItemProtectionPutRequestBody) SetAllowForcePushes(value *bool)() {
     m.allow_force_pushes = value
 }
@@ -326,7 +326,7 @@ func (m *ItemItemBranchesItemProtectionPutRequestBody) SetLockBranch(value *bool
 func (m *ItemItemBranchesItemProtectionPutRequestBody) SetRequiredConversationResolution(value *bool)() {
     m.required_conversation_resolution = value
 }
-// SetRequiredLinearHistory sets the required_linear_history property value. Enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch. Set to `true` to enforce a linear commit history. Set to `false` to disable a linear commit Git history. Your repository must allow squash merging or rebase merging before you can enable a linear commit history. Default: `false`. For more information, see "[Requiring a linear commit history](https://docs.github.com/enterprise-server@3.10/github/administering-a-repository/requiring-a-linear-commit-history)" in the GitHub Help documentation.
+// SetRequiredLinearHistory sets the required_linear_history property value. Enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch. Set to `true` to enforce a linear commit history. Set to `false` to disable a linear commit Git history. Your repository must allow squash merging or rebase merging before you can enable a linear commit history. Default: `false`. For more information, see "[Requiring a linear commit history](https://docs.github.com/enterprise-server@3.13/github/administering-a-repository/requiring-a-linear-commit-history)" in the GitHub Help documentation.
 func (m *ItemItemBranchesItemProtectionPutRequestBody) SetRequiredLinearHistory(value *bool)() {
     m.required_linear_history = value
 }

@@ -13,9 +13,9 @@ type ItemItemForksRequestBuilder struct {
 }
 // ItemItemForksRequestBuilderGetQueryParameters list forks
 type ItemItemForksRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     // The sort order. `stargazers` will sort by star count.
     Sort *i798d43269e92aadb9e3c0d3875f4c1ae215e34660f3f323293c403131b6cc28e.GetSortQueryParameterType `uriparametername:"sort"`
@@ -38,7 +38,7 @@ func NewItemItemForksRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee
 // returns a BasicError error when the service returns a 400 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/repos/forks#list-forks
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/repos/forks#list-forks
 func (m *ItemItemForksRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemForksRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.MinimalRepositoryable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -67,7 +67,7 @@ func (m *ItemItemForksRequestBuilder) Get(ctx context.Context, requestConfigurat
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/repos/forks#create-a-fork
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/repos/forks#create-a-fork
 func (m *ItemItemForksRequestBuilder) Post(ctx context.Context, body ItemItemForksPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.FullRepositoryable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

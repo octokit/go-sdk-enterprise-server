@@ -7,7 +7,7 @@ import (
 type ApiSettingsPutRequestBody struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // A JSON string with the new settings. Note that you only need to pass the specific settings you want to modify. For a list of the available settings, see the [Get settings endpoint](https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/management-console#get-settings).
+    // A JSON string with the new settings. Note that you only need to pass the specific settings you want to modify. For a list of the available settings, see the [Get settings endpoint](https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/management-console#get-settings).
     settings *string
 }
 // NewApiSettingsPutRequestBody instantiates a new ApiSettingsPutRequestBody and sets the default values.
@@ -43,7 +43,7 @@ func (m *ApiSettingsPutRequestBody) GetFieldDeserializers()(map[string]func(i878
     }
     return res
 }
-// GetSettings gets the settings property value. A JSON string with the new settings. Note that you only need to pass the specific settings you want to modify. For a list of the available settings, see the [Get settings endpoint](https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/management-console#get-settings).
+// GetSettings gets the settings property value. A JSON string with the new settings. Note that you only need to pass the specific settings you want to modify. For a list of the available settings, see the [Get settings endpoint](https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/management-console#get-settings).
 // returns a *string when successful
 func (m *ApiSettingsPutRequestBody) GetSettings()(*string) {
     return m.settings
@@ -68,7 +68,7 @@ func (m *ApiSettingsPutRequestBody) Serialize(writer i878a80d2330e89d26896388a3f
 func (m *ApiSettingsPutRequestBody) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetSettings sets the settings property value. A JSON string with the new settings. Note that you only need to pass the specific settings you want to modify. For a list of the available settings, see the [Get settings endpoint](https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/management-console#get-settings).
+// SetSettings sets the settings property value. A JSON string with the new settings. Note that you only need to pass the specific settings you want to modify. For a list of the available settings, see the [Get settings endpoint](https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/management-console#get-settings).
 func (m *ApiSettingsPutRequestBody) SetSettings(value *string)() {
     m.settings = value
 }

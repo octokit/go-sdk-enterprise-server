@@ -12,10 +12,11 @@ const (
     JAVASCRIPTTYPESCRIPT_CODESCANNINGDEFAULTSETUPUPDATE_LANGUAGES
     PYTHON_CODESCANNINGDEFAULTSETUPUPDATE_LANGUAGES
     RUBY_CODESCANNINGDEFAULTSETUPUPDATE_LANGUAGES
+    SWIFT_CODESCANNINGDEFAULTSETUPUPDATE_LANGUAGES
 )
 
 func (i CodeScanningDefaultSetupUpdate_languages) String() string {
-    return []string{"c-cpp", "csharp", "go", "java-kotlin", "javascript-typescript", "python", "ruby"}[i]
+    return []string{"c-cpp", "csharp", "go", "java-kotlin", "javascript-typescript", "python", "ruby", "swift"}[i]
 }
 func ParseCodeScanningDefaultSetupUpdate_languages(v string) (any, error) {
     result := CCPP_CODESCANNINGDEFAULTSETUPUPDATE_LANGUAGES
@@ -34,6 +35,8 @@ func ParseCodeScanningDefaultSetupUpdate_languages(v string) (any, error) {
             result = PYTHON_CODESCANNINGDEFAULTSETUPUPDATE_LANGUAGES
         case "ruby":
             result = RUBY_CODESCANNINGDEFAULTSETUPUPDATE_LANGUAGES
+        case "swift":
+            result = SWIFT_CODESCANNINGDEFAULTSETUPUPDATE_LANGUAGES
         default:
             return 0, errors.New("Unknown CodeScanningDefaultSetupUpdate_languages value: " + v)
     }

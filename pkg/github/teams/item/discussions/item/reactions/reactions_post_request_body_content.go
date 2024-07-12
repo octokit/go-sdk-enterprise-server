@@ -2,7 +2,7 @@ package reactions
 import (
     "errors"
 )
-// The [reaction type](https://docs.github.com/enterprise-server@3.10/rest/reactions/reactions#about-reactions) to add to the team discussion.
+// The [reaction type](https://docs.github.com/enterprise-server@3.13/rest/reactions/reactions#about-reactions) to add to the team discussion.
 type ReactionsPostRequestBody_content int
 
 const (

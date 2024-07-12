@@ -11,13 +11,13 @@ import (
 type ItemStarredRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ItemStarredRequestBuilderGetQueryParameters lists repositories a user has starred.This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."- **`application/vnd.github.star+json`**: Includes a timestamp of when the star was created.
+// ItemStarredRequestBuilderGetQueryParameters lists repositories a user has starred.This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."- **`application/vnd.github.star+json`**: Includes a timestamp of when the star was created.
 type ItemStarredRequestBuilderGetQueryParameters struct {
     // The direction to sort the results by.
     Direction *id8c8059c3f6c019ab1f02512161b44a25b95a3ab167dd66eee2e52202cb7c4a1.GetDirectionQueryParameterType `uriparametername:"direction"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     // The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to.
     Sort *id8c8059c3f6c019ab1f02512161b44a25b95a3ab167dd66eee2e52202cb7c4a1.GetSortQueryParameterType `uriparametername:"sort"`
@@ -141,11 +141,11 @@ func NewItemStarredRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee26
     urlParams["request-raw-url"] = rawUrl
     return NewItemStarredRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Get lists repositories a user has starred.This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."- **`application/vnd.github.star+json`**: Includes a timestamp of when the star was created.
+// Get lists repositories a user has starred.This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."- **`application/vnd.github.star+json`**: Includes a timestamp of when the star was created.
 // returns a StarredGetResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/activity/starring#list-repositories-starred-by-a-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/activity/starring#list-repositories-starred-by-a-user
 func (m *ItemStarredRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemStarredRequestBuilderGetQueryParameters])(StarredGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -160,7 +160,7 @@ func (m *ItemStarredRequestBuilder) Get(ctx context.Context, requestConfiguratio
     }
     return res.(StarredGetResponseable), nil
 }
-// ToGetRequestInformation lists repositories a user has starred.This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."- **`application/vnd.github.star+json`**: Includes a timestamp of when the star was created.
+// ToGetRequestInformation lists repositories a user has starred.This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."- **`application/vnd.github.star+json`**: Includes a timestamp of when the star was created.
 // returns a *RequestInformation when successful
 func (m *ItemStarredRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemStarredRequestBuilderGetQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

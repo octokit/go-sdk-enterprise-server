@@ -9,6 +9,8 @@ type AdvancedSecurityActiveCommittersUser struct {
     additionalData map[string]any
     // The last_pushed_date property
     last_pushed_date *string
+    // The last_pushed_email property
+    last_pushed_email *string
     // The user_login property
     user_login *string
 }
@@ -43,6 +45,16 @@ func (m *AdvancedSecurityActiveCommittersUser) GetFieldDeserializers()(map[strin
         }
         return nil
     }
+    res["last_pushed_email"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
+        val, err := n.GetStringValue()
+        if err != nil {
+            return err
+        }
+        if val != nil {
+            m.SetLastPushedEmail(val)
+        }
+        return nil
+    }
     res["user_login"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
         val, err := n.GetStringValue()
         if err != nil {
@@ -60,6 +72,11 @@ func (m *AdvancedSecurityActiveCommittersUser) GetFieldDeserializers()(map[strin
 func (m *AdvancedSecurityActiveCommittersUser) GetLastPushedDate()(*string) {
     return m.last_pushed_date
 }
+// GetLastPushedEmail gets the last_pushed_email property value. The last_pushed_email property
+// returns a *string when successful
+func (m *AdvancedSecurityActiveCommittersUser) GetLastPushedEmail()(*string) {
+    return m.last_pushed_email
+}
 // GetUserLogin gets the user_login property value. The user_login property
 // returns a *string when successful
 func (m *AdvancedSecurityActiveCommittersUser) GetUserLogin()(*string) {
@@ -69,6 +86,12 @@ func (m *AdvancedSecurityActiveCommittersUser) GetUserLogin()(*string) {
 func (m *AdvancedSecurityActiveCommittersUser) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     {
         err := writer.WriteStringValue("last_pushed_date", m.GetLastPushedDate())
+        if err != nil {
+            return err
+        }
+    }
+    {
+        err := writer.WriteStringValue("last_pushed_email", m.GetLastPushedEmail())
         if err != nil {
             return err
         }
@@ -95,6 +118,10 @@ func (m *AdvancedSecurityActiveCommittersUser) SetAdditionalData(value map[strin
 func (m *AdvancedSecurityActiveCommittersUser) SetLastPushedDate(value *string)() {
     m.last_pushed_date = value
 }
+// SetLastPushedEmail sets the last_pushed_email property value. The last_pushed_email property
+func (m *AdvancedSecurityActiveCommittersUser) SetLastPushedEmail(value *string)() {
+    m.last_pushed_email = value
+}
 // SetUserLogin sets the user_login property value. The user_login property
 func (m *AdvancedSecurityActiveCommittersUser) SetUserLogin(value *string)() {
     m.user_login = value
@@ -103,7 +130,9 @@ type AdvancedSecurityActiveCommittersUserable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.AdditionalDataHolder
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetLastPushedDate()(*string)
+    GetLastPushedEmail()(*string)
     GetUserLogin()(*string)
     SetLastPushedDate(value *string)()
+    SetLastPushedEmail(value *string)()
     SetUserLogin(value *string)()
 }

@@ -19,7 +19,7 @@ type ItemItemDeploymentsPostRequestBody struct {
     production_environment *bool
     // The ref to deploy. This can be a branch, tag, or SHA.
     ref *string
-    // The [status](https://docs.github.com/enterprise-server@3.10/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
+    // The [status](https://docs.github.com/enterprise-server@3.13/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
     required_contexts []string
     // Specifies a task to execute (e.g., `deploy` or `deploy:migrations`).
     task *string
@@ -179,7 +179,7 @@ func (m *ItemItemDeploymentsPostRequestBody) GetProductionEnvironment()(*bool) {
 func (m *ItemItemDeploymentsPostRequestBody) GetRef()(*string) {
     return m.ref
 }
-// GetRequiredContexts gets the required_contexts property value. The [status](https://docs.github.com/enterprise-server@3.10/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
+// GetRequiredContexts gets the required_contexts property value. The [status](https://docs.github.com/enterprise-server@3.13/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
 // returns a []string when successful
 func (m *ItemItemDeploymentsPostRequestBody) GetRequiredContexts()([]string) {
     return m.required_contexts
@@ -286,7 +286,7 @@ func (m *ItemItemDeploymentsPostRequestBody) SetProductionEnvironment(value *boo
 func (m *ItemItemDeploymentsPostRequestBody) SetRef(value *string)() {
     m.ref = value
 }
-// SetRequiredContexts sets the required_contexts property value. The [status](https://docs.github.com/enterprise-server@3.10/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
+// SetRequiredContexts sets the required_contexts property value. The [status](https://docs.github.com/enterprise-server@3.13/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
 func (m *ItemItemDeploymentsPostRequestBody) SetRequiredContexts(value []string)() {
     m.required_contexts = value
 }

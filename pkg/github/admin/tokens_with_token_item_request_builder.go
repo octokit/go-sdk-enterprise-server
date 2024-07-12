@@ -25,7 +25,7 @@ func NewTokensWithToken_ItemRequestBuilder(rawUrl string, requestAdapter i2ae418
 // Delete deletes a personal access token. Returns a `403 - Forbidden` status when a personal access token is in use. For example, if you access this endpoint with the same personal access token that you are trying to delete, you will receive this error.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/users#delete-a-personal-access-token
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/users#delete-a-personal-access-token
 func (m *TokensWithToken_ItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {

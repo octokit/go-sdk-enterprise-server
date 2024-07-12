@@ -23,11 +23,11 @@ func NewItemItemHooksItemPingsRequestBuilder(rawUrl string, requestAdapter i2ae4
     urlParams["request-raw-url"] = rawUrl
     return NewItemItemHooksItemPingsRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Post this will trigger a [ping event](https://docs.github.com/enterprise-server@3.10/webhooks/#ping-event) to be sent to the hook.
+// Post this will trigger a [ping event](https://docs.github.com/enterprise-server@3.13/webhooks/#ping-event) to be sent to the hook.
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/repos/webhooks#ping-a-repository-webhook
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/repos/webhooks#ping-a-repository-webhook
 func (m *ItemItemHooksItemPingsRequestBuilder) Post(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -42,7 +42,7 @@ func (m *ItemItemHooksItemPingsRequestBuilder) Post(ctx context.Context, request
     }
     return nil
 }
-// ToPostRequestInformation this will trigger a [ping event](https://docs.github.com/enterprise-server@3.10/webhooks/#ping-event) to be sent to the hook.
+// ToPostRequestInformation this will trigger a [ping event](https://docs.github.com/enterprise-server@3.13/webhooks/#ping-event) to be sent to the hook.
 // returns a *RequestInformation when successful
 func (m *ItemItemHooksItemPingsRequestBuilder) ToPostRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

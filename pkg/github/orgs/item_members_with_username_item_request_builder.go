@@ -27,7 +27,7 @@ func NewItemMembersWithUsernameItemRequestBuilder(rawUrl string, requestAdapter 
 // returns a BasicError error when the service returns a 403 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/orgs/members#remove-an-organization-member
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/orgs/members#remove-an-organization-member
 func (m *ItemMembersWithUsernameItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -45,7 +45,7 @@ func (m *ItemMembersWithUsernameItemRequestBuilder) Delete(ctx context.Context, 
 // Get check if a user is, publicly or privately, a member of the organization.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/orgs/members#check-organization-membership-for-a-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/orgs/members#check-organization-membership-for-a-user
 func (m *ItemMembersWithUsernameItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

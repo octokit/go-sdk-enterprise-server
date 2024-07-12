@@ -23,11 +23,11 @@ func NewItemItemCheckSuitesPreferencesRequestBuilder(rawUrl string, requestAdapt
     urlParams["request-raw-url"] = rawUrl
     return NewItemItemCheckSuitesPreferencesRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Patch changes the default automatic flow when creating check suites. By default, a check suite is automatically created each time code is pushed to a repository. When you disable the automatic creation of check suites, you can manually [Create a check suite](https://docs.github.com/enterprise-server@3.10/rest/checks/suites#create-a-check-suite).You must have admin permissions in the repository to set preferences for check suites.
+// Patch changes the default automatic flow when creating check suites. By default, a check suite is automatically created each time code is pushed to a repository. When you disable the automatic creation of check suites, you can manually [Create a check suite](https://docs.github.com/enterprise-server@3.13/rest/checks/suites#create-a-check-suite).You must have admin permissions in the repository to set preferences for check suites.
 // returns a CheckSuitePreferenceable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/checks/suites#update-repository-preferences-for-check-suites
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/checks/suites#update-repository-preferences-for-check-suites
 func (m *ItemItemCheckSuitesPreferencesRequestBuilder) Patch(ctx context.Context, body ItemItemCheckSuitesPreferencesPatchRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CheckSuitePreferenceable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -42,7 +42,7 @@ func (m *ItemItemCheckSuitesPreferencesRequestBuilder) Patch(ctx context.Context
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CheckSuitePreferenceable), nil
 }
-// ToPatchRequestInformation changes the default automatic flow when creating check suites. By default, a check suite is automatically created each time code is pushed to a repository. When you disable the automatic creation of check suites, you can manually [Create a check suite](https://docs.github.com/enterprise-server@3.10/rest/checks/suites#create-a-check-suite).You must have admin permissions in the repository to set preferences for check suites.
+// ToPatchRequestInformation changes the default automatic flow when creating check suites. By default, a check suite is automatically created each time code is pushed to a repository. When you disable the automatic creation of check suites, you can manually [Create a check suite](https://docs.github.com/enterprise-server@3.13/rest/checks/suites#create-a-check-suite).You must have admin permissions in the repository to set preferences for check suites.
 // returns a *RequestInformation when successful
 func (m *ItemItemCheckSuitesPreferencesRequestBuilder) ToPatchRequestInformation(ctx context.Context, body ItemItemCheckSuitesPreferencesPatchRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PATCH, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

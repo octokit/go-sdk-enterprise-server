@@ -11,17 +11,17 @@ import (
 type ItemCodeScanningAlertsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ItemCodeScanningAlertsRequestBuilderGetQueryParameters lists code scanning alerts for the default branch for all eligible repositories in an enterprise. Eligible repositories are repositories that are owned by organizations that you own or for which you are a security manager. For more information, see "[Managing security managers in your organization](https://docs.github.com/enterprise-server@3.10/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."The authenticated user must be a member of the enterprise to use this endpoint.OAuth app tokens and personal access tokens (classic) need the `security_events` or `repo` scope to use this endpoint.
+// ItemCodeScanningAlertsRequestBuilderGetQueryParameters lists code scanning alerts for the default branch for all eligible repositories in an enterprise. Eligible repositories are repositories that are owned by organizations that you own or for which you are a security manager. For more information, see "[Managing security managers in your organization](https://docs.github.com/enterprise-server@3.13/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."The authenticated user must be a member of the enterprise to use this endpoint.OAuth app tokens and personal access tokens (classic) need the `security_events` or `repo` scope to use this endpoint.
 type ItemCodeScanningAlertsRequestBuilderGetQueryParameters struct {
-    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.10/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.13/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     After *string `uriparametername:"after"`
-    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.10/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.13/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Before *string `uriparametername:"before"`
     // The direction to sort the results by.
     Direction *iabd26451e4a1bb45e6130c193e3f79df452a56173590088fd4049127fc32a095.GetDirectionQueryParameterType `uriparametername:"direction"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     // The property by which to sort the results.
     Sort *iabd26451e4a1bb45e6130c193e3f79df452a56173590088fd4049127fc32a095.GetSortQueryParameterType `uriparametername:"sort"`
@@ -45,13 +45,13 @@ func NewItemCodeScanningAlertsRequestBuilder(rawUrl string, requestAdapter i2ae4
     urlParams["request-raw-url"] = rawUrl
     return NewItemCodeScanningAlertsRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Get lists code scanning alerts for the default branch for all eligible repositories in an enterprise. Eligible repositories are repositories that are owned by organizations that you own or for which you are a security manager. For more information, see "[Managing security managers in your organization](https://docs.github.com/enterprise-server@3.10/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."The authenticated user must be a member of the enterprise to use this endpoint.OAuth app tokens and personal access tokens (classic) need the `security_events` or `repo` scope to use this endpoint.
+// Get lists code scanning alerts for the default branch for all eligible repositories in an enterprise. Eligible repositories are repositories that are owned by organizations that you own or for which you are a security manager. For more information, see "[Managing security managers in your organization](https://docs.github.com/enterprise-server@3.13/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."The authenticated user must be a member of the enterprise to use this endpoint.OAuth app tokens and personal access tokens (classic) need the `security_events` or `repo` scope to use this endpoint.
 // returns a []CodeScanningOrganizationAlertItemsable when successful
 // returns a BasicError error when the service returns a 404 status code
 // returns a Alerts503Error error when the service returns a 503 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/code-scanning/code-scanning#list-code-scanning-alerts-for-an-enterprise
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/code-scanning/code-scanning#list-code-scanning-alerts-for-an-enterprise
 func (m *ItemCodeScanningAlertsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemCodeScanningAlertsRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CodeScanningOrganizationAlertItemsable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -73,7 +73,7 @@ func (m *ItemCodeScanningAlertsRequestBuilder) Get(ctx context.Context, requestC
     }
     return val, nil
 }
-// ToGetRequestInformation lists code scanning alerts for the default branch for all eligible repositories in an enterprise. Eligible repositories are repositories that are owned by organizations that you own or for which you are a security manager. For more information, see "[Managing security managers in your organization](https://docs.github.com/enterprise-server@3.10/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."The authenticated user must be a member of the enterprise to use this endpoint.OAuth app tokens and personal access tokens (classic) need the `security_events` or `repo` scope to use this endpoint.
+// ToGetRequestInformation lists code scanning alerts for the default branch for all eligible repositories in an enterprise. Eligible repositories are repositories that are owned by organizations that you own or for which you are a security manager. For more information, see "[Managing security managers in your organization](https://docs.github.com/enterprise-server@3.13/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."The authenticated user must be a member of the enterprise to use this endpoint.OAuth app tokens and personal access tokens (classic) need the `security_events` or `repo` scope to use this endpoint.
 // returns a *RequestInformation when successful
 func (m *ItemCodeScanningAlertsRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemCodeScanningAlertsRequestBuilderGetQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

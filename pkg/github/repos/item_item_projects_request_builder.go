@@ -13,9 +13,9 @@ type ItemItemProjectsRequestBuilder struct {
 }
 // ItemItemProjectsRequestBuilderGetQueryParameters lists the projects in a repository. Returns a `404 Not Found` status if projects are disabled in the repository. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
 type ItemItemProjectsRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     // Indicates the state of the projects to return.
     State *iee5b7c7d9113cd9ef49922d6bc12f95d04aa74a59ef7ea6ccd6fa7b396d7923b.GetStateQueryParameterType `uriparametername:"state"`
@@ -42,7 +42,7 @@ func NewItemItemProjectsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7d
 // returns a ValidationErrorSimple error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/projects/projects#list-repository-projects
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/projects/projects#list-repository-projects
 func (m *ItemItemProjectsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemProjectsRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Projectable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -76,7 +76,7 @@ func (m *ItemItemProjectsRequestBuilder) Get(ctx context.Context, requestConfigu
 // returns a ValidationErrorSimple error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/projects/projects#create-a-repository-project
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/projects/projects#create-a-repository-project
 func (m *ItemItemProjectsRequestBuilder) Post(ctx context.Context, body ItemItemProjectsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Projectable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

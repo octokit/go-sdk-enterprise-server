@@ -13,9 +13,9 @@ type MembershipsOrgsRequestBuilder struct {
 }
 // MembershipsOrgsRequestBuilderGetQueryParameters lists all of the authenticated user's organization memberships.
 type MembershipsOrgsRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     // Indicates the state of the memberships to return. If not specified, the API returns both active and pending memberships.
     State *i841e0512172b6bc6cebe7fa6307ef8fd6049762720795a9f1c68e59ce67a9757.GetStateQueryParameterType `uriparametername:"state"`
@@ -52,7 +52,7 @@ func NewMembershipsOrgsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7da
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/orgs/members#list-organization-memberships-for-the-authenticated-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/orgs/members#list-organization-memberships-for-the-authenticated-user
 func (m *MembershipsOrgsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[MembershipsOrgsRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.OrgMembershipable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

@@ -16,9 +16,9 @@ type ItemItemCheckSuitesItemCheckRunsRequestBuilderGetQueryParameters struct {
     Check_name *string `uriparametername:"check_name"`
     // Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs.
     Filter *ia59821f935278ce2134e37176fcfc47c47f81819f8a6e9b764577234616aa46a.GetFilterQueryParameterType `uriparametername:"filter"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     // Returns check runs with the specified `status`.
     Status *ia59821f935278ce2134e37176fcfc47c47f81819f8a6e9b764577234616aa46a.GetStatusQueryParameterType `uriparametername:"status"`
@@ -40,7 +40,7 @@ func NewItemItemCheckSuitesItemCheckRunsRequestBuilder(rawUrl string, requestAda
 // returns a ItemItemCheckSuitesItemCheckRunsGetResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/checks/runs#list-check-runs-in-a-check-suite
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/checks/runs#list-check-runs-in-a-check-suite
 func (m *ItemItemCheckSuitesItemCheckRunsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemCheckSuitesItemCheckRunsRequestBuilderGetQueryParameters])(ItemItemCheckSuitesItemCheckRunsGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

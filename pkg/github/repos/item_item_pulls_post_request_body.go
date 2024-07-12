@@ -11,7 +11,7 @@ type ItemItemPullsPostRequestBody struct {
     base *string
     // The contents of the pull request.
     body *string
-    // Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/enterprise-server@3.10/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more.
+    // Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/enterprise-server@3.13/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more.
     draft *bool
     // The name of the branch where your changes are implemented. For cross-repository pull requests in the same network, namespace `head` with a user like this: `username:branch`.
     head *string
@@ -19,7 +19,7 @@ type ItemItemPullsPostRequestBody struct {
     head_repo *string
     // An issue in the repository to convert to a pull request. The issue title, body, and comments will become the title, body, and comments on the new pull request. Required unless `title` is specified.
     issue *int64
-    // Indicates whether [maintainers can modify](https://docs.github.com/enterprise-server@3.10/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
+    // Indicates whether [maintainers can modify](https://docs.github.com/enterprise-server@3.13/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
     maintainer_can_modify *bool
     // The title of the new pull request. Required unless `issue` is specified.
     title *string
@@ -51,7 +51,7 @@ func (m *ItemItemPullsPostRequestBody) GetBase()(*string) {
 func (m *ItemItemPullsPostRequestBody) GetBody()(*string) {
     return m.body
 }
-// GetDraft gets the draft property value. Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/enterprise-server@3.10/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more.
+// GetDraft gets the draft property value. Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/enterprise-server@3.13/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more.
 // returns a *bool when successful
 func (m *ItemItemPullsPostRequestBody) GetDraft()(*bool) {
     return m.draft
@@ -157,7 +157,7 @@ func (m *ItemItemPullsPostRequestBody) GetHeadRepo()(*string) {
 func (m *ItemItemPullsPostRequestBody) GetIssue()(*int64) {
     return m.issue
 }
-// GetMaintainerCanModify gets the maintainer_can_modify property value. Indicates whether [maintainers can modify](https://docs.github.com/enterprise-server@3.10/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
+// GetMaintainerCanModify gets the maintainer_can_modify property value. Indicates whether [maintainers can modify](https://docs.github.com/enterprise-server@3.13/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
 // returns a *bool when successful
 func (m *ItemItemPullsPostRequestBody) GetMaintainerCanModify()(*bool) {
     return m.maintainer_can_modify
@@ -237,7 +237,7 @@ func (m *ItemItemPullsPostRequestBody) SetBase(value *string)() {
 func (m *ItemItemPullsPostRequestBody) SetBody(value *string)() {
     m.body = value
 }
-// SetDraft sets the draft property value. Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/enterprise-server@3.10/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more.
+// SetDraft sets the draft property value. Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/enterprise-server@3.13/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more.
 func (m *ItemItemPullsPostRequestBody) SetDraft(value *bool)() {
     m.draft = value
 }
@@ -253,7 +253,7 @@ func (m *ItemItemPullsPostRequestBody) SetHeadRepo(value *string)() {
 func (m *ItemItemPullsPostRequestBody) SetIssue(value *int64)() {
     m.issue = value
 }
-// SetMaintainerCanModify sets the maintainer_can_modify property value. Indicates whether [maintainers can modify](https://docs.github.com/enterprise-server@3.10/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
+// SetMaintainerCanModify sets the maintainer_can_modify property value. Indicates whether [maintainers can modify](https://docs.github.com/enterprise-server@3.13/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
 func (m *ItemItemPullsPostRequestBody) SetMaintainerCanModify(value *bool)() {
     m.maintainer_can_modify = value
 }

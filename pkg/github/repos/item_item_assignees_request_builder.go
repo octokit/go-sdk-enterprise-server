@@ -10,11 +10,11 @@ import (
 type ItemItemAssigneesRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ItemItemAssigneesRequestBuilderGetQueryParameters lists the [available assignees](https://docs.github.com/enterprise-server@3.10/articles/assigning-issues-and-pull-requests-to-other-github-users/) for issues in a repository.
+// ItemItemAssigneesRequestBuilderGetQueryParameters lists the [available assignees](https://docs.github.com/enterprise-server@3.13/articles/assigning-issues-and-pull-requests-to-other-github-users/) for issues in a repository.
 type ItemItemAssigneesRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByAssignee gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.repos.item.item.assignees.item collection
@@ -42,12 +42,12 @@ func NewItemItemAssigneesRequestBuilder(rawUrl string, requestAdapter i2ae4187f7
     urlParams["request-raw-url"] = rawUrl
     return NewItemItemAssigneesRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Get lists the [available assignees](https://docs.github.com/enterprise-server@3.10/articles/assigning-issues-and-pull-requests-to-other-github-users/) for issues in a repository.
+// Get lists the [available assignees](https://docs.github.com/enterprise-server@3.13/articles/assigning-issues-and-pull-requests-to-other-github-users/) for issues in a repository.
 // returns a []SimpleUserable when successful
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/issues/assignees#list-assignees
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/issues/assignees#list-assignees
 func (m *ItemItemAssigneesRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemAssigneesRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.SimpleUserable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -68,7 +68,7 @@ func (m *ItemItemAssigneesRequestBuilder) Get(ctx context.Context, requestConfig
     }
     return val, nil
 }
-// ToGetRequestInformation lists the [available assignees](https://docs.github.com/enterprise-server@3.10/articles/assigning-issues-and-pull-requests-to-other-github-users/) for issues in a repository.
+// ToGetRequestInformation lists the [available assignees](https://docs.github.com/enterprise-server@3.13/articles/assigning-issues-and-pull-requests-to-other-github-users/) for issues in a repository.
 // returns a *RequestInformation when successful
 func (m *ItemItemAssigneesRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemAssigneesRequestBuilderGetQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

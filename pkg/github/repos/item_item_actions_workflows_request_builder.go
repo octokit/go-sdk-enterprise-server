@@ -12,9 +12,9 @@ type ItemItemActionsWorkflowsRequestBuilder struct {
 }
 // ItemItemActionsWorkflowsRequestBuilderGetQueryParameters lists the workflows in a repository.Anyone with read access to the repository can use this endpoint.OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
 type ItemItemActionsWorkflowsRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByWorkflow_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.repos.item.item.actions.workflows.item collection
@@ -44,7 +44,7 @@ func NewItemItemActionsWorkflowsRequestBuilder(rawUrl string, requestAdapter i2a
 // returns a ItemItemActionsWorkflowsGetResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/workflows#list-repository-workflows
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/workflows#list-repository-workflows
 func (m *ItemItemActionsWorkflowsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemActionsWorkflowsRequestBuilderGetQueryParameters])(ItemItemActionsWorkflowsGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

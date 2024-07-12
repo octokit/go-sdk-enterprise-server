@@ -26,7 +26,7 @@ func NewItemActionsRunnersWithRunner_ItemRequestBuilder(rawUrl string, requestAd
 // Delete forces the removal of a self-hosted runner from an enterprise. You can use this endpoint to completely remove the runner when the machine you were using no longer exists.OAuth app tokens and personal access tokens (classic) need the `manage_runners:enterprise` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/self-hosted-runners#delete-a-self-hosted-runner-from-an-enterprise
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/self-hosted-runners#delete-a-self-hosted-runner-from-an-enterprise
 func (m *ItemActionsRunnersWithRunner_ItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -42,7 +42,7 @@ func (m *ItemActionsRunnersWithRunner_ItemRequestBuilder) Delete(ctx context.Con
 // returns a Runnerable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/self-hosted-runners#get-a-self-hosted-runner-for-an-enterprise
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/self-hosted-runners#get-a-self-hosted-runner-for-an-enterprise
 func (m *ItemActionsRunnersWithRunner_ItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Runnerable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

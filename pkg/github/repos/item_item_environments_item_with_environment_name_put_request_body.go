@@ -8,6 +8,8 @@ import (
 type ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody struct {
     // The type of deployment branch policy for this environment. To allow all branches to deploy, set to `null`.
     deployment_branch_policy ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.DeploymentBranchPolicySettingsable
+    // Whether or not a user who created the job is prevented from approving their own job.
+    prevent_self_review *bool
     // The people or teams that may review jobs that reference the environment. You can list up to six users or teams as reviewers. The reviewers must have at least read access to the repository. Only one of the required reviewers needs to approve the job for it to proceed.
     reviewers []ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody_reviewersable
     // The amount of time to delay a job after the job is initially triggered. The time (in minutes) must be an integer between 0 and 43,200 (30 days).
@@ -43,6 +45,16 @@ func (m *ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody) GetFieldDes
         }
         return nil
     }
+    res["prevent_self_review"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
+        val, err := n.GetBoolValue()
+        if err != nil {
+            return err
+        }
+        if val != nil {
+            m.SetPreventSelfReview(val)
+        }
+        return nil
+    }
     res["reviewers"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
         val, err := n.GetCollectionOfObjectValues(CreateItemItemEnvironmentsItemWithEnvironment_namePutRequestBody_reviewersFromDiscriminatorValue)
         if err != nil {
@@ -71,6 +83,11 @@ func (m *ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody) GetFieldDes
     }
     return res
 }
+// GetPreventSelfReview gets the prevent_self_review property value. Whether or not a user who created the job is prevented from approving their own job.
+// returns a *bool when successful
+func (m *ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody) GetPreventSelfReview()(*bool) {
+    return m.prevent_self_review
+}
 // GetReviewers gets the reviewers property value. The people or teams that may review jobs that reference the environment. You can list up to six users or teams as reviewers. The reviewers must have at least read access to the repository. Only one of the required reviewers needs to approve the job for it to proceed.
 // returns a []ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody_reviewersable when successful
 func (m *ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody) GetReviewers()([]ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody_reviewersable) {
@@ -85,6 +102,12 @@ func (m *ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody) GetWaitTime
 func (m *ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     {
         err := writer.WriteObjectValue("deployment_branch_policy", m.GetDeploymentBranchPolicy())
+        if err != nil {
+            return err
+        }
+    }
+    {
+        err := writer.WriteBoolValue("prevent_self_review", m.GetPreventSelfReview())
         if err != nil {
             return err
         }
@@ -113,6 +136,10 @@ func (m *ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody) Serialize(w
 func (m *ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody) SetDeploymentBranchPolicy(value ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.DeploymentBranchPolicySettingsable)() {
     m.deployment_branch_policy = value
 }
+// SetPreventSelfReview sets the prevent_self_review property value. Whether or not a user who created the job is prevented from approving their own job.
+func (m *ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody) SetPreventSelfReview(value *bool)() {
+    m.prevent_self_review = value
+}
 // SetReviewers sets the reviewers property value. The people or teams that may review jobs that reference the environment. You can list up to six users or teams as reviewers. The reviewers must have at least read access to the repository. Only one of the required reviewers needs to approve the job for it to proceed.
 func (m *ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody) SetReviewers(value []ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody_reviewersable)() {
     m.reviewers = value
@@ -124,9 +151,11 @@ func (m *ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody) SetWaitTime
 type ItemItemEnvironmentsItemWithEnvironment_namePutRequestBodyable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetDeploymentBranchPolicy()(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.DeploymentBranchPolicySettingsable)
+    GetPreventSelfReview()(*bool)
     GetReviewers()([]ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody_reviewersable)
     GetWaitTimer()(*int32)
     SetDeploymentBranchPolicy(value ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.DeploymentBranchPolicySettingsable)()
+    SetPreventSelfReview(value *bool)()
     SetReviewers(value []ItemItemEnvironmentsItemWithEnvironment_namePutRequestBody_reviewersable)()
     SetWaitTimer(value *int32)()
 }

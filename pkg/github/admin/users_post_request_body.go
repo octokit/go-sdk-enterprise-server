@@ -7,7 +7,7 @@ import (
 type UsersPostRequestBody struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // **Required for built-in authentication.** The user's emailaddress. This parameter can be omitted when using CAS, LDAP, or SAML.For more information, see "[About authentication for your enterprise](https://docs.github.com/enterprise-server@3.10/admin/identity-and-access-management/managing-iam-for-your-enterprise/about-authentication-for-your-enterprise)."
+    // **Required for built-in authentication.** The user's emailaddress. This parameter can be omitted when using CAS, LDAP, or SAML.For more information, see "[About authentication for your enterprise](https://docs.github.com/enterprise-server@3.13/admin/identity-and-access-management/managing-iam-for-your-enterprise/about-authentication-for-your-enterprise)."
     email *string
     // The user's username.
     login *string
@@ -31,7 +31,7 @@ func CreateUsersPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2330e89d
 func (m *UsersPostRequestBody) GetAdditionalData()(map[string]any) {
     return m.additionalData
 }
-// GetEmail gets the email property value. **Required for built-in authentication.** The user's emailaddress. This parameter can be omitted when using CAS, LDAP, or SAML.For more information, see "[About authentication for your enterprise](https://docs.github.com/enterprise-server@3.10/admin/identity-and-access-management/managing-iam-for-your-enterprise/about-authentication-for-your-enterprise)."
+// GetEmail gets the email property value. **Required for built-in authentication.** The user's emailaddress. This parameter can be omitted when using CAS, LDAP, or SAML.For more information, see "[About authentication for your enterprise](https://docs.github.com/enterprise-server@3.13/admin/identity-and-access-management/managing-iam-for-your-enterprise/about-authentication-for-your-enterprise)."
 // returns a *string when successful
 func (m *UsersPostRequestBody) GetEmail()(*string) {
     return m.email
@@ -114,7 +114,7 @@ func (m *UsersPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487ee
 func (m *UsersPostRequestBody) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetEmail sets the email property value. **Required for built-in authentication.** The user's emailaddress. This parameter can be omitted when using CAS, LDAP, or SAML.For more information, see "[About authentication for your enterprise](https://docs.github.com/enterprise-server@3.10/admin/identity-and-access-management/managing-iam-for-your-enterprise/about-authentication-for-your-enterprise)."
+// SetEmail sets the email property value. **Required for built-in authentication.** The user's emailaddress. This parameter can be omitted when using CAS, LDAP, or SAML.For more information, see "[About authentication for your enterprise](https://docs.github.com/enterprise-server@3.13/admin/identity-and-access-management/managing-iam-for-your-enterprise/about-authentication-for-your-enterprise)."
 func (m *UsersPostRequestBody) SetEmail(value *string)() {
     m.email = value
 }

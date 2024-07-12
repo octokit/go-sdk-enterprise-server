@@ -26,7 +26,7 @@ func NewItemItemActionsVariablesWithNameItemRequestBuilder(rawUrl string, reques
 // Delete deletes a repository variable using the variable name.Authenticated users must have collaborator access to a repository to create, update, or read variables.OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/variables#delete-a-repository-variable
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/variables#delete-a-repository-variable
 func (m *ItemItemActionsVariablesWithNameItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -42,7 +42,7 @@ func (m *ItemItemActionsVariablesWithNameItemRequestBuilder) Delete(ctx context.
 // returns a ActionsVariableable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/variables#get-a-repository-variable
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/variables#get-a-repository-variable
 func (m *ItemItemActionsVariablesWithNameItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ActionsVariableable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -60,7 +60,7 @@ func (m *ItemItemActionsVariablesWithNameItemRequestBuilder) Get(ctx context.Con
 // Patch updates a repository variable that you can reference in a GitHub Actions workflow.Authenticated users must have collaborator access to a repository to create, update, or read variables.OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/variables#update-a-repository-variable
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/variables#update-a-repository-variable
 func (m *ItemItemActionsVariablesWithNameItemRequestBuilder) Patch(ctx context.Context, body ItemItemActionsVariablesItemWithNamePatchRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

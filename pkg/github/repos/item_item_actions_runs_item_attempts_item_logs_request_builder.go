@@ -25,7 +25,7 @@ func NewItemItemActionsRunsItemAttemptsItemLogsRequestBuilder(rawUrl string, req
 // Get gets a redirect URL to download an archive of log files for a specific workflow run attempt. This link expires after1 minute. Look for `Location:` in the response header to find the URL for the download.Anyone with read access to the repository can use this endpoint.If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/workflow-runs#download-workflow-run-attempt-logs
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/workflow-runs#download-workflow-run-attempt-logs
 func (m *ItemItemActionsRunsItemAttemptsItemLogsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

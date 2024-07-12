@@ -12,7 +12,7 @@ type HooksItemWithHook_PatchRequestBody_config struct {
     content_type *string
     // Determines whether the SSL certificate of the host for `url` will be verified when delivering payloads. Supported values include `0` (verification is performed) and `1` (verification is not performed). The default is `0`. **We strongly recommend not setting this to `1` as you are subject to man-in-the-middle and other attacks.**
     insecure_ssl *string
-    // If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value in the [`X-Hub-Signature`](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads/#delivery-headers) header.
+    // If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value in the [`X-Hub-Signature`](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads/#delivery-headers) header.
     secret *string
     // The URL to which the payloads will be delivered.
     url *string
@@ -90,7 +90,7 @@ func (m *HooksItemWithHook_PatchRequestBody_config) GetFieldDeserializers()(map[
 func (m *HooksItemWithHook_PatchRequestBody_config) GetInsecureSsl()(*string) {
     return m.insecure_ssl
 }
-// GetSecret gets the secret property value. If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value in the [`X-Hub-Signature`](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads/#delivery-headers) header.
+// GetSecret gets the secret property value. If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value in the [`X-Hub-Signature`](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads/#delivery-headers) header.
 // returns a *string when successful
 func (m *HooksItemWithHook_PatchRequestBody_config) GetSecret()(*string) {
     return m.secret
@@ -146,7 +146,7 @@ func (m *HooksItemWithHook_PatchRequestBody_config) SetContentType(value *string
 func (m *HooksItemWithHook_PatchRequestBody_config) SetInsecureSsl(value *string)() {
     m.insecure_ssl = value
 }
-// SetSecret sets the secret property value. If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value in the [`X-Hub-Signature`](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads/#delivery-headers) header.
+// SetSecret sets the secret property value. If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value in the [`X-Hub-Signature`](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads/#delivery-headers) header.
 func (m *HooksItemWithHook_PatchRequestBody_config) SetSecret(value *string)() {
     m.secret = value
 }

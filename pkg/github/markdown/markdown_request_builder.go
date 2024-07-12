@@ -25,7 +25,7 @@ func NewMarkdownRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee26337
 // Post render a Markdown document
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/markdown/markdown#render-a-markdown-document
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/markdown/markdown#render-a-markdown-document
 func (m *MarkdownRequestBuilder) Post(ctx context.Context, body MarkdownPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

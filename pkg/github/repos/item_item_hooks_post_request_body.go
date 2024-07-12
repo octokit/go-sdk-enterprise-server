@@ -9,7 +9,7 @@ type ItemItemHooksPostRequestBody struct {
     active *bool
     // Key/value pairs to provide settings for this webhook.
     config ItemItemHooksPostRequestBody_configable
-    // Determines what [events](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads) the hook is triggered for.
+    // Determines what [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) the hook is triggered for.
     events []string
     // Use `web` to create a webhook. Default: `web`. This parameter only accepts the value `web`.
     name *string
@@ -35,7 +35,7 @@ func (m *ItemItemHooksPostRequestBody) GetActive()(*bool) {
 func (m *ItemItemHooksPostRequestBody) GetConfig()(ItemItemHooksPostRequestBody_configable) {
     return m.config
 }
-// GetEvents gets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads) the hook is triggered for.
+// GetEvents gets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) the hook is triggered for.
 // returns a []string when successful
 func (m *ItemItemHooksPostRequestBody) GetEvents()([]string) {
     return m.events
@@ -133,7 +133,7 @@ func (m *ItemItemHooksPostRequestBody) SetActive(value *bool)() {
 func (m *ItemItemHooksPostRequestBody) SetConfig(value ItemItemHooksPostRequestBody_configable)() {
     m.config = value
 }
-// SetEvents sets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads) the hook is triggered for.
+// SetEvents sets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) the hook is triggered for.
 func (m *ItemItemHooksPostRequestBody) SetEvents(value []string)() {
     m.events = value
 }

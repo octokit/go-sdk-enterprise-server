@@ -13,9 +13,9 @@ type ItemActionsRunnerGroupsRequestBuilder struct {
 }
 // ItemActionsRunnerGroupsRequestBuilderGetQueryParameters lists all self-hosted runner groups configured in an organization and inherited from an enterprise.OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
 type ItemActionsRunnerGroupsRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     // Only return runner groups that are allowed to be used by this repository.
     Visible_to_repository *string `uriparametername:"visible_to_repository"`
@@ -47,7 +47,7 @@ func NewItemActionsRunnerGroupsRequestBuilder(rawUrl string, requestAdapter i2ae
 // returns a ItemActionsRunnerGroupsGetResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/self-hosted-runner-groups#list-self-hosted-runner-groups-for-an-organization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/self-hosted-runner-groups#list-self-hosted-runner-groups-for-an-organization
 func (m *ItemActionsRunnerGroupsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemActionsRunnerGroupsRequestBuilderGetQueryParameters])(ItemActionsRunnerGroupsGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -66,7 +66,7 @@ func (m *ItemActionsRunnerGroupsRequestBuilder) Get(ctx context.Context, request
 // returns a RunnerGroupsOrgable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/self-hosted-runner-groups#create-a-self-hosted-runner-group-for-an-organization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/self-hosted-runner-groups#create-a-self-hosted-runner-group-for-an-organization
 func (m *ItemActionsRunnerGroupsRequestBuilder) Post(ctx context.Context, body ItemActionsRunnerGroupsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RunnerGroupsOrgable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

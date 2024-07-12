@@ -11,7 +11,7 @@ type ItemHooksItemWithHook_PatchRequestBody struct {
     additionalData map[string]any
     // Key/value pairs to provide settings for this webhook.
     config ItemHooksItemWithHook_PatchRequestBody_configable
-    // Determines what [events](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads) the hook is triggered for.
+    // Determines what [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) the hook is triggered for.
     events []string
     // The name property
     name *string
@@ -43,7 +43,7 @@ func (m *ItemHooksItemWithHook_PatchRequestBody) GetAdditionalData()(map[string]
 func (m *ItemHooksItemWithHook_PatchRequestBody) GetConfig()(ItemHooksItemWithHook_PatchRequestBody_configable) {
     return m.config
 }
-// GetEvents gets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads) the hook is triggered for.
+// GetEvents gets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) the hook is triggered for.
 // returns a []string when successful
 func (m *ItemHooksItemWithHook_PatchRequestBody) GetEvents()([]string) {
     return m.events
@@ -151,7 +151,7 @@ func (m *ItemHooksItemWithHook_PatchRequestBody) SetAdditionalData(value map[str
 func (m *ItemHooksItemWithHook_PatchRequestBody) SetConfig(value ItemHooksItemWithHook_PatchRequestBody_configable)() {
     m.config = value
 }
-// SetEvents sets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads) the hook is triggered for.
+// SetEvents sets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) the hook is triggered for.
 func (m *ItemHooksItemWithHook_PatchRequestBody) SetEvents(value []string)() {
     m.events = value
 }

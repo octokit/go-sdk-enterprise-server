@@ -11,7 +11,7 @@ type ItemHooksPostRequestBody struct {
     additionalData map[string]any
     // Key/value pairs to provide settings for this webhook.
     config ItemHooksPostRequestBody_configable
-    // Determines what [events](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events.
+    // Determines what [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events.
     events []string
     // Must be passed as "web".
     name *string
@@ -43,7 +43,7 @@ func (m *ItemHooksPostRequestBody) GetAdditionalData()(map[string]any) {
 func (m *ItemHooksPostRequestBody) GetConfig()(ItemHooksPostRequestBody_configable) {
     return m.config
 }
-// GetEvents gets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events.
+// GetEvents gets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events.
 // returns a []string when successful
 func (m *ItemHooksPostRequestBody) GetEvents()([]string) {
     return m.events
@@ -151,7 +151,7 @@ func (m *ItemHooksPostRequestBody) SetAdditionalData(value map[string]any)() {
 func (m *ItemHooksPostRequestBody) SetConfig(value ItemHooksPostRequestBody_configable)() {
     m.config = value
 }
-// SetEvents sets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events.
+// SetEvents sets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events.
 func (m *ItemHooksPostRequestBody) SetEvents(value []string)() {
     m.events = value
 }

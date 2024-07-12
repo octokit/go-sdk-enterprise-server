@@ -20,6 +20,7 @@ import (
     i2ae21604fdbb7f04d11551ec8fc6db64b2d62842c0aafe38bc4bb2acbbcc1166 "github.com/octokit/go-sdk-enterprise-server/pkg/github/networks"
     i2c3692ea706dc939eb1fccbfa1f444338ef9d1dea009a854d1a90faa7e1f24f3 "github.com/octokit/go-sdk-enterprise-server/pkg/github/events"
     i390649da93a8a4e2b2f499d2309963d032a52c104175e7dcd881d14d0ca62db2 "github.com/octokit/go-sdk-enterprise-server/pkg/github/gitignore"
+    i39384a1e70757d633c2ee950921fb9439950b78857111cb2dbd68b33f9d8830c "github.com/octokit/go-sdk-enterprise-server/pkg/github/advisories"
     i435ec22ab9e6920515f1fb3655f10415d71afd100ccd097f650723a910916999 "github.com/octokit/go-sdk-enterprise-server/pkg/github/meta"
     i4476ec40ff84502e96456ccdf4d8f7a9e12c4834106e8ad35b4847c7cb8ea9f4 "github.com/octokit/go-sdk-enterprise-server/pkg/github/gists"
     i46a0b04ed3ba56ba62fbc553ce7cfe242cedfc763368fc6fff06a19d3cbe08c2 "github.com/octokit/go-sdk-enterprise-server/pkg/github/orgs"
@@ -55,6 +56,11 @@ type ApiClient struct {
 // returns a *AdminRequestBuilder when successful
 func (m *ApiClient) Admin()(*i19256e8e3069f58ac9e1484a0b995f1de29bf1316e48c80e893c8e451770516d.AdminRequestBuilder) {
     return i19256e8e3069f58ac9e1484a0b995f1de29bf1316e48c80e893c8e451770516d.NewAdminRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+}
+// Advisories the advisories property
+// returns a *AdvisoriesRequestBuilder when successful
+func (m *ApiClient) Advisories()(*i39384a1e70757d633c2ee950921fb9439950b78857111cb2dbd68b33f9d8830c.AdvisoriesRequestBuilder) {
+    return i39384a1e70757d633c2ee950921fb9439950b78857111cb2dbd68b33f9d8830c.NewAdvisoriesRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // App the app property
 // returns a *AppRequestBuilder when successful
@@ -133,7 +139,7 @@ func (m *ApiClient) Feeds()(*ibd0b9c8a18deb92eb077cd9e715af68e5f543021a34f53d8c5
 // returns a Rootable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/meta/meta#github-api-root
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/meta/meta#github-api-root
 func (m *ApiClient) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Rootable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

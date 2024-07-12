@@ -7,15 +7,17 @@ import (
 type ItemCode_security_and_analysisPatchRequestBody struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // Whether GitHub Advanced Security is automatically enabled for new repositories. For more information, see "[About GitHub Advanced Security](https://docs.github.com/enterprise-server@3.10/get-started/learning-about-github/about-github-advanced-security)."
+    // Whether GitHub Advanced Security is automatically enabled for new repositories. For more information, see "[About GitHub Advanced Security](https://docs.github.com/enterprise-server@3.13/get-started/learning-about-github/about-github-advanced-security)."
     advanced_security_enabled_for_new_repositories *bool
-    // Whether Dependabot alerts are automatically enabled for new repositories. For more information, see "[About Dependabot alerts](https://docs.github.com/enterprise-server@3.10/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)."
+    // Whether GitHub Advanced Security is automatically enabled for new user namespace repositories. For more information, see "[About GitHub Advanced Security](https://docs.github.com/enterprise-server@3.13/get-started/learning-about-github/about-github-advanced-security)."
+    advanced_security_enabled_new_user_namespace_repos *bool
+    // Whether Dependabot alerts are automatically enabled for new repositories. For more information, see "[About Dependabot alerts](https://docs.github.com/enterprise-server@3.13/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)."
     dependabot_alerts_enabled_for_new_repositories *bool
-    // Whether secret scanning is automatically enabled for new repositories. For more information, see "[About secret scanning](https://docs.github.com/enterprise-server@3.10/code-security/secret-scanning/about-secret-scanning)."
+    // Whether secret scanning is automatically enabled for new repositories. For more information, see "[About secret scanning](https://docs.github.com/enterprise-server@3.13/code-security/secret-scanning/about-secret-scanning)."
     secret_scanning_enabled_for_new_repositories *bool
-    // The URL that will be displayed to contributors who are blocked from pushing a secret. For more information, see "[Protecting pushes with secret scanning](https://docs.github.com/enterprise-server@3.10/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."To disable this functionality, set this field to `null`.
+    // The URL that will be displayed to contributors who are blocked from pushing a secret. For more information, see "[Protecting pushes with secret scanning](https://docs.github.com/enterprise-server@3.13/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."To disable this functionality, set this field to `null`.
     secret_scanning_push_protection_custom_link *string
-    // Whether secret scanning push protection is automatically enabled for new repositories. For more information, see "[Protecting pushes with secret scanning](https://docs.github.com/enterprise-server@3.10/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."
+    // Whether secret scanning push protection is automatically enabled for new repositories. For more information, see "[Protecting pushes with secret scanning](https://docs.github.com/enterprise-server@3.13/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."
     secret_scanning_push_protection_enabled_for_new_repositories *bool
 }
 // NewItemCode_security_and_analysisPatchRequestBody instantiates a new ItemCode_security_and_analysisPatchRequestBody and sets the default values.
@@ -35,12 +37,17 @@ func CreateItemCode_security_and_analysisPatchRequestBodyFromDiscriminatorValue(
 func (m *ItemCode_security_and_analysisPatchRequestBody) GetAdditionalData()(map[string]any) {
     return m.additionalData
 }
-// GetAdvancedSecurityEnabledForNewRepositories gets the advanced_security_enabled_for_new_repositories property value. Whether GitHub Advanced Security is automatically enabled for new repositories. For more information, see "[About GitHub Advanced Security](https://docs.github.com/enterprise-server@3.10/get-started/learning-about-github/about-github-advanced-security)."
+// GetAdvancedSecurityEnabledForNewRepositories gets the advanced_security_enabled_for_new_repositories property value. Whether GitHub Advanced Security is automatically enabled for new repositories. For more information, see "[About GitHub Advanced Security](https://docs.github.com/enterprise-server@3.13/get-started/learning-about-github/about-github-advanced-security)."
 // returns a *bool when successful
 func (m *ItemCode_security_and_analysisPatchRequestBody) GetAdvancedSecurityEnabledForNewRepositories()(*bool) {
     return m.advanced_security_enabled_for_new_repositories
 }
-// GetDependabotAlertsEnabledForNewRepositories gets the dependabot_alerts_enabled_for_new_repositories property value. Whether Dependabot alerts are automatically enabled for new repositories. For more information, see "[About Dependabot alerts](https://docs.github.com/enterprise-server@3.10/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)."
+// GetAdvancedSecurityEnabledNewUserNamespaceRepos gets the advanced_security_enabled_new_user_namespace_repos property value. Whether GitHub Advanced Security is automatically enabled for new user namespace repositories. For more information, see "[About GitHub Advanced Security](https://docs.github.com/enterprise-server@3.13/get-started/learning-about-github/about-github-advanced-security)."
+// returns a *bool when successful
+func (m *ItemCode_security_and_analysisPatchRequestBody) GetAdvancedSecurityEnabledNewUserNamespaceRepos()(*bool) {
+    return m.advanced_security_enabled_new_user_namespace_repos
+}
+// GetDependabotAlertsEnabledForNewRepositories gets the dependabot_alerts_enabled_for_new_repositories property value. Whether Dependabot alerts are automatically enabled for new repositories. For more information, see "[About Dependabot alerts](https://docs.github.com/enterprise-server@3.13/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)."
 // returns a *bool when successful
 func (m *ItemCode_security_and_analysisPatchRequestBody) GetDependabotAlertsEnabledForNewRepositories()(*bool) {
     return m.dependabot_alerts_enabled_for_new_repositories
@@ -56,6 +63,16 @@ func (m *ItemCode_security_and_analysisPatchRequestBody) GetFieldDeserializers()
         }
         if val != nil {
             m.SetAdvancedSecurityEnabledForNewRepositories(val)
+        }
+        return nil
+    }
+    res["advanced_security_enabled_new_user_namespace_repos"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
+        val, err := n.GetBoolValue()
+        if err != nil {
+            return err
+        }
+        if val != nil {
+            m.SetAdvancedSecurityEnabledNewUserNamespaceRepos(val)
         }
         return nil
     }
@@ -101,17 +118,17 @@ func (m *ItemCode_security_and_analysisPatchRequestBody) GetFieldDeserializers()
     }
     return res
 }
-// GetSecretScanningEnabledForNewRepositories gets the secret_scanning_enabled_for_new_repositories property value. Whether secret scanning is automatically enabled for new repositories. For more information, see "[About secret scanning](https://docs.github.com/enterprise-server@3.10/code-security/secret-scanning/about-secret-scanning)."
+// GetSecretScanningEnabledForNewRepositories gets the secret_scanning_enabled_for_new_repositories property value. Whether secret scanning is automatically enabled for new repositories. For more information, see "[About secret scanning](https://docs.github.com/enterprise-server@3.13/code-security/secret-scanning/about-secret-scanning)."
 // returns a *bool when successful
 func (m *ItemCode_security_and_analysisPatchRequestBody) GetSecretScanningEnabledForNewRepositories()(*bool) {
     return m.secret_scanning_enabled_for_new_repositories
 }
-// GetSecretScanningPushProtectionCustomLink gets the secret_scanning_push_protection_custom_link property value. The URL that will be displayed to contributors who are blocked from pushing a secret. For more information, see "[Protecting pushes with secret scanning](https://docs.github.com/enterprise-server@3.10/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."To disable this functionality, set this field to `null`.
+// GetSecretScanningPushProtectionCustomLink gets the secret_scanning_push_protection_custom_link property value. The URL that will be displayed to contributors who are blocked from pushing a secret. For more information, see "[Protecting pushes with secret scanning](https://docs.github.com/enterprise-server@3.13/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."To disable this functionality, set this field to `null`.
 // returns a *string when successful
 func (m *ItemCode_security_and_analysisPatchRequestBody) GetSecretScanningPushProtectionCustomLink()(*string) {
     return m.secret_scanning_push_protection_custom_link
 }
-// GetSecretScanningPushProtectionEnabledForNewRepositories gets the secret_scanning_push_protection_enabled_for_new_repositories property value. Whether secret scanning push protection is automatically enabled for new repositories. For more information, see "[Protecting pushes with secret scanning](https://docs.github.com/enterprise-server@3.10/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."
+// GetSecretScanningPushProtectionEnabledForNewRepositories gets the secret_scanning_push_protection_enabled_for_new_repositories property value. Whether secret scanning push protection is automatically enabled for new repositories. For more information, see "[Protecting pushes with secret scanning](https://docs.github.com/enterprise-server@3.13/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."
 // returns a *bool when successful
 func (m *ItemCode_security_and_analysisPatchRequestBody) GetSecretScanningPushProtectionEnabledForNewRepositories()(*bool) {
     return m.secret_scanning_push_protection_enabled_for_new_repositories
@@ -120,6 +137,12 @@ func (m *ItemCode_security_and_analysisPatchRequestBody) GetSecretScanningPushPr
 func (m *ItemCode_security_and_analysisPatchRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     {
         err := writer.WriteBoolValue("advanced_security_enabled_for_new_repositories", m.GetAdvancedSecurityEnabledForNewRepositories())
+        if err != nil {
+            return err
+        }
+    }
+    {
+        err := writer.WriteBoolValue("advanced_security_enabled_new_user_namespace_repos", m.GetAdvancedSecurityEnabledNewUserNamespaceRepos())
         if err != nil {
             return err
         }
@@ -160,23 +183,27 @@ func (m *ItemCode_security_and_analysisPatchRequestBody) Serialize(writer i878a8
 func (m *ItemCode_security_and_analysisPatchRequestBody) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetAdvancedSecurityEnabledForNewRepositories sets the advanced_security_enabled_for_new_repositories property value. Whether GitHub Advanced Security is automatically enabled for new repositories. For more information, see "[About GitHub Advanced Security](https://docs.github.com/enterprise-server@3.10/get-started/learning-about-github/about-github-advanced-security)."
+// SetAdvancedSecurityEnabledForNewRepositories sets the advanced_security_enabled_for_new_repositories property value. Whether GitHub Advanced Security is automatically enabled for new repositories. For more information, see "[About GitHub Advanced Security](https://docs.github.com/enterprise-server@3.13/get-started/learning-about-github/about-github-advanced-security)."
 func (m *ItemCode_security_and_analysisPatchRequestBody) SetAdvancedSecurityEnabledForNewRepositories(value *bool)() {
     m.advanced_security_enabled_for_new_repositories = value
 }
-// SetDependabotAlertsEnabledForNewRepositories sets the dependabot_alerts_enabled_for_new_repositories property value. Whether Dependabot alerts are automatically enabled for new repositories. For more information, see "[About Dependabot alerts](https://docs.github.com/enterprise-server@3.10/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)."
+// SetAdvancedSecurityEnabledNewUserNamespaceRepos sets the advanced_security_enabled_new_user_namespace_repos property value. Whether GitHub Advanced Security is automatically enabled for new user namespace repositories. For more information, see "[About GitHub Advanced Security](https://docs.github.com/enterprise-server@3.13/get-started/learning-about-github/about-github-advanced-security)."
+func (m *ItemCode_security_and_analysisPatchRequestBody) SetAdvancedSecurityEnabledNewUserNamespaceRepos(value *bool)() {
+    m.advanced_security_enabled_new_user_namespace_repos = value
+}
+// SetDependabotAlertsEnabledForNewRepositories sets the dependabot_alerts_enabled_for_new_repositories property value. Whether Dependabot alerts are automatically enabled for new repositories. For more information, see "[About Dependabot alerts](https://docs.github.com/enterprise-server@3.13/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)."
 func (m *ItemCode_security_and_analysisPatchRequestBody) SetDependabotAlertsEnabledForNewRepositories(value *bool)() {
     m.dependabot_alerts_enabled_for_new_repositories = value
 }
-// SetSecretScanningEnabledForNewRepositories sets the secret_scanning_enabled_for_new_repositories property value. Whether secret scanning is automatically enabled for new repositories. For more information, see "[About secret scanning](https://docs.github.com/enterprise-server@3.10/code-security/secret-scanning/about-secret-scanning)."
+// SetSecretScanningEnabledForNewRepositories sets the secret_scanning_enabled_for_new_repositories property value. Whether secret scanning is automatically enabled for new repositories. For more information, see "[About secret scanning](https://docs.github.com/enterprise-server@3.13/code-security/secret-scanning/about-secret-scanning)."
 func (m *ItemCode_security_and_analysisPatchRequestBody) SetSecretScanningEnabledForNewRepositories(value *bool)() {
     m.secret_scanning_enabled_for_new_repositories = value
 }
-// SetSecretScanningPushProtectionCustomLink sets the secret_scanning_push_protection_custom_link property value. The URL that will be displayed to contributors who are blocked from pushing a secret. For more information, see "[Protecting pushes with secret scanning](https://docs.github.com/enterprise-server@3.10/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."To disable this functionality, set this field to `null`.
+// SetSecretScanningPushProtectionCustomLink sets the secret_scanning_push_protection_custom_link property value. The URL that will be displayed to contributors who are blocked from pushing a secret. For more information, see "[Protecting pushes with secret scanning](https://docs.github.com/enterprise-server@3.13/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."To disable this functionality, set this field to `null`.
 func (m *ItemCode_security_and_analysisPatchRequestBody) SetSecretScanningPushProtectionCustomLink(value *string)() {
     m.secret_scanning_push_protection_custom_link = value
 }
-// SetSecretScanningPushProtectionEnabledForNewRepositories sets the secret_scanning_push_protection_enabled_for_new_repositories property value. Whether secret scanning push protection is automatically enabled for new repositories. For more information, see "[Protecting pushes with secret scanning](https://docs.github.com/enterprise-server@3.10/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."
+// SetSecretScanningPushProtectionEnabledForNewRepositories sets the secret_scanning_push_protection_enabled_for_new_repositories property value. Whether secret scanning push protection is automatically enabled for new repositories. For more information, see "[Protecting pushes with secret scanning](https://docs.github.com/enterprise-server@3.13/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."
 func (m *ItemCode_security_and_analysisPatchRequestBody) SetSecretScanningPushProtectionEnabledForNewRepositories(value *bool)() {
     m.secret_scanning_push_protection_enabled_for_new_repositories = value
 }
@@ -184,11 +211,13 @@ type ItemCode_security_and_analysisPatchRequestBodyable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.AdditionalDataHolder
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetAdvancedSecurityEnabledForNewRepositories()(*bool)
+    GetAdvancedSecurityEnabledNewUserNamespaceRepos()(*bool)
     GetDependabotAlertsEnabledForNewRepositories()(*bool)
     GetSecretScanningEnabledForNewRepositories()(*bool)
     GetSecretScanningPushProtectionCustomLink()(*string)
     GetSecretScanningPushProtectionEnabledForNewRepositories()(*bool)
     SetAdvancedSecurityEnabledForNewRepositories(value *bool)()
+    SetAdvancedSecurityEnabledNewUserNamespaceRepos(value *bool)()
     SetDependabotAlertsEnabledForNewRepositories(value *bool)()
     SetSecretScanningEnabledForNewRepositories(value *bool)()
     SetSecretScanningPushProtectionCustomLink(value *string)()

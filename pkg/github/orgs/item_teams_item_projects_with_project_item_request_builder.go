@@ -26,7 +26,7 @@ func NewItemTeamsItemProjectsWithProject_ItemRequestBuilder(rawUrl string, reque
 // Delete removes an organization project from a team. An organization owner or a team maintainer can remove any project from the team. To remove a project from a team as an organization member, the authenticated user must have `read` access to both the team and project, or `admin` access to the team or project. This endpoint removes the project from the team, but does not delete the project.**Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/teams/teams#remove-a-project-from-a-team
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/teams/teams#remove-a-project-from-a-team
 func (m *ItemTeamsItemProjectsWithProject_ItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -42,7 +42,7 @@ func (m *ItemTeamsItemProjectsWithProject_ItemRequestBuilder) Delete(ctx context
 // returns a TeamProjectable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/teams/teams#check-team-permissions-for-a-project
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/teams/teams#check-team-permissions-for-a-project
 func (m *ItemTeamsItemProjectsWithProject_ItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.TeamProjectable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -61,7 +61,7 @@ func (m *ItemTeamsItemProjectsWithProject_ItemRequestBuilder) Get(ctx context.Co
 // returns a ItemTeamsItemProjectsItemWithProject_403Error error when the service returns a 403 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/teams/teams#add-or-update-team-project-permissions
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/teams/teams#add-or-update-team-project-permissions
 func (m *ItemTeamsItemProjectsWithProject_ItemRequestBuilder) Put(ctx context.Context, body ItemTeamsItemProjectsItemWithProject_PutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

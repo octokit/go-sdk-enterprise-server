@@ -34,7 +34,7 @@ func NewItemItemPagesRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/pages/pages#delete-a-apiname-pages-site
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/pages/pages#delete-a-apiname-pages-site
 func (m *ItemItemPagesRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -61,7 +61,7 @@ func (m *ItemItemPagesRequestBuilder) Deployments()(*ItemItemPagesDeploymentsReq
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/pages/pages#get-a-apiname-pages-site
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/pages/pages#get-a-apiname-pages-site
 func (m *ItemItemPagesRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Pageable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -85,7 +85,7 @@ func (m *ItemItemPagesRequestBuilder) Get(ctx context.Context, requestConfigurat
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/pages/pages#create-a-apiname-pages-site
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/pages/pages#create-a-apiname-pages-site
 func (m *ItemItemPagesRequestBuilder) Post(ctx context.Context, body ItemItemPagesPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Pageable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -110,7 +110,7 @@ func (m *ItemItemPagesRequestBuilder) Post(ctx context.Context, body ItemItemPag
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/pages/pages#update-information-about-a-apiname-pages-site
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/pages/pages#update-information-about-a-apiname-pages-site
 func (m *ItemItemPagesRequestBuilder) Put(ctx context.Context, body ItemItemPagesPutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

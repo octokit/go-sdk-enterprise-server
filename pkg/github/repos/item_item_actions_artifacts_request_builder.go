@@ -14,9 +14,9 @@ type ItemItemActionsArtifactsRequestBuilder struct {
 type ItemItemActionsArtifactsRequestBuilderGetQueryParameters struct {
     // The name field of an artifact. When specified, only artifacts with this name will be returned.
     Name *string `uriparametername:"name"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByArtifact_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.repos.item.item.actions.artifacts.item collection
@@ -46,7 +46,7 @@ func NewItemItemActionsArtifactsRequestBuilder(rawUrl string, requestAdapter i2a
 // returns a ItemItemActionsArtifactsGetResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/artifacts#list-artifacts-for-a-repository
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/artifacts#list-artifacts-for-a-repository
 func (m *ItemItemActionsArtifactsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemActionsArtifactsRequestBuilderGetQueryParameters])(ItemItemActionsArtifactsGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

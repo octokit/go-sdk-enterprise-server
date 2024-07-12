@@ -41,7 +41,7 @@ func NewItemActionsRunnersItemLabelsRequestBuilder(rawUrl string, requestAdapter
 // returns a ValidationErrorSimple error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/self-hosted-runners#remove-all-custom-labels-from-a-self-hosted-runner-for-an-enterprise
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/self-hosted-runners#remove-all-custom-labels-from-a-self-hosted-runner-for-an-enterprise
 func (m *ItemActionsRunnersItemLabelsRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ItemActionsRunnersItemLabelsDeleteResponseable, error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -65,7 +65,7 @@ func (m *ItemActionsRunnersItemLabelsRequestBuilder) Delete(ctx context.Context,
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/self-hosted-runners#list-labels-for-a-self-hosted-runner-for-an-enterprise
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/self-hosted-runners#list-labels-for-a-self-hosted-runner-for-an-enterprise
 func (m *ItemActionsRunnersItemLabelsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ItemActionsRunnersItemLabelsGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -89,7 +89,7 @@ func (m *ItemActionsRunnersItemLabelsRequestBuilder) Get(ctx context.Context, re
 // returns a ValidationErrorSimple error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/self-hosted-runners#add-custom-labels-to-a-self-hosted-runner-for-an-enterprise
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/self-hosted-runners#add-custom-labels-to-a-self-hosted-runner-for-an-enterprise
 func (m *ItemActionsRunnersItemLabelsRequestBuilder) Post(ctx context.Context, body ItemActionsRunnersItemLabelsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ItemActionsRunnersItemLabelsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -114,7 +114,7 @@ func (m *ItemActionsRunnersItemLabelsRequestBuilder) Post(ctx context.Context, b
 // returns a ValidationErrorSimple error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/self-hosted-runners#set-custom-labels-for-a-self-hosted-runner-for-an-enterprise
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/self-hosted-runners#set-custom-labels-for-a-self-hosted-runner-for-an-enterprise
 func (m *ItemActionsRunnersItemLabelsRequestBuilder) Put(ctx context.Context, body ItemActionsRunnersItemLabelsPutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ItemActionsRunnersItemLabelsPutResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

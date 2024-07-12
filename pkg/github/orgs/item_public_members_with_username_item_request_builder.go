@@ -26,7 +26,7 @@ func NewItemPublic_membersWithUsernameItemRequestBuilder(rawUrl string, requestA
 // Delete removes the public membership for the authenticated user from the specified organization, unless public visibility is enforced by default.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/orgs/members#remove-public-organization-membership-for-the-authenticated-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/orgs/members#remove-public-organization-membership-for-the-authenticated-user
 func (m *ItemPublic_membersWithUsernameItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -41,7 +41,7 @@ func (m *ItemPublic_membersWithUsernameItemRequestBuilder) Delete(ctx context.Co
 // Get check if the provided user is a public member of the organization.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/orgs/members#check-public-organization-membership-for-a-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/orgs/members#check-public-organization-membership-for-a-user
 func (m *ItemPublic_membersWithUsernameItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -53,11 +53,11 @@ func (m *ItemPublic_membersWithUsernameItemRequestBuilder) Get(ctx context.Conte
     }
     return nil
 }
-// Put the user can publicize their own membership. (A user cannot publicize the membership for another user.)Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP method](https://docs.github.com/enterprise-server@3.10/rest/guides/getting-started-with-the-rest-api#http-method)."
+// Put the user can publicize their own membership. (A user cannot publicize the membership for another user.)Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP method](https://docs.github.com/enterprise-server@3.13/rest/guides/getting-started-with-the-rest-api#http-method)."
 // returns a BasicError error when the service returns a 403 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/orgs/members#set-public-organization-membership-for-the-authenticated-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/orgs/members#set-public-organization-membership-for-the-authenticated-user
 func (m *ItemPublic_membersWithUsernameItemRequestBuilder) Put(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -86,7 +86,7 @@ func (m *ItemPublic_membersWithUsernameItemRequestBuilder) ToGetRequestInformati
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.ConfigureRequestInformation(requestInfo, requestConfiguration)
     return requestInfo, nil
 }
-// ToPutRequestInformation the user can publicize their own membership. (A user cannot publicize the membership for another user.)Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP method](https://docs.github.com/enterprise-server@3.10/rest/guides/getting-started-with-the-rest-api#http-method)."
+// ToPutRequestInformation the user can publicize their own membership. (A user cannot publicize the membership for another user.)Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP method](https://docs.github.com/enterprise-server@3.13/rest/guides/getting-started-with-the-rest-api#http-method)."
 // returns a *RequestInformation when successful
 func (m *ItemPublic_membersWithUsernameItemRequestBuilder) ToPutRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

@@ -27,7 +27,7 @@ func NewApiMaintenanceRequestBuilder(rawUrl string, requestAdapter i2ae4187f7dae
 // returns a MaintenanceStatusable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/management-console#get-the-maintenance-status
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/management-console#get-the-maintenance-status
 func (m *ApiMaintenanceRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.MaintenanceStatusable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -46,7 +46,7 @@ func (m *ApiMaintenanceRequestBuilder) Get(ctx context.Context, requestConfigura
 // returns a MaintenanceStatusable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/management-console#enable-or-disable-maintenance-mode
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/management-console#enable-or-disable-maintenance-mode
 func (m *ApiMaintenanceRequestBuilder) Post(ctx context.Context, body ApiMaintenancePostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.MaintenanceStatusable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

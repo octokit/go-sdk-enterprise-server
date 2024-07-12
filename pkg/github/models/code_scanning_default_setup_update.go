@@ -6,8 +6,6 @@ import (
 
 // CodeScanningDefaultSetupUpdate configuration for code scanning default setup.
 type CodeScanningDefaultSetupUpdate struct {
-    // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-    additionalData map[string]any
     // CodeQL languages to be analyzed.
     languages []CodeScanningDefaultSetupUpdate_languages
     // CodeQL query suite to be used.
@@ -19,18 +17,12 @@ type CodeScanningDefaultSetupUpdate struct {
 func NewCodeScanningDefaultSetupUpdate()(*CodeScanningDefaultSetupUpdate) {
     m := &CodeScanningDefaultSetupUpdate{
     }
-    m.SetAdditionalData(make(map[string]any))
     return m
 }
 // CreateCodeScanningDefaultSetupUpdateFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
 // returns a Parsable when successful
 func CreateCodeScanningDefaultSetupUpdateFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
     return NewCodeScanningDefaultSetupUpdate(), nil
-}
-// GetAdditionalData gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-// returns a map[string]any when successful
-func (m *CodeScanningDefaultSetupUpdate) GetAdditionalData()(map[string]any) {
-    return m.additionalData
 }
 // GetFieldDeserializers the deserialization information for the current model
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
@@ -111,17 +103,7 @@ func (m *CodeScanningDefaultSetupUpdate) Serialize(writer i878a80d2330e89d268963
             return err
         }
     }
-    {
-        err := writer.WriteAdditionalData(m.GetAdditionalData())
-        if err != nil {
-            return err
-        }
-    }
     return nil
-}
-// SetAdditionalData sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-func (m *CodeScanningDefaultSetupUpdate) SetAdditionalData(value map[string]any)() {
-    m.additionalData = value
 }
 // SetLanguages sets the languages property value. CodeQL languages to be analyzed.
 func (m *CodeScanningDefaultSetupUpdate) SetLanguages(value []CodeScanningDefaultSetupUpdate_languages)() {
@@ -136,7 +118,6 @@ func (m *CodeScanningDefaultSetupUpdate) SetState(value *CodeScanningDefaultSetu
     m.state = value
 }
 type CodeScanningDefaultSetupUpdateable interface {
-    i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.AdditionalDataHolder
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetLanguages()([]CodeScanningDefaultSetupUpdate_languages)
     GetQuerySuite()(*CodeScanningDefaultSetupUpdate_query_suite)

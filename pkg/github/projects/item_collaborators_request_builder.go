@@ -15,9 +15,9 @@ type ItemCollaboratorsRequestBuilder struct {
 type ItemCollaboratorsRequestBuilderGetQueryParameters struct {
     // Filters the collaborators by their affiliation. `outside` means outside collaborators of a project that are not a member of the project's organization. `direct` means collaborators with permissions to a project, regardless of organization membership status. `all` means all collaborators the authenticated user can see.
     Affiliation *ib1fe385fd8da2d50ecb088338f0cc2de21dd0ebdc643d14bbcff13e8bf00d9ef.GetAffiliationQueryParameterType `uriparametername:"affiliation"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.10/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByUsername gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.projects.item.collaborators.item collection
@@ -53,7 +53,7 @@ func NewItemCollaboratorsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/projects/collaborators#list-project-collaborators
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/projects/collaborators#list-project-collaborators
 func (m *ItemCollaboratorsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemCollaboratorsRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.SimpleUserable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

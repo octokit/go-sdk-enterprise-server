@@ -23,13 +23,13 @@ func NewItemItemTagsProtectionWithTag_protection_ItemRequestBuilder(rawUrl strin
     urlParams["request-raw-url"] = rawUrl
     return NewItemItemTagsProtectionWithTag_protection_ItemRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Delete **Note**: This operation is deprecated and will be removed after August 30th 2024Use the "[Repository Rulesets](https://docs.github.com/enterprise-server@3.10/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.This deletes a tag protection state for a repository.This endpoint is only available to repository administrators.
+// Delete **Note**: This operation is deprecated and will be removed after August 30th 2024Use the "[Repository Rulesets](https://docs.github.com/enterprise-server@3.13/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.This deletes a tag protection state for a repository.This endpoint is only available to repository administrators.
 // Deprecated: 
 // returns a BasicError error when the service returns a 403 status code
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/repos/tags#deprecated---delete-a-tag-protection-state-for-a-repository
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/repos/tags#deprecated---delete-a-tag-protection-state-for-a-repository
 func (m *ItemItemTagsProtectionWithTag_protection_ItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -45,7 +45,7 @@ func (m *ItemItemTagsProtectionWithTag_protection_ItemRequestBuilder) Delete(ctx
     }
     return nil
 }
-// ToDeleteRequestInformation **Note**: This operation is deprecated and will be removed after August 30th 2024Use the "[Repository Rulesets](https://docs.github.com/enterprise-server@3.10/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.This deletes a tag protection state for a repository.This endpoint is only available to repository administrators.
+// ToDeleteRequestInformation **Note**: This operation is deprecated and will be removed after August 30th 2024Use the "[Repository Rulesets](https://docs.github.com/enterprise-server@3.13/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.This deletes a tag protection state for a repository.This endpoint is only available to repository administrators.
 // Deprecated: 
 // returns a *RequestInformation when successful
 func (m *ItemItemTagsProtectionWithTag_protection_ItemRequestBuilder) ToDeleteRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {

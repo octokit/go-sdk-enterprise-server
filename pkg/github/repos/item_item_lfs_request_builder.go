@@ -25,7 +25,7 @@ func NewItemItemLfsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee26
 // Delete disables Git LFS for a repository.OAuth app tokens and personal access tokens (classic) need the `admin:enterprise` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/repos/lfs#disable-git-lfs-for-a-repository
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/repos/lfs#disable-git-lfs-for-a-repository
 func (m *ItemItemLfsRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -41,7 +41,7 @@ func (m *ItemItemLfsRequestBuilder) Delete(ctx context.Context, requestConfigura
 // returns a ItemItemLfsPutResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/repos/lfs#enable-git-lfs-for-a-repository
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/repos/lfs#enable-git-lfs-for-a-repository
 func (m *ItemItemLfsRequestBuilder) Put(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ItemItemLfsPutResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, requestConfiguration);
     if err != nil {

@@ -11,7 +11,7 @@ type HooksItemWithHook_PatchRequestBody struct {
     additionalData map[string]any
     // Key/value pairs to provide settings for this webhook.
     config HooksItemWithHook_PatchRequestBody_configable
-    // The [events](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads) that trigger this webhook. A global webhook can be triggered by `user` and `organization` events. Default: `user` and `organization`.
+    // The [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) that trigger this webhook. A global webhook can be triggered by `user` and `organization` events. Default: `user` and `organization`.
     events []string
 }
 // NewHooksItemWithHook_PatchRequestBody instantiates a new HooksItemWithHook_PatchRequestBody and sets the default values.
@@ -41,7 +41,7 @@ func (m *HooksItemWithHook_PatchRequestBody) GetAdditionalData()(map[string]any)
 func (m *HooksItemWithHook_PatchRequestBody) GetConfig()(HooksItemWithHook_PatchRequestBody_configable) {
     return m.config
 }
-// GetEvents gets the events property value. The [events](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads) that trigger this webhook. A global webhook can be triggered by `user` and `organization` events. Default: `user` and `organization`.
+// GetEvents gets the events property value. The [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) that trigger this webhook. A global webhook can be triggered by `user` and `organization` events. Default: `user` and `organization`.
 // returns a []string when successful
 func (m *HooksItemWithHook_PatchRequestBody) GetEvents()([]string) {
     return m.events
@@ -128,7 +128,7 @@ func (m *HooksItemWithHook_PatchRequestBody) SetAdditionalData(value map[string]
 func (m *HooksItemWithHook_PatchRequestBody) SetConfig(value HooksItemWithHook_PatchRequestBody_configable)() {
     m.config = value
 }
-// SetEvents sets the events property value. The [events](https://docs.github.com/enterprise-server@3.10/webhooks/event-payloads) that trigger this webhook. A global webhook can be triggered by `user` and `organization` events. Default: `user` and `organization`.
+// SetEvents sets the events property value. The [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) that trigger this webhook. A global webhook can be triggered by `user` and `organization` events. Default: `user` and `organization`.
 func (m *HooksItemWithHook_PatchRequestBody) SetEvents(value []string)() {
     m.events = value
 }

@@ -9,6 +9,8 @@ type EnterpriseSecurityAnalysisSettings struct {
     additionalData map[string]any
     // Whether GitHub advanced security is automatically enabled for new repositories and repositories transferred tothis enterprise.
     advanced_security_enabled_for_new_repositories *bool
+    // Whether GitHub Advanced Security is automatically enabled for new user namespace repositories.
+    advanced_security_enabled_for_new_user_namespace_repositories *bool
     // Whether Dependabot alerts are automatically enabled for new repositories and repositories transferred to thisenterprise.
     dependabot_alerts_enabled_for_new_repositories *bool
     // Whether secret scanning is automatically enabled for new repositories and repositories transferred to thisenterprise.
@@ -40,6 +42,11 @@ func (m *EnterpriseSecurityAnalysisSettings) GetAdditionalData()(map[string]any)
 func (m *EnterpriseSecurityAnalysisSettings) GetAdvancedSecurityEnabledForNewRepositories()(*bool) {
     return m.advanced_security_enabled_for_new_repositories
 }
+// GetAdvancedSecurityEnabledForNewUserNamespaceRepositories gets the advanced_security_enabled_for_new_user_namespace_repositories property value. Whether GitHub Advanced Security is automatically enabled for new user namespace repositories.
+// returns a *bool when successful
+func (m *EnterpriseSecurityAnalysisSettings) GetAdvancedSecurityEnabledForNewUserNamespaceRepositories()(*bool) {
+    return m.advanced_security_enabled_for_new_user_namespace_repositories
+}
 // GetDependabotAlertsEnabledForNewRepositories gets the dependabot_alerts_enabled_for_new_repositories property value. Whether Dependabot alerts are automatically enabled for new repositories and repositories transferred to thisenterprise.
 // returns a *bool when successful
 func (m *EnterpriseSecurityAnalysisSettings) GetDependabotAlertsEnabledForNewRepositories()(*bool) {
@@ -56,6 +63,16 @@ func (m *EnterpriseSecurityAnalysisSettings) GetFieldDeserializers()(map[string]
         }
         if val != nil {
             m.SetAdvancedSecurityEnabledForNewRepositories(val)
+        }
+        return nil
+    }
+    res["advanced_security_enabled_for_new_user_namespace_repositories"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
+        val, err := n.GetBoolValue()
+        if err != nil {
+            return err
+        }
+        if val != nil {
+            m.SetAdvancedSecurityEnabledForNewUserNamespaceRepositories(val)
         }
         return nil
     }
@@ -125,6 +142,12 @@ func (m *EnterpriseSecurityAnalysisSettings) Serialize(writer i878a80d2330e89d26
         }
     }
     {
+        err := writer.WriteBoolValue("advanced_security_enabled_for_new_user_namespace_repositories", m.GetAdvancedSecurityEnabledForNewUserNamespaceRepositories())
+        if err != nil {
+            return err
+        }
+    }
+    {
         err := writer.WriteBoolValue("dependabot_alerts_enabled_for_new_repositories", m.GetDependabotAlertsEnabledForNewRepositories())
         if err != nil {
             return err
@@ -164,6 +187,10 @@ func (m *EnterpriseSecurityAnalysisSettings) SetAdditionalData(value map[string]
 func (m *EnterpriseSecurityAnalysisSettings) SetAdvancedSecurityEnabledForNewRepositories(value *bool)() {
     m.advanced_security_enabled_for_new_repositories = value
 }
+// SetAdvancedSecurityEnabledForNewUserNamespaceRepositories sets the advanced_security_enabled_for_new_user_namespace_repositories property value. Whether GitHub Advanced Security is automatically enabled for new user namespace repositories.
+func (m *EnterpriseSecurityAnalysisSettings) SetAdvancedSecurityEnabledForNewUserNamespaceRepositories(value *bool)() {
+    m.advanced_security_enabled_for_new_user_namespace_repositories = value
+}
 // SetDependabotAlertsEnabledForNewRepositories sets the dependabot_alerts_enabled_for_new_repositories property value. Whether Dependabot alerts are automatically enabled for new repositories and repositories transferred to thisenterprise.
 func (m *EnterpriseSecurityAnalysisSettings) SetDependabotAlertsEnabledForNewRepositories(value *bool)() {
     m.dependabot_alerts_enabled_for_new_repositories = value
@@ -184,11 +211,13 @@ type EnterpriseSecurityAnalysisSettingsable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.AdditionalDataHolder
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetAdvancedSecurityEnabledForNewRepositories()(*bool)
+    GetAdvancedSecurityEnabledForNewUserNamespaceRepositories()(*bool)
     GetDependabotAlertsEnabledForNewRepositories()(*bool)
     GetSecretScanningEnabledForNewRepositories()(*bool)
     GetSecretScanningPushProtectionCustomLink()(*string)
     GetSecretScanningPushProtectionEnabledForNewRepositories()(*bool)
     SetAdvancedSecurityEnabledForNewRepositories(value *bool)()
+    SetAdvancedSecurityEnabledForNewUserNamespaceRepositories(value *bool)()
     SetDependabotAlertsEnabledForNewRepositories(value *bool)()
     SetSecretScanningEnabledForNewRepositories(value *bool)()
     SetSecretScanningPushProtectionCustomLink(value *string)()

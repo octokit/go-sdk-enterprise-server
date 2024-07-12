@@ -29,7 +29,7 @@ func NewItemItemActionsRunnersGenerateJitconfigRequestBuilder(rawUrl string, req
 // returns a ValidationErrorSimple error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/actions/self-hosted-runners#create-configuration-for-a-just-in-time-runner-for-a-repository
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/self-hosted-runners#create-configuration-for-a-just-in-time-runner-for-a-repository
 func (m *ItemItemActionsRunnersGenerateJitconfigRequestBuilder) Post(ctx context.Context, body ItemItemActionsRunnersGenerateJitconfigPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ItemItemActionsRunnersGenerateJitconfigPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

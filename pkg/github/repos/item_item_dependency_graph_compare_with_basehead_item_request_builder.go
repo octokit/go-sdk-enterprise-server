@@ -34,7 +34,7 @@ func NewItemItemDependencyGraphCompareWithBaseheadItemRequestBuilder(rawUrl stri
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.10/rest/dependency-graph/dependency-review#get-a-diff-of-the-dependencies-between-commits
+// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/dependency-graph/dependency-review#get-a-diff-of-the-dependencies-between-commits
 func (m *ItemItemDependencyGraphCompareWithBaseheadItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemDependencyGraphCompareWithBaseheadItemRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.DependencyGraphDiffable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
