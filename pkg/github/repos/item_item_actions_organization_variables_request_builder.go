@@ -11,9 +11,9 @@ type ItemItemActionsOrganizationVariablesRequestBuilder struct {
 }
 // ItemItemActionsOrganizationVariablesRequestBuilderGetQueryParameters lists all organization variables shared with a repository.Authenticated users must have collaborator access to a repository to create, update, or read variables.OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
 type ItemItemActionsOrganizationVariablesRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 30). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 30). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // NewItemItemActionsOrganizationVariablesRequestBuilderInternal instantiates a new ItemItemActionsOrganizationVariablesRequestBuilder and sets the default values.
@@ -33,7 +33,7 @@ func NewItemItemActionsOrganizationVariablesRequestBuilder(rawUrl string, reques
 // returns a ItemItemActionsOrganizationVariablesGetResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/variables#list-repository-organization-variables
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/actions/variables#list-repository-organization-variables
 func (m *ItemItemActionsOrganizationVariablesRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemActionsOrganizationVariablesRequestBuilderGetQueryParameters])(ItemItemActionsOrganizationVariablesGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

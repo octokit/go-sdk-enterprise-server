@@ -30,7 +30,7 @@ func NewItemPersonalAccessTokenRequestsWithPat_request_ItemRequestBuilder(rawUrl
 // returns a BasicError error when the service returns a 500 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/orgs/personal-access-tokens#review-a-request-to-access-organization-resources-with-a-fine-grained-personal-access-token
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/orgs/personal-access-tokens#review-a-request-to-access-organization-resources-with-a-fine-grained-personal-access-token
 func (m *ItemPersonalAccessTokenRequestsWithPat_request_ItemRequestBuilder) Post(ctx context.Context, body ItemPersonalAccessTokenRequestsItemWithPat_request_PostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

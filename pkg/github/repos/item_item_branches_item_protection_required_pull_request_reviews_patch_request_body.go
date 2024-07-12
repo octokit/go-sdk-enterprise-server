@@ -13,7 +13,7 @@ type ItemItemBranchesItemProtectionRequired_pull_request_reviewsPatchRequestBody
     dismiss_stale_reviews *bool
     // Specify which users, teams, and apps can dismiss pull request reviews. Pass an empty `dismissal_restrictions` object to disable. User and team `dismissal_restrictions` are only available for organization-owned repositories. Omit this parameter for personal repositories.
     dismissal_restrictions ItemItemBranchesItemProtectionRequired_pull_request_reviewsPatchRequestBody_dismissal_restrictionsable
-    // Blocks merging pull requests until [code owners](https://docs.github.com/enterprise-server@3.13/articles/about-code-owners/) have reviewed.
+    // Blocks merging pull requests until [code owners](https://docs.github.com/enterprise-server@3.11/articles/about-code-owners/) have reviewed.
     require_code_owner_reviews *bool
     // Whether the most recent push must be approved by someone other than the person who pushed it. Default: `false`
     require_last_push_approval *bool
@@ -118,7 +118,7 @@ func (m *ItemItemBranchesItemProtectionRequired_pull_request_reviewsPatchRequest
     }
     return res
 }
-// GetRequireCodeOwnerReviews gets the require_code_owner_reviews property value. Blocks merging pull requests until [code owners](https://docs.github.com/enterprise-server@3.13/articles/about-code-owners/) have reviewed.
+// GetRequireCodeOwnerReviews gets the require_code_owner_reviews property value. Blocks merging pull requests until [code owners](https://docs.github.com/enterprise-server@3.11/articles/about-code-owners/) have reviewed.
 // returns a *bool when successful
 func (m *ItemItemBranchesItemProtectionRequired_pull_request_reviewsPatchRequestBody) GetRequireCodeOwnerReviews()(*bool) {
     return m.require_code_owner_reviews
@@ -195,7 +195,7 @@ func (m *ItemItemBranchesItemProtectionRequired_pull_request_reviewsPatchRequest
 func (m *ItemItemBranchesItemProtectionRequired_pull_request_reviewsPatchRequestBody) SetDismissStaleReviews(value *bool)() {
     m.dismiss_stale_reviews = value
 }
-// SetRequireCodeOwnerReviews sets the require_code_owner_reviews property value. Blocks merging pull requests until [code owners](https://docs.github.com/enterprise-server@3.13/articles/about-code-owners/) have reviewed.
+// SetRequireCodeOwnerReviews sets the require_code_owner_reviews property value. Blocks merging pull requests until [code owners](https://docs.github.com/enterprise-server@3.11/articles/about-code-owners/) have reviewed.
 func (m *ItemItemBranchesItemProtectionRequired_pull_request_reviewsPatchRequestBody) SetRequireCodeOwnerReviews(value *bool)() {
     m.require_code_owner_reviews = value
 }

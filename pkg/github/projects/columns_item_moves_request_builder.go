@@ -30,7 +30,7 @@ func NewColumnsItemMovesRequestBuilder(rawUrl string, requestAdapter i2ae4187f7d
 // returns a ValidationErrorSimple error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/projects/columns#move-a-project-column
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/projects/columns#move-a-project-column
 func (m *ColumnsItemMovesRequestBuilder) Post(ctx context.Context, body ColumnsItemMovesPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ColumnsItemMovesPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

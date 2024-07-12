@@ -28,7 +28,7 @@ func NewItemItemActionsRunsItemLogsRequestBuilder(rawUrl string, requestAdapter 
 // returns a BasicError error when the service returns a 500 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/workflow-runs#delete-workflow-run-logs
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/actions/workflow-runs#delete-workflow-run-logs
 func (m *ItemItemActionsRunsItemLogsRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -47,7 +47,7 @@ func (m *ItemItemActionsRunsItemLogsRequestBuilder) Delete(ctx context.Context, 
 // Get gets a redirect URL to download an archive of log files for a workflow run. This link expires after 1 minute. Look for`Location:` in the response header to find the URL for the download.Anyone with read access to the repository can use this endpoint.If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/workflow-runs#download-workflow-run-logs
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/actions/workflow-runs#download-workflow-run-logs
 func (m *ItemItemActionsRunsItemLogsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

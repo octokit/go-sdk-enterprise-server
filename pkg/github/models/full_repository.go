@@ -51,8 +51,6 @@ type FullRepository struct {
     contributors_url *string
     // The created_at property
     created_at *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time
-    // The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
-    custom_properties FullRepository_custom_propertiesable
     // The default_branch property
     default_branch *string
     // The delete_branch_on_merge property
@@ -338,11 +336,6 @@ func (m *FullRepository) GetContributorsUrl()(*string) {
 func (m *FullRepository) GetCreatedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time) {
     return m.created_at
 }
-// GetCustomProperties gets the custom_properties property value. The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
-// returns a FullRepository_custom_propertiesable when successful
-func (m *FullRepository) GetCustomProperties()(FullRepository_custom_propertiesable) {
-    return m.custom_properties
-}
 // GetDefaultBranch gets the default_branch property value. The default_branch property
 // returns a *string when successful
 func (m *FullRepository) GetDefaultBranch()(*string) {
@@ -589,16 +582,6 @@ func (m *FullRepository) GetFieldDeserializers()(map[string]func(i878a80d2330e89
         }
         if val != nil {
             m.SetCreatedAt(val)
-        }
-        return nil
-    }
-    res["custom_properties"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
-        val, err := n.GetObjectValue(CreateFullRepository_custom_propertiesFromDiscriminatorValue)
-        if err != nil {
-            return err
-        }
-        if val != nil {
-            m.SetCustomProperties(val.(FullRepository_custom_propertiesable))
         }
         return nil
     }
@@ -1919,12 +1902,6 @@ func (m *FullRepository) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a
         }
     }
     {
-        err := writer.WriteObjectValue("custom_properties", m.GetCustomProperties())
-        if err != nil {
-            return err
-        }
-    }
-    {
         err := writer.WriteStringValue("default_branch", m.GetDefaultBranch())
         if err != nil {
             return err
@@ -2510,10 +2487,6 @@ func (m *FullRepository) SetContributorsUrl(value *string)() {
 func (m *FullRepository) SetCreatedAt(value *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)() {
     m.created_at = value
 }
-// SetCustomProperties sets the custom_properties property value. The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
-func (m *FullRepository) SetCustomProperties(value FullRepository_custom_propertiesable)() {
-    m.custom_properties = value
-}
 // SetDefaultBranch sets the default_branch property value. The default_branch property
 func (m *FullRepository) SetDefaultBranch(value *string)() {
     m.default_branch = value
@@ -2862,7 +2835,6 @@ type FullRepositoryable interface {
     GetContentsUrl()(*string)
     GetContributorsUrl()(*string)
     GetCreatedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)
-    GetCustomProperties()(FullRepository_custom_propertiesable)
     GetDefaultBranch()(*string)
     GetDeleteBranchOnMerge()(*bool)
     GetDeploymentsUrl()(*string)
@@ -2965,7 +2937,6 @@ type FullRepositoryable interface {
     SetContentsUrl(value *string)()
     SetContributorsUrl(value *string)()
     SetCreatedAt(value *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)()
-    SetCustomProperties(value FullRepository_custom_propertiesable)()
     SetDefaultBranch(value *string)()
     SetDeleteBranchOnMerge(value *bool)()
     SetDeploymentsUrl(value *string)()

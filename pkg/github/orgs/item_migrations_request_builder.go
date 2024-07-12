@@ -16,9 +16,9 @@ type ItemMigrationsRequestBuilder struct {
 type ItemMigrationsRequestBuilderGetQueryParameters struct {
     // Exclude attributes from the API response to improve performance
     Exclude []idb852d204b27766a976dad5566589007cf8893c473cc1a1115d9a28c8fa10fc1.GetExcludeQueryParameterType `uriparametername:"exclude"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByMigration_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.orgs.item.migrations.item collection
@@ -48,7 +48,7 @@ func NewItemMigrationsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7dae
 // returns a []Migrationable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/migrations/orgs#list-organization-migrations
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/migrations/orgs#list-organization-migrations
 func (m *ItemMigrationsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemMigrationsRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Migrationable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -66,13 +66,13 @@ func (m *ItemMigrationsRequestBuilder) Get(ctx context.Context, requestConfigura
     }
     return val, nil
 }
-// Post initiates the generation of a migration archive.Before you can use this endpoint, you must configure a blob storage provider in the "Migrations" section in the Management Console. For more details, see "[Migrating repositories from GitHub Enterprise Server to GitHub Enterprise Cloud](https://docs.github.com/enterprise-server@3.13/migrations/using-github-enterprise-importer/migrating-repositories-with-github-enterprise-importer/migrating-repositories-from-github-enterprise-server-to-github-enterprise-cloud#step-4-set-up-blob-storage)."
+// Post initiates the generation of a migration archive.Before you can use this endpoint, you must configure a blob storage provider in the "Migrations" section in the Management Console. For more details, see "[Migrating repositories from GitHub Enterprise Server to GitHub Enterprise Cloud](https://docs.github.com/enterprise-server@3.11/migrations/using-github-enterprise-importer/migrating-repositories-with-github-enterprise-importer/migrating-repositories-from-github-enterprise-server-to-github-enterprise-cloud#step-4-set-up-blob-storage)."
 // returns a Migrationable when successful
 // returns a BasicError error when the service returns a 404 status code
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/migrations/orgs#start-an-organization-migration
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/migrations/orgs#start-an-organization-migration
 func (m *ItemMigrationsRequestBuilder) Post(ctx context.Context, body ItemMigrationsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Migrationable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -99,7 +99,7 @@ func (m *ItemMigrationsRequestBuilder) ToGetRequestInformation(ctx context.Conte
     requestInfo.Headers.TryAdd("Accept", "application/json")
     return requestInfo, nil
 }
-// ToPostRequestInformation initiates the generation of a migration archive.Before you can use this endpoint, you must configure a blob storage provider in the "Migrations" section in the Management Console. For more details, see "[Migrating repositories from GitHub Enterprise Server to GitHub Enterprise Cloud](https://docs.github.com/enterprise-server@3.13/migrations/using-github-enterprise-importer/migrating-repositories-with-github-enterprise-importer/migrating-repositories-from-github-enterprise-server-to-github-enterprise-cloud#step-4-set-up-blob-storage)."
+// ToPostRequestInformation initiates the generation of a migration archive.Before you can use this endpoint, you must configure a blob storage provider in the "Migrations" section in the Management Console. For more details, see "[Migrating repositories from GitHub Enterprise Server to GitHub Enterprise Cloud](https://docs.github.com/enterprise-server@3.11/migrations/using-github-enterprise-importer/migrating-repositories-with-github-enterprise-importer/migrating-repositories-from-github-enterprise-server-to-github-enterprise-cloud#step-4-set-up-blob-storage)."
 // returns a *RequestInformation when successful
 func (m *ItemMigrationsRequestBuilder) ToPostRequestInformation(ctx context.Context, body ItemMigrationsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

@@ -2,7 +2,7 @@ package repos
 import (
     "errors"
 )
-// The visibility of the repository. **Note**: For GitHub Enterprise Server, this endpoint will only list repositories available to all users on the enterprise. For more information, see "[Creating an internal repository](https://docs.github.com/enterprise-server@3.13/github/creating-cloning-and-archiving-repositories/about-repository-visibility#about-internal-repositories)" in the GitHub Help documentation.  The `visibility` parameter overrides the `private` parameter when you use both parameters with the `nebula-preview` preview header.
+// The visibility of the repository. **Note**: For GitHub Enterprise Server, this endpoint will only list repositories available to all users on the enterprise. For more information, see "[Creating an internal repository](https://docs.github.com/enterprise-server@3.11/github/creating-cloning-and-archiving-repositories/about-repository-visibility#about-internal-repositories)" in the GitHub Help documentation.  The `visibility` parameter overrides the `private` parameter when you use both parameters with the `nebula-preview` preview header.
 type ReposPostRequestBody_visibility int
 
 const (

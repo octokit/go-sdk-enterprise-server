@@ -12,9 +12,9 @@ type ItemItemCommitsItemStatusesRequestBuilder struct {
 }
 // ItemItemCommitsItemStatusesRequestBuilderGetQueryParameters users with pull access in a repository can view commit statuses for a given ref. The ref can be a SHA, a branch name, or a tag name. Statuses are returned in reverse chronological order. The first status in the list will be the latest one.This resource is also available via a legacy route: `GET /repos/:owner/:repo/statuses/:ref`.
 type ItemItemCommitsItemStatusesRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // NewItemItemCommitsItemStatusesRequestBuilderInternal instantiates a new ItemItemCommitsItemStatusesRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ func NewItemItemCommitsItemStatusesRequestBuilder(rawUrl string, requestAdapter 
 // returns a []Statusable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/commits/statuses#list-commit-statuses-for-a-reference
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/commits/statuses#list-commit-statuses-for-a-reference
 func (m *ItemItemCommitsItemStatusesRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemCommitsItemStatusesRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Statusable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

@@ -10,13 +10,13 @@ import (
 type AdvisoriesRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// AdvisoriesRequestBuilderGetQueryParameters lists all global security advisories that match the specified parameters. If no other parameters are defined, the request will return only GitHub-reviewed advisories that are not malware.By default, all responses will exclude advisories for malware, because malware are not standard vulnerabilities. To list advisories for malware, you must include the `type` parameter in your request, with the value `malware`. For more information about the different types of security advisories, see "[About the GitHub Advisory database](https://docs.github.com/enterprise-server@3.13/code-security/security-advisories/global-security-advisories/about-the-github-advisory-database#about-types-of-security-advisories)."
+// AdvisoriesRequestBuilderGetQueryParameters lists all global security advisories that match the specified parameters. If no other parameters are defined, the request will return only GitHub-reviewed advisories that are not malware.By default, all responses will exclude advisories for malware, because malware are not standard vulnerabilities. To list advisories for malware, you must include the `type` parameter in your request, with the value `malware`. For more information about the different types of security advisories, see "[About the GitHub Advisory database](https://docs.github.com/enterprise-server@3.11/code-security/security-advisories/global-security-advisories/about-the-github-advisory-database#about-types-of-security-advisories)."
 type AdvisoriesRequestBuilderGetQueryParameters struct {
     // If specified, only return advisories that affect any of `package` or `package@version`. A maximum of 1000 packages can be specified.If the query parameter causes the URL to exceed the maximum URL length supported by your client, you must specify fewer packages.Example: `affects=package1,package2@1.0.0,package3@^2.0.0` or `affects[]=package1&affects[]=package2@1.0.0`
     Affects *string `uriparametername:"affects"`
-    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.13/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.11/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     After *string `uriparametername:"after"`
-    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.13/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.11/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Before *string `uriparametername:"before"`
     // If specified, only advisories with this CVE (Common Vulnerabilities and Exposures) identifier will be returned.
     Cve_id *string `uriparametername:"cve_id"`
@@ -30,11 +30,11 @@ type AdvisoriesRequestBuilderGetQueryParameters struct {
     Ghsa_id *string `uriparametername:"ghsa_id"`
     // Whether to only return advisories that have been withdrawn.
     Is_withdrawn *bool `uriparametername:"is_withdrawn"`
-    // If specified, only show advisories that were updated or published on a date or date range.For more information on the syntax of the date range, see "[Understanding the search syntax](https://docs.github.com/enterprise-server@3.13/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax#query-for-dates)."
+    // If specified, only show advisories that were updated or published on a date or date range.For more information on the syntax of the date range, see "[Understanding the search syntax](https://docs.github.com/enterprise-server@3.11/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax#query-for-dates)."
     Modified *string `uriparametername:"modified"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
-    // If specified, only return advisories that were published on a date or date range.For more information on the syntax of the date range, see "[Understanding the search syntax](https://docs.github.com/enterprise-server@3.13/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax#query-for-dates)."
+    // If specified, only return advisories that were published on a date or date range.For more information on the syntax of the date range, see "[Understanding the search syntax](https://docs.github.com/enterprise-server@3.11/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax#query-for-dates)."
     Published *string `uriparametername:"published"`
     // If specified, only advisories with these severities will be returned.
     Severity *GetSeverityQueryParameterType `uriparametername:"severity"`
@@ -42,7 +42,7 @@ type AdvisoriesRequestBuilderGetQueryParameters struct {
     Sort *GetSortQueryParameterType `uriparametername:"sort"`
     // If specified, only advisories of this type will be returned. By default, a request with no other parameters defined will only return reviewed advisories that are not malware.
     Type *GetTypeQueryParameterType `uriparametername:"type"`
-    // If specified, only return advisories that were updated on a date or date range.For more information on the syntax of the date range, see "[Understanding the search syntax](https://docs.github.com/enterprise-server@3.13/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax#query-for-dates)."
+    // If specified, only return advisories that were updated on a date or date range.For more information on the syntax of the date range, see "[Understanding the search syntax](https://docs.github.com/enterprise-server@3.11/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax#query-for-dates)."
     Updated *string `uriparametername:"updated"`
 }
 // ByGhsa_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.advisories.item collection
@@ -70,13 +70,13 @@ func NewAdvisoriesRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee263
     urlParams["request-raw-url"] = rawUrl
     return NewAdvisoriesRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Get lists all global security advisories that match the specified parameters. If no other parameters are defined, the request will return only GitHub-reviewed advisories that are not malware.By default, all responses will exclude advisories for malware, because malware are not standard vulnerabilities. To list advisories for malware, you must include the `type` parameter in your request, with the value `malware`. For more information about the different types of security advisories, see "[About the GitHub Advisory database](https://docs.github.com/enterprise-server@3.13/code-security/security-advisories/global-security-advisories/about-the-github-advisory-database#about-types-of-security-advisories)."
+// Get lists all global security advisories that match the specified parameters. If no other parameters are defined, the request will return only GitHub-reviewed advisories that are not malware.By default, all responses will exclude advisories for malware, because malware are not standard vulnerabilities. To list advisories for malware, you must include the `type` parameter in your request, with the value `malware`. For more information about the different types of security advisories, see "[About the GitHub Advisory database](https://docs.github.com/enterprise-server@3.11/code-security/security-advisories/global-security-advisories/about-the-github-advisory-database#about-types-of-security-advisories)."
 // returns a []GlobalAdvisoryable when successful
 // returns a ValidationErrorSimple error when the service returns a 422 status code
 // returns a BasicError error when the service returns a 429 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/security-advisories/global-advisories#list-global-security-advisories
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/security-advisories/global-advisories#list-global-security-advisories
 func (m *AdvisoriesRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[AdvisoriesRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GlobalAdvisoryable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -98,7 +98,7 @@ func (m *AdvisoriesRequestBuilder) Get(ctx context.Context, requestConfiguration
     }
     return val, nil
 }
-// ToGetRequestInformation lists all global security advisories that match the specified parameters. If no other parameters are defined, the request will return only GitHub-reviewed advisories that are not malware.By default, all responses will exclude advisories for malware, because malware are not standard vulnerabilities. To list advisories for malware, you must include the `type` parameter in your request, with the value `malware`. For more information about the different types of security advisories, see "[About the GitHub Advisory database](https://docs.github.com/enterprise-server@3.13/code-security/security-advisories/global-security-advisories/about-the-github-advisory-database#about-types-of-security-advisories)."
+// ToGetRequestInformation lists all global security advisories that match the specified parameters. If no other parameters are defined, the request will return only GitHub-reviewed advisories that are not malware.By default, all responses will exclude advisories for malware, because malware are not standard vulnerabilities. To list advisories for malware, you must include the `type` parameter in your request, with the value `malware`. For more information about the different types of security advisories, see "[About the GitHub Advisory database](https://docs.github.com/enterprise-server@3.11/code-security/security-advisories/global-security-advisories/about-the-github-advisory-database#about-types-of-security-advisories)."
 // returns a *RequestInformation when successful
 func (m *AdvisoriesRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[AdvisoriesRequestBuilderGetQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

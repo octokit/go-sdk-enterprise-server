@@ -13,7 +13,7 @@ type ItemItemHooksPostRequestBody_config struct {
     content_type *string
     // The insecure_ssl property
     insecure_ssl ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.WebhookConfigInsecureSslable
-    // If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads/#delivery-headers).
+    // If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-server@3.11/webhooks/event-payloads/#delivery-headers).
     secret *string
     // The URL to which the payloads will be delivered.
     url *string
@@ -91,7 +91,7 @@ func (m *ItemItemHooksPostRequestBody_config) GetFieldDeserializers()(map[string
 func (m *ItemItemHooksPostRequestBody_config) GetInsecureSsl()(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.WebhookConfigInsecureSslable) {
     return m.insecure_ssl
 }
-// GetSecret gets the secret property value. If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads/#delivery-headers).
+// GetSecret gets the secret property value. If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-server@3.11/webhooks/event-payloads/#delivery-headers).
 // returns a *string when successful
 func (m *ItemItemHooksPostRequestBody_config) GetSecret()(*string) {
     return m.secret
@@ -147,7 +147,7 @@ func (m *ItemItemHooksPostRequestBody_config) SetContentType(value *string)() {
 func (m *ItemItemHooksPostRequestBody_config) SetInsecureSsl(value ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.WebhookConfigInsecureSslable)() {
     m.insecure_ssl = value
 }
-// SetSecret sets the secret property value. If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads/#delivery-headers).
+// SetSecret sets the secret property value. If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-server@3.11/webhooks/event-payloads/#delivery-headers).
 func (m *ItemItemHooksPostRequestBody_config) SetSecret(value *string)() {
     m.secret = value
 }

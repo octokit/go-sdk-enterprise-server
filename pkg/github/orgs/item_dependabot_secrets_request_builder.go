@@ -11,9 +11,9 @@ type ItemDependabotSecretsRequestBuilder struct {
 }
 // ItemDependabotSecretsRequestBuilderGetQueryParameters lists all secrets available in an organization without revealing theirencrypted values.OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
 type ItemDependabotSecretsRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // BySecret_name gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.orgs.item.dependabot.secrets.item collection
@@ -45,7 +45,7 @@ func NewItemDependabotSecretsRequestBuilder(rawUrl string, requestAdapter i2ae41
 // returns a ItemDependabotSecretsGetResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/dependabot/secrets#list-organization-secrets
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/dependabot/secrets#list-organization-secrets
 func (m *ItemDependabotSecretsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemDependabotSecretsRequestBuilderGetQueryParameters])(ItemDependabotSecretsGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

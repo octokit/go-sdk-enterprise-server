@@ -7,7 +7,7 @@ import (
 type UsersItemAuthorizationsPostRequestBody struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // A list of [scopes](https://docs.github.com/enterprise-server@3.13/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    // A list of [scopes](https://docs.github.com/enterprise-server@3.11/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
     scopes []string
 }
 // NewUsersItemAuthorizationsPostRequestBody instantiates a new UsersItemAuthorizationsPostRequestBody and sets the default values.
@@ -49,7 +49,7 @@ func (m *UsersItemAuthorizationsPostRequestBody) GetFieldDeserializers()(map[str
     }
     return res
 }
-// GetScopes gets the scopes property value. A list of [scopes](https://docs.github.com/enterprise-server@3.13/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+// GetScopes gets the scopes property value. A list of [scopes](https://docs.github.com/enterprise-server@3.11/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 // returns a []string when successful
 func (m *UsersItemAuthorizationsPostRequestBody) GetScopes()([]string) {
     return m.scopes
@@ -74,7 +74,7 @@ func (m *UsersItemAuthorizationsPostRequestBody) Serialize(writer i878a80d2330e8
 func (m *UsersItemAuthorizationsPostRequestBody) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetScopes sets the scopes property value. A list of [scopes](https://docs.github.com/enterprise-server@3.13/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+// SetScopes sets the scopes property value. A list of [scopes](https://docs.github.com/enterprise-server@3.11/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 func (m *UsersItemAuthorizationsPostRequestBody) SetScopes(value []string)() {
     m.scopes = value
 }

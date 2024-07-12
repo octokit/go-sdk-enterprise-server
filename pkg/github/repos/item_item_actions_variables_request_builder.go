@@ -12,9 +12,9 @@ type ItemItemActionsVariablesRequestBuilder struct {
 }
 // ItemItemActionsVariablesRequestBuilderGetQueryParameters lists all repository variables.Authenticated users must have collaborator access to a repository to create, update, or read variables.OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
 type ItemItemActionsVariablesRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 30). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 30). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByName gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.repos.item.item.actions.variables.item collection
@@ -46,7 +46,7 @@ func NewItemItemActionsVariablesRequestBuilder(rawUrl string, requestAdapter i2a
 // returns a ItemItemActionsVariablesGetResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/variables#list-repository-variables
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/actions/variables#list-repository-variables
 func (m *ItemItemActionsVariablesRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemActionsVariablesRequestBuilderGetQueryParameters])(ItemItemActionsVariablesGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -65,7 +65,7 @@ func (m *ItemItemActionsVariablesRequestBuilder) Get(ctx context.Context, reques
 // returns a EmptyObjectable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/variables#create-a-repository-variable
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/actions/variables#create-a-repository-variable
 func (m *ItemItemActionsVariablesRequestBuilder) Post(ctx context.Context, body ItemItemActionsVariablesPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.EmptyObjectable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

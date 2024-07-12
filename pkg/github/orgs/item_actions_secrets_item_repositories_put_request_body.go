@@ -7,7 +7,7 @@ import (
 type ItemActionsSecretsItemRepositoriesPutRequestBody struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can add and remove individual repositories using the [Add selected repository to an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#add-selected-repository-to-an-organization-secret) and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
+    // An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can add and remove individual repositories using the [Add selected repository to an organization secret](https://docs.github.com/enterprise-server@3.11/rest/actions/secrets#add-selected-repository-to-an-organization-secret) and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-server@3.11/rest/actions/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
     selected_repository_ids []int32
 }
 // NewItemActionsSecretsItemRepositoriesPutRequestBody instantiates a new ItemActionsSecretsItemRepositoriesPutRequestBody and sets the default values.
@@ -49,7 +49,7 @@ func (m *ItemActionsSecretsItemRepositoriesPutRequestBody) GetFieldDeserializers
     }
     return res
 }
-// GetSelectedRepositoryIds gets the selected_repository_ids property value. An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can add and remove individual repositories using the [Add selected repository to an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#add-selected-repository-to-an-organization-secret) and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
+// GetSelectedRepositoryIds gets the selected_repository_ids property value. An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can add and remove individual repositories using the [Add selected repository to an organization secret](https://docs.github.com/enterprise-server@3.11/rest/actions/secrets#add-selected-repository-to-an-organization-secret) and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-server@3.11/rest/actions/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
 // returns a []int32 when successful
 func (m *ItemActionsSecretsItemRepositoriesPutRequestBody) GetSelectedRepositoryIds()([]int32) {
     return m.selected_repository_ids
@@ -74,7 +74,7 @@ func (m *ItemActionsSecretsItemRepositoriesPutRequestBody) Serialize(writer i878
 func (m *ItemActionsSecretsItemRepositoriesPutRequestBody) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetSelectedRepositoryIds sets the selected_repository_ids property value. An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can add and remove individual repositories using the [Add selected repository to an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#add-selected-repository-to-an-organization-secret) and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-server@3.13/rest/actions/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
+// SetSelectedRepositoryIds sets the selected_repository_ids property value. An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can add and remove individual repositories using the [Add selected repository to an organization secret](https://docs.github.com/enterprise-server@3.11/rest/actions/secrets#add-selected-repository-to-an-organization-secret) and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-server@3.11/rest/actions/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
 func (m *ItemActionsSecretsItemRepositoriesPutRequestBody) SetSelectedRepositoryIds(value []int32)() {
     m.selected_repository_ids = value
 }

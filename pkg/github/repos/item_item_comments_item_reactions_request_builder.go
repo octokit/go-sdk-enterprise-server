@@ -12,13 +12,13 @@ import (
 type ItemItemCommentsItemReactionsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ItemItemCommentsItemReactionsRequestBuilderGetQueryParameters list the reactions to a [commit comment](https://docs.github.com/enterprise-server@3.13/rest/commits/comments#get-a-commit-comment).
+// ItemItemCommentsItemReactionsRequestBuilderGetQueryParameters list the reactions to a [commit comment](https://docs.github.com/enterprise-server@3.11/rest/commits/comments#get-a-commit-comment).
 type ItemItemCommentsItemReactionsRequestBuilderGetQueryParameters struct {
-    // Returns a single [reaction type](https://docs.github.com/enterprise-server@3.13/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a commit comment.
+    // Returns a single [reaction type](https://docs.github.com/enterprise-server@3.11/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a commit comment.
     Content *i2daa89030a4a9be72ff596adb42acdd38f379e1d583f9f68dea5e1f91d45ba3d.GetContentQueryParameterType `uriparametername:"content"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByReaction_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.repos.item.item.comments.item.reactions.item collection
@@ -44,12 +44,12 @@ func NewItemItemCommentsItemReactionsRequestBuilder(rawUrl string, requestAdapte
     urlParams["request-raw-url"] = rawUrl
     return NewItemItemCommentsItemReactionsRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Get list the reactions to a [commit comment](https://docs.github.com/enterprise-server@3.13/rest/commits/comments#get-a-commit-comment).
+// Get list the reactions to a [commit comment](https://docs.github.com/enterprise-server@3.11/rest/commits/comments#get-a-commit-comment).
 // returns a []Reactionable when successful
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/reactions/reactions#list-reactions-for-a-commit-comment
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/reactions/reactions#list-reactions-for-a-commit-comment
 func (m *ItemItemCommentsItemReactionsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemCommentsItemReactionsRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Reactionable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -70,12 +70,12 @@ func (m *ItemItemCommentsItemReactionsRequestBuilder) Get(ctx context.Context, r
     }
     return val, nil
 }
-// Post create a reaction to a [commit comment](https://docs.github.com/enterprise-server@3.13/rest/commits/comments#get-a-commit-comment). A response with an HTTP `200` status means that you already added the reaction type to this commit comment.
+// Post create a reaction to a [commit comment](https://docs.github.com/enterprise-server@3.11/rest/commits/comments#get-a-commit-comment). A response with an HTTP `200` status means that you already added the reaction type to this commit comment.
 // returns a Reactionable when successful
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/reactions/reactions#create-reaction-for-a-commit-comment
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/reactions/reactions#create-reaction-for-a-commit-comment
 func (m *ItemItemCommentsItemReactionsRequestBuilder) Post(ctx context.Context, body ItemItemCommentsItemReactionsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Reactionable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -93,7 +93,7 @@ func (m *ItemItemCommentsItemReactionsRequestBuilder) Post(ctx context.Context, 
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Reactionable), nil
 }
-// ToGetRequestInformation list the reactions to a [commit comment](https://docs.github.com/enterprise-server@3.13/rest/commits/comments#get-a-commit-comment).
+// ToGetRequestInformation list the reactions to a [commit comment](https://docs.github.com/enterprise-server@3.11/rest/commits/comments#get-a-commit-comment).
 // returns a *RequestInformation when successful
 func (m *ItemItemCommentsItemReactionsRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemCommentsItemReactionsRequestBuilderGetQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
@@ -101,7 +101,7 @@ func (m *ItemItemCommentsItemReactionsRequestBuilder) ToGetRequestInformation(ct
     requestInfo.Headers.TryAdd("Accept", "application/json")
     return requestInfo, nil
 }
-// ToPostRequestInformation create a reaction to a [commit comment](https://docs.github.com/enterprise-server@3.13/rest/commits/comments#get-a-commit-comment). A response with an HTTP `200` status means that you already added the reaction type to this commit comment.
+// ToPostRequestInformation create a reaction to a [commit comment](https://docs.github.com/enterprise-server@3.11/rest/commits/comments#get-a-commit-comment). A response with an HTTP `200` status means that you already added the reaction type to this commit comment.
 // returns a *RequestInformation when successful
 func (m *ItemItemCommentsItemReactionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body ItemItemCommentsItemReactionsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

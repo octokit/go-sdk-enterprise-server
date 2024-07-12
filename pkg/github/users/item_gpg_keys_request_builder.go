@@ -12,9 +12,9 @@ type ItemGpg_keysRequestBuilder struct {
 }
 // ItemGpg_keysRequestBuilderGetQueryParameters lists the GPG keys for a user. This information is accessible by anyone.
 type ItemGpg_keysRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // NewItemGpg_keysRequestBuilderInternal instantiates a new ItemGpg_keysRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ func NewItemGpg_keysRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee2
 // returns a []GpgKeyable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/users/gpg-keys#list-gpg-keys-for-a-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/users/gpg-keys#list-gpg-keys-for-a-user
 func (m *ItemGpg_keysRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemGpg_keysRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GpgKeyable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

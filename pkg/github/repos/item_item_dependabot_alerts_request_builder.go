@@ -14,9 +14,9 @@ type ItemItemDependabotAlertsRequestBuilder struct {
 }
 // ItemItemDependabotAlertsRequestBuilderGetQueryParameters oAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
 type ItemItemDependabotAlertsRequestBuilderGetQueryParameters struct {
-    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.13/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.11/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     After *string `uriparametername:"after"`
-    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.13/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.11/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Before *string `uriparametername:"before"`
     // The direction to sort the results by.
     Direction *i8393e6fbe49565baf8cec2bd146fda3d83f1a474d09b264e9b4a52c3a16b03f1.GetDirectionQueryParameterType `uriparametername:"direction"`
@@ -33,7 +33,7 @@ type ItemItemDependabotAlertsRequestBuilderGetQueryParameters struct {
     // **Deprecated**. Page number of the results to fetch. Use cursor-based pagination with `before` or `after` instead.
     // Deprecated: 
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     // Deprecated: 
     Per_page *int32 `uriparametername:"per_page"`
     // The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
@@ -76,7 +76,7 @@ func NewItemItemDependabotAlertsRequestBuilder(rawUrl string, requestAdapter i2a
 // returns a ValidationErrorSimple error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/dependabot/alerts#list-dependabot-alerts-for-a-repository
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/dependabot/alerts#list-dependabot-alerts-for-a-repository
 func (m *ItemItemDependabotAlertsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemDependabotAlertsRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.DependabotAlertable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

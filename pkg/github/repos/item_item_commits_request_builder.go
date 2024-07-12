@@ -17,11 +17,11 @@ type ItemItemCommitsRequestBuilderGetQueryParameters struct {
     Author *string `uriparametername:"author"`
     // GitHub username or email address to use to filter by commit committer.
     Committer *string `uriparametername:"committer"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
     // Only commits containing this file path will be returned.
     Path *string `uriparametername:"path"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     // SHA or branch to start listing commits from. Default: the repository’s default branch (usually `main`).
     Sha *string `uriparametername:"sha"`
@@ -63,7 +63,7 @@ func NewItemItemCommitsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7da
 // returns a BasicError error when the service returns a 500 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/commits/commits#list-commits
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/commits/commits#list-commits
 func (m *ItemItemCommitsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemCommitsRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Commitable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

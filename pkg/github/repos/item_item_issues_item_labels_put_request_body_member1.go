@@ -7,7 +7,7 @@ import (
 type ItemItemIssuesItemLabelsPutRequestBodyMember1 struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // The names of the labels to set for the issue. The labels you set replace any existing labels. You can pass an empty array to remove all labels. Alternatively, you can pass a single label as a `string` or an `array` of labels directly, but GitHub recommends passing an object with the `labels` key. You can also add labels to the existing labels for an issue. For more information, see "[Add labels to an issue](https://docs.github.com/enterprise-server@3.13/rest/issues/labels#add-labels-to-an-issue)."
+    // The names of the labels to set for the issue. The labels you set replace any existing labels. You can pass an empty array to remove all labels. Alternatively, you can pass a single label as a `string` or an `array` of labels directly, but GitHub recommends passing an object with the `labels` key. You can also add labels to the existing labels for an issue. For more information, see "[Add labels to an issue](https://docs.github.com/enterprise-server@3.11/rest/issues/labels#add-labels-to-an-issue)."
     labels []string
 }
 // NewItemItemIssuesItemLabelsPutRequestBodyMember1 instantiates a new ItemItemIssuesItemLabelsPutRequestBodyMember1 and sets the default values.
@@ -49,7 +49,7 @@ func (m *ItemItemIssuesItemLabelsPutRequestBodyMember1) GetFieldDeserializers()(
     }
     return res
 }
-// GetLabels gets the labels property value. The names of the labels to set for the issue. The labels you set replace any existing labels. You can pass an empty array to remove all labels. Alternatively, you can pass a single label as a `string` or an `array` of labels directly, but GitHub recommends passing an object with the `labels` key. You can also add labels to the existing labels for an issue. For more information, see "[Add labels to an issue](https://docs.github.com/enterprise-server@3.13/rest/issues/labels#add-labels-to-an-issue)."
+// GetLabels gets the labels property value. The names of the labels to set for the issue. The labels you set replace any existing labels. You can pass an empty array to remove all labels. Alternatively, you can pass a single label as a `string` or an `array` of labels directly, but GitHub recommends passing an object with the `labels` key. You can also add labels to the existing labels for an issue. For more information, see "[Add labels to an issue](https://docs.github.com/enterprise-server@3.11/rest/issues/labels#add-labels-to-an-issue)."
 // returns a []string when successful
 func (m *ItemItemIssuesItemLabelsPutRequestBodyMember1) GetLabels()([]string) {
     return m.labels
@@ -74,7 +74,7 @@ func (m *ItemItemIssuesItemLabelsPutRequestBodyMember1) Serialize(writer i878a80
 func (m *ItemItemIssuesItemLabelsPutRequestBodyMember1) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetLabels sets the labels property value. The names of the labels to set for the issue. The labels you set replace any existing labels. You can pass an empty array to remove all labels. Alternatively, you can pass a single label as a `string` or an `array` of labels directly, but GitHub recommends passing an object with the `labels` key. You can also add labels to the existing labels for an issue. For more information, see "[Add labels to an issue](https://docs.github.com/enterprise-server@3.13/rest/issues/labels#add-labels-to-an-issue)."
+// SetLabels sets the labels property value. The names of the labels to set for the issue. The labels you set replace any existing labels. You can pass an empty array to remove all labels. Alternatively, you can pass a single label as a `string` or an `array` of labels directly, but GitHub recommends passing an object with the `labels` key. You can also add labels to the existing labels for an issue. For more information, see "[Add labels to an issue](https://docs.github.com/enterprise-server@3.11/rest/issues/labels#add-labels-to-an-issue)."
 func (m *ItemItemIssuesItemLabelsPutRequestBodyMember1) SetLabels(value []string)() {
     m.labels = value
 }

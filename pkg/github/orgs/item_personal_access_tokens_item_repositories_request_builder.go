@@ -12,9 +12,9 @@ type ItemPersonalAccessTokensItemRepositoriesRequestBuilder struct {
 }
 // ItemPersonalAccessTokensItemRepositoriesRequestBuilderGetQueryParameters lists the repositories a fine-grained personal access token has access to.Only GitHub Apps can use this endpoint.
 type ItemPersonalAccessTokensItemRepositoriesRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // NewItemPersonalAccessTokensItemRepositoriesRequestBuilderInternal instantiates a new ItemPersonalAccessTokensItemRepositoriesRequestBuilder and sets the default values.
@@ -37,7 +37,7 @@ func NewItemPersonalAccessTokensItemRepositoriesRequestBuilder(rawUrl string, re
 // returns a BasicError error when the service returns a 500 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/orgs/personal-access-tokens#list-repositories-a-fine-grained-personal-access-token-has-access-to
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/orgs/personal-access-tokens#list-repositories-a-fine-grained-personal-access-token-has-access-to
 func (m *ItemPersonalAccessTokensItemRepositoriesRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemPersonalAccessTokensItemRepositoriesRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.MinimalRepositoryable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

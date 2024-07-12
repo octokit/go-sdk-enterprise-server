@@ -12,9 +12,9 @@ type ItemSettingsBillingAdvancedSecurityRequestBuilder struct {
 }
 // ItemSettingsBillingAdvancedSecurityRequestBuilderGetQueryParameters gets the GitHub Advanced Security active committers for an organization per repository.Each distinct user login across all repositories is counted as a single Advanced Security seat, so the `total_advanced_security_committers` is not the sum of advanced_security_committers for each repository.If this organization defers to an enterprise for billing, the `total_advanced_security_committers` returned from the organization API may include some users that are in more than one organization, so they will only consume a single Advanced Security seat at the enterprise level.The total number of repositories with committer information is tracked by the `total_count` field.
 type ItemSettingsBillingAdvancedSecurityRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // NewItemSettingsBillingAdvancedSecurityRequestBuilderInternal instantiates a new ItemSettingsBillingAdvancedSecurityRequestBuilder and sets the default values.
@@ -32,15 +32,19 @@ func NewItemSettingsBillingAdvancedSecurityRequestBuilder(rawUrl string, request
 }
 // Get gets the GitHub Advanced Security active committers for an organization per repository.Each distinct user login across all repositories is counted as a single Advanced Security seat, so the `total_advanced_security_committers` is not the sum of advanced_security_committers for each repository.If this organization defers to an enterprise for billing, the `total_advanced_security_committers` returned from the organization API may include some users that are in more than one organization, so they will only consume a single Advanced Security seat at the enterprise level.The total number of repositories with committer information is tracked by the `total_count` field.
 // returns a AdvancedSecurityActiveCommittersable when successful
+// returns a BasicError error when the service returns a 403 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/billing/billing#get-github-advanced-security-active-committers-for-an-organization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/billing/billing#get-github-advanced-security-active-committers-for-an-organization
 func (m *ItemSettingsBillingAdvancedSecurityRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemSettingsBillingAdvancedSecurityRequestBuilderGetQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.AdvancedSecurityActiveCommittersable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
         return nil, err
     }
-    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CreateAdvancedSecurityActiveCommittersFromDiscriminatorValue, nil)
+    errorMapping := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.ErrorMappings {
+        "403": ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CreateBasicErrorFromDiscriminatorValue,
+    }
+    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CreateAdvancedSecurityActiveCommittersFromDiscriminatorValue, errorMapping)
     if err != nil {
         return nil, err
     }

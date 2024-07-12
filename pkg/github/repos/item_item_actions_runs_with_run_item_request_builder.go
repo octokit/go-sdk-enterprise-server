@@ -51,7 +51,7 @@ func NewItemItemActionsRunsWithRun_ItemRequestBuilder(rawUrl string, requestAdap
 // Delete deletes a specific workflow run.Anyone with write access to the repository can use this endpoint.If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/workflow-runs#delete-a-workflow-run
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/actions/workflow-runs#delete-a-workflow-run
 func (m *ItemItemActionsRunsWithRun_ItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -68,16 +68,11 @@ func (m *ItemItemActionsRunsWithRun_ItemRequestBuilder) Delete(ctx context.Conte
 func (m *ItemItemActionsRunsWithRun_ItemRequestBuilder) Deployment_protection_rule()(*ItemItemActionsRunsItemDeployment_protection_ruleRequestBuilder) {
     return NewItemItemActionsRunsItemDeployment_protection_ruleRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
-// ForceCancel the forceCancel property
-// returns a *ItemItemActionsRunsItemForceCancelRequestBuilder when successful
-func (m *ItemItemActionsRunsWithRun_ItemRequestBuilder) ForceCancel()(*ItemItemActionsRunsItemForceCancelRequestBuilder) {
-    return NewItemItemActionsRunsItemForceCancelRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
 // Get gets a specific workflow run.Anyone with read access to the repository can use this endpoint.OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
 // returns a WorkflowRunable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/workflow-runs#get-a-workflow-run
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/actions/workflow-runs#get-a-workflow-run
 func (m *ItemItemActionsRunsWithRun_ItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemActionsRunsWithRun_ItemRequestBuilderGetQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.WorkflowRunable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

@@ -14,7 +14,7 @@ type ItemItemHooksItemWithHook_PatchRequestBody struct {
     additionalData map[string]any
     // Configuration object of the webhook
     config ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.WebhookConfigable
-    // Determines what [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) the hook is triggered for. This replaces the entire array of events.
+    // Determines what [events](https://docs.github.com/enterprise-server@3.11/webhooks/event-payloads) the hook is triggered for. This replaces the entire array of events.
     events []string
     // Determines a list of events to be removed from the list of events that the Hook triggers for.
     remove_events []string
@@ -51,7 +51,7 @@ func (m *ItemItemHooksItemWithHook_PatchRequestBody) GetAdditionalData()(map[str
 func (m *ItemItemHooksItemWithHook_PatchRequestBody) GetConfig()(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.WebhookConfigable) {
     return m.config
 }
-// GetEvents gets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) the hook is triggered for. This replaces the entire array of events.
+// GetEvents gets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.11/webhooks/event-payloads) the hook is triggered for. This replaces the entire array of events.
 // returns a []string when successful
 func (m *ItemItemHooksItemWithHook_PatchRequestBody) GetEvents()([]string) {
     return m.events
@@ -191,7 +191,7 @@ func (m *ItemItemHooksItemWithHook_PatchRequestBody) SetAdditionalData(value map
 func (m *ItemItemHooksItemWithHook_PatchRequestBody) SetConfig(value ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.WebhookConfigable)() {
     m.config = value
 }
-// SetEvents sets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) the hook is triggered for. This replaces the entire array of events.
+// SetEvents sets the events property value. Determines what [events](https://docs.github.com/enterprise-server@3.11/webhooks/event-payloads) the hook is triggered for. This replaces the entire array of events.
 func (m *ItemItemHooksItemWithHook_PatchRequestBody) SetEvents(value []string)() {
     m.events = value
 }

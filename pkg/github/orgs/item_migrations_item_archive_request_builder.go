@@ -27,7 +27,7 @@ func NewItemMigrationsItemArchiveRequestBuilder(rawUrl string, requestAdapter i2
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/migrations/orgs#delete-an-organization-migration-archive
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/migrations/orgs#delete-an-organization-migration-archive
 func (m *ItemMigrationsItemArchiveRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -46,7 +46,7 @@ func (m *ItemMigrationsItemArchiveRequestBuilder) Delete(ctx context.Context, re
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/migrations/orgs#download-an-organization-migration-archive
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/migrations/orgs#download-an-organization-migration-archive
 func (m *ItemMigrationsItemArchiveRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

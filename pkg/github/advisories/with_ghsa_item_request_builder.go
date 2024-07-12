@@ -28,7 +28,7 @@ func NewWithGhsa_ItemRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/security-advisories/global-advisories#get-a-global-security-advisory
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/security-advisories/global-advisories#get-a-global-security-advisory
 func (m *WithGhsa_ItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GlobalAdvisoryable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

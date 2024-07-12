@@ -23,13 +23,13 @@ func NewWithLicenseItemRequestBuilder(rawUrl string, requestAdapter i2ae4187f7da
     urlParams["request-raw-url"] = rawUrl
     return NewWithLicenseItemRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Get gets information about a specific license. For more information, see "[Licensing a repository ](https://docs.github.com/enterprise-server@3.13/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)."
+// Get gets information about a specific license. For more information, see "[Licensing a repository ](https://docs.github.com/enterprise-server@3.11/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)."
 // returns a Licenseable when successful
 // returns a BasicError error when the service returns a 403 status code
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/licenses/licenses#get-a-license
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/licenses/licenses#get-a-license
 func (m *WithLicenseItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Licenseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -48,7 +48,7 @@ func (m *WithLicenseItemRequestBuilder) Get(ctx context.Context, requestConfigur
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Licenseable), nil
 }
-// ToGetRequestInformation gets information about a specific license. For more information, see "[Licensing a repository ](https://docs.github.com/enterprise-server@3.13/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)."
+// ToGetRequestInformation gets information about a specific license. For more information, see "[Licensing a repository ](https://docs.github.com/enterprise-server@3.11/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)."
 // returns a *RequestInformation when successful
 func (m *WithLicenseItemRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

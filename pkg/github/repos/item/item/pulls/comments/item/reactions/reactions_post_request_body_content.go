@@ -2,7 +2,7 @@ package reactions
 import (
     "errors"
 )
-// The [reaction type](https://docs.github.com/enterprise-server@3.13/rest/reactions/reactions#about-reactions) to add to the pull request review comment.
+// The [reaction type](https://docs.github.com/enterprise-server@3.11/rest/reactions/reactions#about-reactions) to add to the pull request review comment.
 type ReactionsPostRequestBody_content int
 
 const (

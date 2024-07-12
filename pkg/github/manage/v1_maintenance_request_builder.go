@@ -10,7 +10,7 @@ import (
 type V1MaintenanceRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// V1MaintenanceRequestBuilderGetQueryParameters gets the status and details of maintenance mode on all available nodes. For more information, see "[Enabling and scheduling maintenance mode](https://docs.github.com/enterprise-server@3.13/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode)."
+// V1MaintenanceRequestBuilderGetQueryParameters gets the status and details of maintenance mode on all available nodes. For more information, see "[Enabling and scheduling maintenance mode](https://docs.github.com/enterprise-server@3.11/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode)."
 type V1MaintenanceRequestBuilderGetQueryParameters struct {
     // The cluster roles from the cluster configuration file.
     Cluster_roles *string `uriparametername:"cluster_roles"`
@@ -30,11 +30,11 @@ func NewV1MaintenanceRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee
     urlParams["request-raw-url"] = rawUrl
     return NewV1MaintenanceRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Get gets the status and details of maintenance mode on all available nodes. For more information, see "[Enabling and scheduling maintenance mode](https://docs.github.com/enterprise-server@3.13/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode)."
+// Get gets the status and details of maintenance mode on all available nodes. For more information, see "[Enabling and scheduling maintenance mode](https://docs.github.com/enterprise-server@3.11/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode)."
 // returns a []GhesGetMaintenanceable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/manage-ghes#get-the-status-of-maintenance-mode
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/manage-ghes#get-the-status-of-maintenance-mode
 func (m *V1MaintenanceRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[V1MaintenanceRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GhesGetMaintenanceable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -52,11 +52,11 @@ func (m *V1MaintenanceRequestBuilder) Get(ctx context.Context, requestConfigurat
     }
     return val, nil
 }
-// Post sets or schedules the maintenance mode. For more information, see "[Enabling and scheduling maintenance mode](https://docs.github.com/enterprise-server@3.13/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode)."
+// Post sets or schedules the maintenance mode. For more information, see "[Enabling and scheduling maintenance mode](https://docs.github.com/enterprise-server@3.11/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode)."
 // returns a []GhesSetMaintenanceResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/manage-ghes#set-the-status-of-maintenance-mode
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/manage-ghes#set-the-status-of-maintenance-mode
 func (m *V1MaintenanceRequestBuilder) Post(ctx context.Context, body ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GhesSetMaintenanceRequestable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GhesSetMaintenanceResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -74,7 +74,7 @@ func (m *V1MaintenanceRequestBuilder) Post(ctx context.Context, body ie1e2072a5a
     }
     return val, nil
 }
-// ToGetRequestInformation gets the status and details of maintenance mode on all available nodes. For more information, see "[Enabling and scheduling maintenance mode](https://docs.github.com/enterprise-server@3.13/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode)."
+// ToGetRequestInformation gets the status and details of maintenance mode on all available nodes. For more information, see "[Enabling and scheduling maintenance mode](https://docs.github.com/enterprise-server@3.11/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode)."
 // returns a *RequestInformation when successful
 func (m *V1MaintenanceRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[V1MaintenanceRequestBuilderGetQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
@@ -82,7 +82,7 @@ func (m *V1MaintenanceRequestBuilder) ToGetRequestInformation(ctx context.Contex
     requestInfo.Headers.TryAdd("Accept", "application/json")
     return requestInfo, nil
 }
-// ToPostRequestInformation sets or schedules the maintenance mode. For more information, see "[Enabling and scheduling maintenance mode](https://docs.github.com/enterprise-server@3.13/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode)."
+// ToPostRequestInformation sets or schedules the maintenance mode. For more information, see "[Enabling and scheduling maintenance mode](https://docs.github.com/enterprise-server@3.11/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode)."
 // returns a *RequestInformation when successful
 func (m *V1MaintenanceRequestBuilder) ToPostRequestInformation(ctx context.Context, body ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GhesSetMaintenanceRequestable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

@@ -158,7 +158,7 @@ func NewItemItemCheckRunsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7
 // returns a CheckRunable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/checks/runs#create-a-check-run
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/checks/runs#create-a-check-run
 func (m *ItemItemCheckRunsRequestBuilder) Post(ctx context.Context, body CheckRunsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CheckRunable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

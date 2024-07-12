@@ -10,12 +10,12 @@ import (
 type LicensesRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// LicensesRequestBuilderGetQueryParameters lists the most commonly used licenses on GitHub. For more information, see "[Licensing a repository ](https://docs.github.com/enterprise-server@3.13/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)."
+// LicensesRequestBuilderGetQueryParameters lists the most commonly used licenses on GitHub. For more information, see "[Licensing a repository ](https://docs.github.com/enterprise-server@3.11/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)."
 type LicensesRequestBuilderGetQueryParameters struct {
     Featured *bool `uriparametername:"featured"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByLicense gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.licenses.item collection
@@ -43,11 +43,11 @@ func NewLicensesRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee26337
     urlParams["request-raw-url"] = rawUrl
     return NewLicensesRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Get lists the most commonly used licenses on GitHub. For more information, see "[Licensing a repository ](https://docs.github.com/enterprise-server@3.13/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)."
+// Get lists the most commonly used licenses on GitHub. For more information, see "[Licensing a repository ](https://docs.github.com/enterprise-server@3.11/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)."
 // returns a []LicenseSimpleable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/licenses/licenses#get-all-commonly-used-licenses
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/licenses/licenses#get-all-commonly-used-licenses
 func (m *LicensesRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[LicensesRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.LicenseSimpleable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -65,7 +65,7 @@ func (m *LicensesRequestBuilder) Get(ctx context.Context, requestConfiguration *
     }
     return val, nil
 }
-// ToGetRequestInformation lists the most commonly used licenses on GitHub. For more information, see "[Licensing a repository ](https://docs.github.com/enterprise-server@3.13/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)."
+// ToGetRequestInformation lists the most commonly used licenses on GitHub. For more information, see "[Licensing a repository ](https://docs.github.com/enterprise-server@3.11/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)."
 // returns a *RequestInformation when successful
 func (m *LicensesRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[LicensesRequestBuilderGetQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

@@ -15,7 +15,7 @@ type ItemHooksItemDeliveriesRequestBuilder struct {
 type ItemHooksItemDeliveriesRequestBuilderGetQueryParameters struct {
     // Used for pagination: the starting delivery from which the page of deliveries is fetched. Refer to the `link` header for the next and previous page cursors.
     Cursor *string `uriparametername:"cursor"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     Redelivery *bool `uriparametername:"redelivery"`
 }
@@ -48,7 +48,7 @@ func NewItemHooksItemDeliveriesRequestBuilder(rawUrl string, requestAdapter i2ae
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/orgs/webhooks#list-deliveries-for-an-organization-webhook
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/orgs/webhooks#list-deliveries-for-an-organization-webhook
 func (m *ItemHooksItemDeliveriesRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemHooksItemDeliveriesRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.HookDeliveryItemable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

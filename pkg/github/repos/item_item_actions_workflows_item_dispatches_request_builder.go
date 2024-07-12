@@ -25,7 +25,7 @@ func NewItemItemActionsWorkflowsItemDispatchesRequestBuilder(rawUrl string, requ
 // Post you can use this endpoint to manually trigger a GitHub Actions workflow run. You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`.You must configure your GitHub Actions workflow to run when the [`workflow_dispatch` webhook](/developers/webhooks-and-events/webhook-events-and-payloads#workflow_dispatch) event occurs. The `inputs` are configured in the workflow file. For more information about how to configure the `workflow_dispatch` event in the workflow file, see "[Events that trigger workflows](/actions/reference/events-that-trigger-workflows#workflow_dispatch)."OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/workflows#create-a-workflow-dispatch-event
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/actions/workflows#create-a-workflow-dispatch-event
 func (m *ItemItemActionsWorkflowsItemDispatchesRequestBuilder) Post(ctx context.Context, body ItemItemActionsWorkflowsItemDispatchesPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

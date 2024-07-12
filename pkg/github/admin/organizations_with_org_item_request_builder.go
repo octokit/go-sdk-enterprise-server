@@ -26,7 +26,7 @@ func NewOrganizationsWithOrgItemRequestBuilder(rawUrl string, requestAdapter i2a
 // returns a OrganizationsItemWithOrgPatchResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/orgs#update-an-organization-name
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/orgs#update-an-organization-name
 func (m *OrganizationsWithOrgItemRequestBuilder) Patch(ctx context.Context, body OrganizationsItemWithOrgPatchRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(OrganizationsItemWithOrgPatchResponseable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

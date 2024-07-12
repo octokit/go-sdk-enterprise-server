@@ -23,13 +23,13 @@ func NewHookDeliveriesItemAttemptsRequestBuilder(rawUrl string, requestAdapter i
     urlParams["request-raw-url"] = rawUrl
     return NewHookDeliveriesItemAttemptsRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Post redeliver a delivery for the webhook configured for a GitHub App.You must use a [JWT](https://docs.github.com/enterprise-server@3.13/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
+// Post redeliver a delivery for the webhook configured for a GitHub App.You must use a [JWT](https://docs.github.com/enterprise-server@3.11/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
 // returns a HookDeliveriesItemAttemptsPostResponseable when successful
 // returns a BasicError error when the service returns a 400 status code
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/apps/webhooks#redeliver-a-delivery-for-an-app-webhook
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/apps/webhooks#redeliver-a-delivery-for-an-app-webhook
 func (m *HookDeliveriesItemAttemptsRequestBuilder) Post(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(HookDeliveriesItemAttemptsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -48,7 +48,7 @@ func (m *HookDeliveriesItemAttemptsRequestBuilder) Post(ctx context.Context, req
     }
     return res.(HookDeliveriesItemAttemptsPostResponseable), nil
 }
-// ToPostRequestInformation redeliver a delivery for the webhook configured for a GitHub App.You must use a [JWT](https://docs.github.com/enterprise-server@3.13/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
+// ToPostRequestInformation redeliver a delivery for the webhook configured for a GitHub App.You must use a [JWT](https://docs.github.com/enterprise-server@3.11/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
 // returns a *RequestInformation when successful
 func (m *HookDeliveriesItemAttemptsRequestBuilder) ToPostRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

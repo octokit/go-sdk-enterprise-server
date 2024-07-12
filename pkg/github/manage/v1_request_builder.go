@@ -8,16 +8,6 @@ import (
 type V1RequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// Access the access property
-// returns a *V1AccessRequestBuilder when successful
-func (m *V1RequestBuilder) Access()(*V1AccessRequestBuilder) {
-    return NewV1AccessRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
-// Checks the checks property
-// returns a *V1ChecksRequestBuilder when successful
-func (m *V1RequestBuilder) Checks()(*V1ChecksRequestBuilder) {
-    return NewV1ChecksRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
 // Config the config property
 // returns a *V1ConfigRequestBuilder when successful
 func (m *V1RequestBuilder) Config()(*V1ConfigRequestBuilder) {

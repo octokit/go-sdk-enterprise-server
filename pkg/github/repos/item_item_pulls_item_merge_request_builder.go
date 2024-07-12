@@ -26,7 +26,7 @@ func NewItemItemPullsItemMergeRequestBuilder(rawUrl string, requestAdapter i2ae4
 // Get checks if a pull request has been merged into the base branch. The HTTP status of the response indicates whether or not the pull request has been merged; the response body is empty.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/pulls/pulls#check-if-a-pull-request-has-been-merged
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/pulls/pulls#check-if-a-pull-request-has-been-merged
 func (m *ItemItemPullsItemMergeRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -38,7 +38,7 @@ func (m *ItemItemPullsItemMergeRequestBuilder) Get(ctx context.Context, requestC
     }
     return nil
 }
-// Put merges a pull request into the base branch.This endpoint triggers [notifications](https://docs.github.com/enterprise-server@3.13/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/enterprise-server@3.13/rest/guides/best-practices-for-using-the-rest-api)."
+// Put merges a pull request into the base branch.This endpoint triggers [notifications](https://docs.github.com/enterprise-server@3.11/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/enterprise-server@3.11/rest/guides/best-practices-for-using-the-rest-api)."
 // returns a PullRequestMergeResultable when successful
 // returns a BasicError error when the service returns a 403 status code
 // returns a BasicError error when the service returns a 404 status code
@@ -47,7 +47,7 @@ func (m *ItemItemPullsItemMergeRequestBuilder) Get(ctx context.Context, requestC
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/pulls/pulls#merge-a-pull-request
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/pulls/pulls#merge-a-pull-request
 func (m *ItemItemPullsItemMergeRequestBuilder) Put(ctx context.Context, body ItemItemPullsItemMergePutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.PullRequestMergeResultable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -76,7 +76,7 @@ func (m *ItemItemPullsItemMergeRequestBuilder) ToGetRequestInformation(ctx conte
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.ConfigureRequestInformation(requestInfo, requestConfiguration)
     return requestInfo, nil
 }
-// ToPutRequestInformation merges a pull request into the base branch.This endpoint triggers [notifications](https://docs.github.com/enterprise-server@3.13/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/enterprise-server@3.13/rest/guides/best-practices-for-using-the-rest-api)."
+// ToPutRequestInformation merges a pull request into the base branch.This endpoint triggers [notifications](https://docs.github.com/enterprise-server@3.11/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/enterprise-server@3.11/rest/guides/best-practices-for-using-the-rest-api)."
 // returns a *RequestInformation when successful
 func (m *ItemItemPullsItemMergeRequestBuilder) ToPutRequestInformation(ctx context.Context, body ItemItemPullsItemMergePutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

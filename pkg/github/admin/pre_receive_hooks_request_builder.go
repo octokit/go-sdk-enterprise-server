@@ -16,9 +16,9 @@ type PreReceiveHooksRequestBuilder struct {
 type PreReceiveHooksRequestBuilderGetQueryParameters struct {
     // The direction to sort the results by.
     Direction *i24ee6165ab19c8a2e0c2d9a788ca00150f57243a6a5375502e37e96ab12549d1.GetDirectionQueryParameterType `uriparametername:"direction"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     // The property to sort the results by.
     Sort *i24ee6165ab19c8a2e0c2d9a788ca00150f57243a6a5375502e37e96ab12549d1.GetSortQueryParameterType `uriparametername:"sort"`
@@ -50,7 +50,7 @@ func NewPreReceiveHooksRequestBuilder(rawUrl string, requestAdapter i2ae4187f7da
 // returns a []PreReceiveHookable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/pre-receive-hooks#list-pre-receive-hooks
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/pre-receive-hooks#list-pre-receive-hooks
 func (m *PreReceiveHooksRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[PreReceiveHooksRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.PreReceiveHookable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -72,7 +72,7 @@ func (m *PreReceiveHooksRequestBuilder) Get(ctx context.Context, requestConfigur
 // returns a PreReceiveHookable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/pre-receive-hooks#create-a-pre-receive-hook
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/pre-receive-hooks#create-a-pre-receive-hook
 func (m *PreReceiveHooksRequestBuilder) Post(ctx context.Context, body PreReceiveHooksPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.PreReceiveHookable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

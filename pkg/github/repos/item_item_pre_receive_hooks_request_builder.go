@@ -16,9 +16,9 @@ type ItemItemPreReceiveHooksRequestBuilder struct {
 type ItemItemPreReceiveHooksRequestBuilderGetQueryParameters struct {
     // The direction to sort the results by.
     Direction *ica6934b4a373fa1659e9f86c88392ef5c7c24513cb1e02c6bad9849147d46e61.GetDirectionQueryParameterType `uriparametername:"direction"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
     Sort *ica6934b4a373fa1659e9f86c88392ef5c7c24513cb1e02c6bad9849147d46e61.GetSortQueryParameterType `uriparametername:"sort"`
 }
@@ -49,7 +49,7 @@ func NewItemItemPreReceiveHooksRequestBuilder(rawUrl string, requestAdapter i2ae
 // returns a []RepositoryPreReceiveHookable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/repo-pre-receive-hooks#list-pre-receive-hooks-for-a-repository
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/repo-pre-receive-hooks#list-pre-receive-hooks-for-a-repository
 func (m *ItemItemPreReceiveHooksRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemPreReceiveHooksRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryPreReceiveHookable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

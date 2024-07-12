@@ -124,9 +124,9 @@ func (m *CardsPostRequestBody) SetColumnsItemCardsPostRequestBodyMember2(value C
 type ColumnsItemCardsRequestBuilderGetQueryParameters struct {
     // Filters the project cards that are returned by the card's state.
     Archived_state *i08da0c53b72492e2f5e6fbf28989af08fb10cadb406714cdeb825125f9cdeaff.GetArchived_stateQueryParameterType `uriparametername:"archived_state"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 type CardsPostRequestBodyable interface {
@@ -159,7 +159,7 @@ func NewColumnsItemCardsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7d
 // returns a BasicError error when the service returns a 403 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/projects/cards#list-project-cards
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/projects/cards#list-project-cards
 func (m *ColumnsItemCardsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ColumnsItemCardsRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ProjectCardable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -188,7 +188,7 @@ func (m *ColumnsItemCardsRequestBuilder) Get(ctx context.Context, requestConfigu
 // returns a ColumnsItemCardsProjectCard503Error error when the service returns a 503 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/projects/cards#create-a-project-card
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/projects/cards#create-a-project-card
 func (m *ColumnsItemCardsRequestBuilder) Post(ctx context.Context, body CardsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ProjectCardable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

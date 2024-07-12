@@ -31,7 +31,7 @@ func NewColumnsCardsItemMovesRequestBuilder(rawUrl string, requestAdapter i2ae41
 // returns a ColumnsCardsItemMoves503Error error when the service returns a 503 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/projects/cards#move-a-project-card
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/projects/cards#move-a-project-card
 func (m *ColumnsCardsItemMovesRequestBuilder) Post(ctx context.Context, body ColumnsCardsItemMovesPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ColumnsCardsItemMovesPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

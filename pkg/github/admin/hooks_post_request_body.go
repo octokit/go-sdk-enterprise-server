@@ -11,7 +11,7 @@ type HooksPostRequestBody struct {
     additionalData map[string]any
     // Key/value pairs to provide settings for this webhook.
     config HooksPostRequestBody_configable
-    // The [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) that trigger this webhook. A global webhook can be triggered by `user` and `organization` events. Default: `user` and `organization`.
+    // The [events](https://docs.github.com/enterprise-server@3.11/webhooks/event-payloads) that trigger this webhook. A global webhook can be triggered by `user` and `organization` events. Default: `user` and `organization`.
     events []string
     // Must be passed as "web".
     name *string
@@ -43,7 +43,7 @@ func (m *HooksPostRequestBody) GetAdditionalData()(map[string]any) {
 func (m *HooksPostRequestBody) GetConfig()(HooksPostRequestBody_configable) {
     return m.config
 }
-// GetEvents gets the events property value. The [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) that trigger this webhook. A global webhook can be triggered by `user` and `organization` events. Default: `user` and `organization`.
+// GetEvents gets the events property value. The [events](https://docs.github.com/enterprise-server@3.11/webhooks/event-payloads) that trigger this webhook. A global webhook can be triggered by `user` and `organization` events. Default: `user` and `organization`.
 // returns a []string when successful
 func (m *HooksPostRequestBody) GetEvents()([]string) {
     return m.events
@@ -151,7 +151,7 @@ func (m *HooksPostRequestBody) SetAdditionalData(value map[string]any)() {
 func (m *HooksPostRequestBody) SetConfig(value HooksPostRequestBody_configable)() {
     m.config = value
 }
-// SetEvents sets the events property value. The [events](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads) that trigger this webhook. A global webhook can be triggered by `user` and `organization` events. Default: `user` and `organization`.
+// SetEvents sets the events property value. The [events](https://docs.github.com/enterprise-server@3.11/webhooks/event-payloads) that trigger this webhook. A global webhook can be triggered by `user` and `organization` events. Default: `user` and `organization`.
 func (m *HooksPostRequestBody) SetEvents(value []string)() {
     m.events = value
 }

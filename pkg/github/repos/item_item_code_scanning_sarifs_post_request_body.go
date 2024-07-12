@@ -12,7 +12,7 @@ type ItemItemCodeScanningSarifsPostRequestBody struct {
     commit_sha *string
     // The full Git reference, formatted as `refs/heads/<branch name>`,`refs/tags/<tag>`, `refs/pull/<number>/merge`, or `refs/pull/<number>/head`.
     ref *string
-    // A Base64 string representing the SARIF file to upload. You must first compress your SARIF file using [`gzip`](http://www.gnu.org/software/gzip/manual/gzip.html) and then translate the contents of the file into a Base64 encoding string. For more information, see "[SARIF support for code scanning](https://docs.github.com/enterprise-server@3.13/code-security/secure-coding/sarif-support-for-code-scanning)."
+    // A Base64 string representing the SARIF file to upload. You must first compress your SARIF file using [`gzip`](http://www.gnu.org/software/gzip/manual/gzip.html) and then translate the contents of the file into a Base64 encoding string. For more information, see "[SARIF support for code scanning](https://docs.github.com/enterprise-server@3.11/code-security/secure-coding/sarif-support-for-code-scanning)."
     sarif *string
     // The time that the analysis run began. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
     started_at *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time
@@ -111,7 +111,7 @@ func (m *ItemItemCodeScanningSarifsPostRequestBody) GetFieldDeserializers()(map[
 func (m *ItemItemCodeScanningSarifsPostRequestBody) GetRef()(*string) {
     return m.ref
 }
-// GetSarif gets the sarif property value. A Base64 string representing the SARIF file to upload. You must first compress your SARIF file using [`gzip`](http://www.gnu.org/software/gzip/manual/gzip.html) and then translate the contents of the file into a Base64 encoding string. For more information, see "[SARIF support for code scanning](https://docs.github.com/enterprise-server@3.13/code-security/secure-coding/sarif-support-for-code-scanning)."
+// GetSarif gets the sarif property value. A Base64 string representing the SARIF file to upload. You must first compress your SARIF file using [`gzip`](http://www.gnu.org/software/gzip/manual/gzip.html) and then translate the contents of the file into a Base64 encoding string. For more information, see "[SARIF support for code scanning](https://docs.github.com/enterprise-server@3.11/code-security/secure-coding/sarif-support-for-code-scanning)."
 // returns a *string when successful
 func (m *ItemItemCodeScanningSarifsPostRequestBody) GetSarif()(*string) {
     return m.sarif
@@ -178,7 +178,7 @@ func (m *ItemItemCodeScanningSarifsPostRequestBody) SetCommitSha(value *string)(
 func (m *ItemItemCodeScanningSarifsPostRequestBody) SetRef(value *string)() {
     m.ref = value
 }
-// SetSarif sets the sarif property value. A Base64 string representing the SARIF file to upload. You must first compress your SARIF file using [`gzip`](http://www.gnu.org/software/gzip/manual/gzip.html) and then translate the contents of the file into a Base64 encoding string. For more information, see "[SARIF support for code scanning](https://docs.github.com/enterprise-server@3.13/code-security/secure-coding/sarif-support-for-code-scanning)."
+// SetSarif sets the sarif property value. A Base64 string representing the SARIF file to upload. You must first compress your SARIF file using [`gzip`](http://www.gnu.org/software/gzip/manual/gzip.html) and then translate the contents of the file into a Base64 encoding string. For more information, see "[SARIF support for code scanning](https://docs.github.com/enterprise-server@3.11/code-security/secure-coding/sarif-support-for-code-scanning)."
 func (m *ItemItemCodeScanningSarifsPostRequestBody) SetSarif(value *string)() {
     m.sarif = value
 }

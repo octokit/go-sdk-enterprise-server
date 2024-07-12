@@ -29,7 +29,7 @@ func NewItemHooksItemDeliveriesItemAttemptsRequestBuilder(rawUrl string, request
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/orgs/webhooks#redeliver-a-delivery-for-an-organization-webhook
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/orgs/webhooks#redeliver-a-delivery-for-an-organization-webhook
 func (m *ItemHooksItemDeliveriesItemAttemptsRequestBuilder) Post(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ItemHooksItemDeliveriesItemAttemptsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, requestConfiguration);
     if err != nil {

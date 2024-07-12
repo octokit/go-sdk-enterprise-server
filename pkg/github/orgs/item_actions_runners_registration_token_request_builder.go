@@ -27,7 +27,7 @@ func NewItemActionsRunnersRegistrationTokenRequestBuilder(rawUrl string, request
 // returns a AuthenticationTokenable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/self-hosted-runners#create-a-registration-token-for-an-organization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/actions/self-hosted-runners#create-a-registration-token-for-an-organization
 func (m *ItemActionsRunnersRegistrationTokenRequestBuilder) Post(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.AuthenticationTokenable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, requestConfiguration);
     if err != nil {

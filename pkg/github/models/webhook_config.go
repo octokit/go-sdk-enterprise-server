@@ -12,7 +12,7 @@ type WebhookConfig struct {
     content_type *string
     // The insecure_ssl property
     insecure_ssl WebhookConfigInsecureSslable
-    // If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads/#delivery-headers).
+    // If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-server@3.11/webhooks/event-payloads/#delivery-headers).
     secret *string
     // The URL to which the payloads will be delivered.
     url *string
@@ -90,7 +90,7 @@ func (m *WebhookConfig) GetFieldDeserializers()(map[string]func(i878a80d2330e89d
 func (m *WebhookConfig) GetInsecureSsl()(WebhookConfigInsecureSslable) {
     return m.insecure_ssl
 }
-// GetSecret gets the secret property value. If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads/#delivery-headers).
+// GetSecret gets the secret property value. If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-server@3.11/webhooks/event-payloads/#delivery-headers).
 // returns a *string when successful
 func (m *WebhookConfig) GetSecret()(*string) {
     return m.secret
@@ -146,7 +146,7 @@ func (m *WebhookConfig) SetContentType(value *string)() {
 func (m *WebhookConfig) SetInsecureSsl(value WebhookConfigInsecureSslable)() {
     m.insecure_ssl = value
 }
-// SetSecret sets the secret property value. If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-server@3.13/webhooks/event-payloads/#delivery-headers).
+// SetSecret sets the secret property value. If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-server@3.11/webhooks/event-payloads/#delivery-headers).
 func (m *WebhookConfig) SetSecret(value *string)() {
     m.secret = value
 }

@@ -25,7 +25,7 @@ func NewItemActionsPermissionsRepositoriesWithRepository_ItemRequestBuilder(rawU
 // Delete removes a repository from the list of selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/permissions#disable-a-selected-repository-for-github-actions-in-an-organization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/actions/permissions#disable-a-selected-repository-for-github-actions-in-an-organization
 func (m *ItemActionsPermissionsRepositoriesWithRepository_ItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -40,7 +40,7 @@ func (m *ItemActionsPermissionsRepositoriesWithRepository_ItemRequestBuilder) De
 // Put adds a repository to the list of selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/permissions#enable-a-selected-repository-for-github-actions-in-an-organization
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/actions/permissions#enable-a-selected-repository-for-github-actions-in-an-organization
 func (m *ItemActionsPermissionsRepositoriesWithRepository_ItemRequestBuilder) Put(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, requestConfiguration);
     if err != nil {

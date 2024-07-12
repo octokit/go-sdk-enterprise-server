@@ -12,9 +12,9 @@ type ItemKeysRequestBuilder struct {
 }
 // ItemKeysRequestBuilderGetQueryParameters lists the _verified_ public SSH keys for a user. This is accessible by anyone.
 type ItemKeysRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // NewItemKeysRequestBuilderInternal instantiates a new ItemKeysRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ func NewItemKeysRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee26337
 // returns a []KeySimpleable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/users/keys#list-public-keys-for-a-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/users/keys#list-public-keys-for-a-user
 func (m *ItemKeysRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemKeysRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.KeySimpleable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

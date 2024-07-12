@@ -37,7 +37,7 @@ type ItemReposPostRequestBody struct {
     homepage *string
     // Either `true` to make this repo available as a template repository or `false` to prevent it.
     is_template *bool
-    // Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://docs.github.com/enterprise-server@3.13/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
+    // Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://docs.github.com/enterprise-server@3.11/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
     license_template *string
     // The name of the repository.
     name *string
@@ -347,7 +347,7 @@ func (m *ItemReposPostRequestBody) GetHomepage()(*string) {
 func (m *ItemReposPostRequestBody) GetIsTemplate()(*bool) {
     return m.is_template
 }
-// GetLicenseTemplate gets the license_template property value. Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://docs.github.com/enterprise-server@3.13/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
+// GetLicenseTemplate gets the license_template property value. Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://docs.github.com/enterprise-server@3.11/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
 // returns a *string when successful
 func (m *ItemReposPostRequestBody) GetLicenseTemplate()(*string) {
     return m.license_template
@@ -567,7 +567,7 @@ func (m *ItemReposPostRequestBody) SetHomepage(value *string)() {
 func (m *ItemReposPostRequestBody) SetIsTemplate(value *bool)() {
     m.is_template = value
 }
-// SetLicenseTemplate sets the license_template property value. Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://docs.github.com/enterprise-server@3.13/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
+// SetLicenseTemplate sets the license_template property value. Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://docs.github.com/enterprise-server@3.11/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
 func (m *ItemReposPostRequestBody) SetLicenseTemplate(value *string)() {
     m.license_template = value
 }

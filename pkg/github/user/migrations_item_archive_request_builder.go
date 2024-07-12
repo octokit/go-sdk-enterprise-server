@@ -28,7 +28,7 @@ func NewMigrationsItemArchiveRequestBuilder(rawUrl string, requestAdapter i2ae41
 // returns a BasicError error when the service returns a 403 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/migrations/users#download-a-user-migration-archive
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/migrations/users#download-a-user-migration-archive
 func (m *MigrationsItemArchiveRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

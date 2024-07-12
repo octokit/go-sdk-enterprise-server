@@ -13,9 +13,9 @@ type Ssh_signing_keysRequestBuilder struct {
 }
 // Ssh_signing_keysRequestBuilderGetQueryParameters lists the SSH signing keys for the authenticated user's GitHub account.OAuth app tokens and personal access tokens (classic) need the `read:ssh_signing_key` scope to use this endpoint.
 type Ssh_signing_keysRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // BySsh_signing_key_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.user.ssh_signing_keys.item collection
@@ -48,7 +48,7 @@ func NewSsh_signing_keysRequestBuilder(rawUrl string, requestAdapter i2ae4187f7d
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/users/ssh-signing-keys#list-ssh-signing-keys-for-the-authenticated-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/users/ssh-signing-keys#list-ssh-signing-keys-for-the-authenticated-user
 func (m *Ssh_signing_keysRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[Ssh_signing_keysRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.SshSigningKeyable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -79,7 +79,7 @@ func (m *Ssh_signing_keysRequestBuilder) Get(ctx context.Context, requestConfigu
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/users/ssh-signing-keys#create-a-ssh-signing-key-for-the-authenticated-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/users/ssh-signing-keys#create-a-ssh-signing-key-for-the-authenticated-user
 func (m *Ssh_signing_keysRequestBuilder) Post(ctx context.Context, body Ssh_signing_keysPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.SshSigningKeyable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

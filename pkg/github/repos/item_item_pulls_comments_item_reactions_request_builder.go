@@ -12,13 +12,13 @@ import (
 type ItemItemPullsCommentsItemReactionsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ItemItemPullsCommentsItemReactionsRequestBuilderGetQueryParameters list the reactions to a [pull request review comment](https://docs.github.com/enterprise-server@3.13/rest/pulls/comments#get-a-review-comment-for-a-pull-request).
+// ItemItemPullsCommentsItemReactionsRequestBuilderGetQueryParameters list the reactions to a [pull request review comment](https://docs.github.com/enterprise-server@3.11/rest/pulls/comments#get-a-review-comment-for-a-pull-request).
 type ItemItemPullsCommentsItemReactionsRequestBuilderGetQueryParameters struct {
-    // Returns a single [reaction type](https://docs.github.com/enterprise-server@3.13/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a pull request review comment.
+    // Returns a single [reaction type](https://docs.github.com/enterprise-server@3.11/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a pull request review comment.
     Content *i2cc6c579dc277888675f0cc7051bb5ee29007a09fd9058528d4f5ef3fcebd37b.GetContentQueryParameterType `uriparametername:"content"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByReaction_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.repos.item.item.pulls.comments.item.reactions.item collection
@@ -44,12 +44,12 @@ func NewItemItemPullsCommentsItemReactionsRequestBuilder(rawUrl string, requestA
     urlParams["request-raw-url"] = rawUrl
     return NewItemItemPullsCommentsItemReactionsRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Get list the reactions to a [pull request review comment](https://docs.github.com/enterprise-server@3.13/rest/pulls/comments#get-a-review-comment-for-a-pull-request).
+// Get list the reactions to a [pull request review comment](https://docs.github.com/enterprise-server@3.11/rest/pulls/comments#get-a-review-comment-for-a-pull-request).
 // returns a []Reactionable when successful
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/reactions/reactions#list-reactions-for-a-pull-request-review-comment
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/reactions/reactions#list-reactions-for-a-pull-request-review-comment
 func (m *ItemItemPullsCommentsItemReactionsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemPullsCommentsItemReactionsRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Reactionable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -70,12 +70,12 @@ func (m *ItemItemPullsCommentsItemReactionsRequestBuilder) Get(ctx context.Conte
     }
     return val, nil
 }
-// Post create a reaction to a [pull request review comment](https://docs.github.com/enterprise-server@3.13/rest/pulls/comments#get-a-review-comment-for-a-pull-request). A response with an HTTP `200` status means that you already added the reaction type to this pull request review comment.
+// Post create a reaction to a [pull request review comment](https://docs.github.com/enterprise-server@3.11/rest/pulls/comments#get-a-review-comment-for-a-pull-request). A response with an HTTP `200` status means that you already added the reaction type to this pull request review comment.
 // returns a Reactionable when successful
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/reactions/reactions#create-reaction-for-a-pull-request-review-comment
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/reactions/reactions#create-reaction-for-a-pull-request-review-comment
 func (m *ItemItemPullsCommentsItemReactionsRequestBuilder) Post(ctx context.Context, body ItemItemPullsCommentsItemReactionsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Reactionable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -93,7 +93,7 @@ func (m *ItemItemPullsCommentsItemReactionsRequestBuilder) Post(ctx context.Cont
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Reactionable), nil
 }
-// ToGetRequestInformation list the reactions to a [pull request review comment](https://docs.github.com/enterprise-server@3.13/rest/pulls/comments#get-a-review-comment-for-a-pull-request).
+// ToGetRequestInformation list the reactions to a [pull request review comment](https://docs.github.com/enterprise-server@3.11/rest/pulls/comments#get-a-review-comment-for-a-pull-request).
 // returns a *RequestInformation when successful
 func (m *ItemItemPullsCommentsItemReactionsRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemPullsCommentsItemReactionsRequestBuilderGetQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
@@ -101,7 +101,7 @@ func (m *ItemItemPullsCommentsItemReactionsRequestBuilder) ToGetRequestInformati
     requestInfo.Headers.TryAdd("Accept", "application/json")
     return requestInfo, nil
 }
-// ToPostRequestInformation create a reaction to a [pull request review comment](https://docs.github.com/enterprise-server@3.13/rest/pulls/comments#get-a-review-comment-for-a-pull-request). A response with an HTTP `200` status means that you already added the reaction type to this pull request review comment.
+// ToPostRequestInformation create a reaction to a [pull request review comment](https://docs.github.com/enterprise-server@3.11/rest/pulls/comments#get-a-review-comment-for-a-pull-request). A response with an HTTP `200` status means that you already added the reaction type to this pull request review comment.
 // returns a *RequestInformation when successful
 func (m *ItemItemPullsCommentsItemReactionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body ItemItemPullsCommentsItemReactionsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

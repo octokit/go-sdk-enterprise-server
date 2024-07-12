@@ -10,7 +10,7 @@ import (
 type V1ConfigNodesRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// V1ConfigNodesRequestBuilderGetQueryParameters get node metadata for all configured nodes in the current cluster. For more information, see "[About clustering](https://docs.github.com/enterprise-server@3.13/admin/enterprise-management/configuring-clustering/about-clustering)."
+// V1ConfigNodesRequestBuilderGetQueryParameters get node metadata for all configured nodes in the current cluster. For more information, see "[About clustering](https://docs.github.com/enterprise-server@3.11/admin/enterprise-management/configuring-clustering/about-clustering)."
 type V1ConfigNodesRequestBuilderGetQueryParameters struct {
     // The cluster roles from the cluster configuration file.
     Cluster_roles *string `uriparametername:"cluster_roles"`
@@ -30,11 +30,11 @@ func NewV1ConfigNodesRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee
     urlParams["request-raw-url"] = rawUrl
     return NewV1ConfigNodesRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Get get node metadata for all configured nodes in the current cluster. For more information, see "[About clustering](https://docs.github.com/enterprise-server@3.13/admin/enterprise-management/configuring-clustering/about-clustering)."
+// Get get node metadata for all configured nodes in the current cluster. For more information, see "[About clustering](https://docs.github.com/enterprise-server@3.11/admin/enterprise-management/configuring-clustering/about-clustering)."
 // returns a GhesConfigNodesable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/manage-ghes#get-ghes-node-metadata-for-all-nodes
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/manage-ghes#get-ghes-node-metadata-for-all-nodes
 func (m *V1ConfigNodesRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[V1ConfigNodesRequestBuilderGetQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GhesConfigNodesable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -49,7 +49,7 @@ func (m *V1ConfigNodesRequestBuilder) Get(ctx context.Context, requestConfigurat
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GhesConfigNodesable), nil
 }
-// ToGetRequestInformation get node metadata for all configured nodes in the current cluster. For more information, see "[About clustering](https://docs.github.com/enterprise-server@3.13/admin/enterprise-management/configuring-clustering/about-clustering)."
+// ToGetRequestInformation get node metadata for all configured nodes in the current cluster. For more information, see "[About clustering](https://docs.github.com/enterprise-server@3.11/admin/enterprise-management/configuring-clustering/about-clustering)."
 // returns a *RequestInformation when successful
 func (m *V1ConfigNodesRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[V1ConfigNodesRequestBuilderGetQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

@@ -7,7 +7,7 @@ import (
 type ItemItemPullsItemUpdateBranchPutRequestBody struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // The expected SHA of the pull request's HEAD ref. This is the most recent commit on the pull request's branch. If the expected SHA does not match the pull request's HEAD, you will receive a `422 Unprocessable Entity` status. You can use the "[List commits](https://docs.github.com/enterprise-server@3.13/rest/commits/commits#list-commits)" endpoint to find the most recent commit SHA. Default: SHA of the pull request's current HEAD ref.
+    // The expected SHA of the pull request's HEAD ref. This is the most recent commit on the pull request's branch. If the expected SHA does not match the pull request's HEAD, you will receive a `422 Unprocessable Entity` status. You can use the "[List commits](https://docs.github.com/enterprise-server@3.11/rest/commits/commits#list-commits)" endpoint to find the most recent commit SHA. Default: SHA of the pull request's current HEAD ref.
     expected_head_sha *string
 }
 // NewItemItemPullsItemUpdateBranchPutRequestBody instantiates a new ItemItemPullsItemUpdateBranchPutRequestBody and sets the default values.
@@ -27,7 +27,7 @@ func CreateItemItemPullsItemUpdateBranchPutRequestBodyFromDiscriminatorValue(par
 func (m *ItemItemPullsItemUpdateBranchPutRequestBody) GetAdditionalData()(map[string]any) {
     return m.additionalData
 }
-// GetExpectedHeadSha gets the expected_head_sha property value. The expected SHA of the pull request's HEAD ref. This is the most recent commit on the pull request's branch. If the expected SHA does not match the pull request's HEAD, you will receive a `422 Unprocessable Entity` status. You can use the "[List commits](https://docs.github.com/enterprise-server@3.13/rest/commits/commits#list-commits)" endpoint to find the most recent commit SHA. Default: SHA of the pull request's current HEAD ref.
+// GetExpectedHeadSha gets the expected_head_sha property value. The expected SHA of the pull request's HEAD ref. This is the most recent commit on the pull request's branch. If the expected SHA does not match the pull request's HEAD, you will receive a `422 Unprocessable Entity` status. You can use the "[List commits](https://docs.github.com/enterprise-server@3.11/rest/commits/commits#list-commits)" endpoint to find the most recent commit SHA. Default: SHA of the pull request's current HEAD ref.
 // returns a *string when successful
 func (m *ItemItemPullsItemUpdateBranchPutRequestBody) GetExpectedHeadSha()(*string) {
     return m.expected_head_sha
@@ -68,7 +68,7 @@ func (m *ItemItemPullsItemUpdateBranchPutRequestBody) Serialize(writer i878a80d2
 func (m *ItemItemPullsItemUpdateBranchPutRequestBody) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetExpectedHeadSha sets the expected_head_sha property value. The expected SHA of the pull request's HEAD ref. This is the most recent commit on the pull request's branch. If the expected SHA does not match the pull request's HEAD, you will receive a `422 Unprocessable Entity` status. You can use the "[List commits](https://docs.github.com/enterprise-server@3.13/rest/commits/commits#list-commits)" endpoint to find the most recent commit SHA. Default: SHA of the pull request's current HEAD ref.
+// SetExpectedHeadSha sets the expected_head_sha property value. The expected SHA of the pull request's HEAD ref. This is the most recent commit on the pull request's branch. If the expected SHA does not match the pull request's HEAD, you will receive a `422 Unprocessable Entity` status. You can use the "[List commits](https://docs.github.com/enterprise-server@3.11/rest/commits/commits#list-commits)" endpoint to find the most recent commit SHA. Default: SHA of the pull request's current HEAD ref.
 func (m *ItemItemPullsItemUpdateBranchPutRequestBody) SetExpectedHeadSha(value *string)() {
     m.expected_head_sha = value
 }

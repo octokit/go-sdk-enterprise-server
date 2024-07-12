@@ -13,9 +13,9 @@ type ItemRulesetsRequestBuilder struct {
 }
 // ItemRulesetsRequestBuilderGetQueryParameters get all the repository rulesets for an organization.
 type ItemRulesetsRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByRuleset_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.orgs.item.rulesets.item collection
@@ -47,7 +47,7 @@ func NewItemRulesetsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee2
 // returns a BasicError error when the service returns a 500 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/orgs/rules#get-all-organization-repository-rulesets
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/orgs/rules#get-all-organization-repository-rulesets
 func (m *ItemRulesetsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemRulesetsRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryRulesetable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -75,7 +75,7 @@ func (m *ItemRulesetsRequestBuilder) Get(ctx context.Context, requestConfigurati
 // returns a BasicError error when the service returns a 500 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/orgs/rules#create-an-organization-repository-ruleset
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/orgs/rules#create-an-organization-repository-ruleset
 func (m *ItemRulesetsRequestBuilder) Post(ctx context.Context, body ItemRulesetsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryRulesetable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -93,11 +93,6 @@ func (m *ItemRulesetsRequestBuilder) Post(ctx context.Context, body ItemRulesets
         return nil, nil
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryRulesetable), nil
-}
-// RuleSuites the ruleSuites property
-// returns a *ItemRulesetsRuleSuitesRequestBuilder when successful
-func (m *ItemRulesetsRequestBuilder) RuleSuites()(*ItemRulesetsRuleSuitesRequestBuilder) {
-    return NewItemRulesetsRuleSuitesRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // ToGetRequestInformation get all the repository rulesets for an organization.
 // returns a *RequestInformation when successful

@@ -7,7 +7,7 @@ import (
 type ItemSuspendedDeleteRequestBody struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // The reason the user is being unsuspended. This message will be logged in the [audit log](https://docs.github.com/enterprise-server@3.13/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/about-the-audit-log-for-your-enterprise). If you don't provide a `reason`, it will default to "Unsuspended via API by _SITE\_ADMINISTRATOR_", where _SITE\_ADMINISTRATOR_ is the person who performed the action.
+    // The reason the user is being unsuspended. This message will be logged in the [audit log](https://docs.github.com/enterprise-server@3.11/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/about-the-audit-log-for-your-enterprise). If you don't provide a `reason`, it will default to "Unsuspended via API by _SITE\_ADMINISTRATOR_", where _SITE\_ADMINISTRATOR_ is the person who performed the action.
     reason *string
 }
 // NewItemSuspendedDeleteRequestBody instantiates a new ItemSuspendedDeleteRequestBody and sets the default values.
@@ -43,7 +43,7 @@ func (m *ItemSuspendedDeleteRequestBody) GetFieldDeserializers()(map[string]func
     }
     return res
 }
-// GetReason gets the reason property value. The reason the user is being unsuspended. This message will be logged in the [audit log](https://docs.github.com/enterprise-server@3.13/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/about-the-audit-log-for-your-enterprise). If you don't provide a `reason`, it will default to "Unsuspended via API by _SITE\_ADMINISTRATOR_", where _SITE\_ADMINISTRATOR_ is the person who performed the action.
+// GetReason gets the reason property value. The reason the user is being unsuspended. This message will be logged in the [audit log](https://docs.github.com/enterprise-server@3.11/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/about-the-audit-log-for-your-enterprise). If you don't provide a `reason`, it will default to "Unsuspended via API by _SITE\_ADMINISTRATOR_", where _SITE\_ADMINISTRATOR_ is the person who performed the action.
 // returns a *string when successful
 func (m *ItemSuspendedDeleteRequestBody) GetReason()(*string) {
     return m.reason
@@ -68,7 +68,7 @@ func (m *ItemSuspendedDeleteRequestBody) Serialize(writer i878a80d2330e89d268963
 func (m *ItemSuspendedDeleteRequestBody) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetReason sets the reason property value. The reason the user is being unsuspended. This message will be logged in the [audit log](https://docs.github.com/enterprise-server@3.13/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/about-the-audit-log-for-your-enterprise). If you don't provide a `reason`, it will default to "Unsuspended via API by _SITE\_ADMINISTRATOR_", where _SITE\_ADMINISTRATOR_ is the person who performed the action.
+// SetReason sets the reason property value. The reason the user is being unsuspended. This message will be logged in the [audit log](https://docs.github.com/enterprise-server@3.11/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/about-the-audit-log-for-your-enterprise). If you don't provide a `reason`, it will default to "Unsuspended via API by _SITE\_ADMINISTRATOR_", where _SITE\_ADMINISTRATOR_ is the person who performed the action.
 func (m *ItemSuspendedDeleteRequestBody) SetReason(value *string)() {
     m.reason = value
 }

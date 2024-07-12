@@ -13,9 +13,9 @@ type HooksRequestBuilder struct {
 }
 // HooksRequestBuilderGetQueryParameters list global webhooks
 type HooksRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByHook_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.admin.hooks.item collection
@@ -45,7 +45,7 @@ func NewHooksRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee263371cb
 // returns a []GlobalHookable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/global-webhooks#list-global-webhooks
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/global-webhooks#list-global-webhooks
 func (m *HooksRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[HooksRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GlobalHookable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -67,7 +67,7 @@ func (m *HooksRequestBuilder) Get(ctx context.Context, requestConfiguration *i2a
 // returns a GlobalHookable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/global-webhooks#create-a-global-webhook
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/global-webhooks#create-a-global-webhook
 func (m *HooksRequestBuilder) Post(ctx context.Context, body HooksPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GlobalHookable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

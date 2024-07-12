@@ -29,7 +29,7 @@ func NewFollowingWithUsernameItemRequestBuilder(rawUrl string, requestAdapter i2
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/users/followers#unfollow-a-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/users/followers#unfollow-a-user
 func (m *FollowingWithUsernameItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -52,7 +52,7 @@ func (m *FollowingWithUsernameItemRequestBuilder) Delete(ctx context.Context, re
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/users/followers#check-if-a-person-is-followed-by-the-authenticated-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/users/followers#check-if-a-person-is-followed-by-the-authenticated-user
 func (m *FollowingWithUsernameItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -69,13 +69,13 @@ func (m *FollowingWithUsernameItemRequestBuilder) Get(ctx context.Context, reque
     }
     return nil
 }
-// Put note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://docs.github.com/enterprise-server@3.13/rest/guides/getting-started-with-the-rest-api#http-method)."OAuth app tokens and personal access tokens (classic) need the `user:follow` scope to use this endpoint.
+// Put note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://docs.github.com/enterprise-server@3.11/rest/guides/getting-started-with-the-rest-api#http-method)."OAuth app tokens and personal access tokens (classic) need the `user:follow` scope to use this endpoint.
 // returns a BasicError error when the service returns a 401 status code
 // returns a BasicError error when the service returns a 403 status code
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/users/followers#follow-a-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/users/followers#follow-a-user
 func (m *FollowingWithUsernameItemRequestBuilder) Put(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -107,7 +107,7 @@ func (m *FollowingWithUsernameItemRequestBuilder) ToGetRequestInformation(ctx co
     requestInfo.Headers.TryAdd("Accept", "application/json")
     return requestInfo, nil
 }
-// ToPutRequestInformation note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://docs.github.com/enterprise-server@3.13/rest/guides/getting-started-with-the-rest-api#http-method)."OAuth app tokens and personal access tokens (classic) need the `user:follow` scope to use this endpoint.
+// ToPutRequestInformation note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://docs.github.com/enterprise-server@3.11/rest/guides/getting-started-with-the-rest-api#http-method)."OAuth app tokens and personal access tokens (classic) need the `user:follow` scope to use this endpoint.
 // returns a *RequestInformation when successful
 func (m *FollowingWithUsernameItemRequestBuilder) ToPutRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

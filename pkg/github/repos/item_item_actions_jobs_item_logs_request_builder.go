@@ -25,7 +25,7 @@ func NewItemItemActionsJobsItemLogsRequestBuilder(rawUrl string, requestAdapter 
 // Get gets a redirect URL to download a plain text file of logs for a workflow job. This link expires after 1 minute. Lookfor `Location:` in the response header to find the URL for the download.Anyone with read access to the repository can use this endpoint.If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/workflow-jobs#download-job-logs-for-a-workflow-run
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/actions/workflow-jobs#download-job-logs-for-a-workflow-run
 func (m *ItemItemActionsJobsItemLogsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

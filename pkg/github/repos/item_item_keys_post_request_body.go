@@ -9,7 +9,7 @@ type ItemItemKeysPostRequestBody struct {
     additionalData map[string]any
     // The contents of the key.
     key *string
-    // If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write.    Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://docs.github.com/enterprise-server@3.13/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://docs.github.com/enterprise-server@3.13/articles/permission-levels-for-a-user-account-repository/)."
+    // If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write.    Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://docs.github.com/enterprise-server@3.11/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://docs.github.com/enterprise-server@3.11/articles/permission-levels-for-a-user-account-repository/)."
     read_only *bool
     // A name for the key.
     title *string
@@ -72,7 +72,7 @@ func (m *ItemItemKeysPostRequestBody) GetFieldDeserializers()(map[string]func(i8
 func (m *ItemItemKeysPostRequestBody) GetKey()(*string) {
     return m.key
 }
-// GetReadOnly gets the read_only property value. If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write.    Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://docs.github.com/enterprise-server@3.13/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://docs.github.com/enterprise-server@3.13/articles/permission-levels-for-a-user-account-repository/)."
+// GetReadOnly gets the read_only property value. If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write.    Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://docs.github.com/enterprise-server@3.11/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://docs.github.com/enterprise-server@3.11/articles/permission-levels-for-a-user-account-repository/)."
 // returns a *bool when successful
 func (m *ItemItemKeysPostRequestBody) GetReadOnly()(*bool) {
     return m.read_only
@@ -118,7 +118,7 @@ func (m *ItemItemKeysPostRequestBody) SetAdditionalData(value map[string]any)() 
 func (m *ItemItemKeysPostRequestBody) SetKey(value *string)() {
     m.key = value
 }
-// SetReadOnly sets the read_only property value. If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write.    Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://docs.github.com/enterprise-server@3.13/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://docs.github.com/enterprise-server@3.13/articles/permission-levels-for-a-user-account-repository/)."
+// SetReadOnly sets the read_only property value. If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write.    Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://docs.github.com/enterprise-server@3.11/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://docs.github.com/enterprise-server@3.11/articles/permission-levels-for-a-user-account-repository/)."
 func (m *ItemItemKeysPostRequestBody) SetReadOnly(value *bool)() {
     m.read_only = value
 }

@@ -35,7 +35,7 @@ func NewV2EnterprisesItemGroupsWithScim_group_ItemRequestBuilder(rawUrl string, 
 // returns a ScimError error when the service returns a 500 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/scim#delete-a-scim-group-from-an-enterprise
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/scim#delete-a-scim-group-from-an-enterprise
 func (m *V2EnterprisesItemGroupsWithScim_group_ItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -61,7 +61,7 @@ func (m *V2EnterprisesItemGroupsWithScim_group_ItemRequestBuilder) Delete(ctx co
 // returns a ScimError error when the service returns a 500 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/scim#get-scim-provisioning-information-for-an-enterprise-group
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/scim#get-scim-provisioning-information-for-an-enterprise-group
 func (m *V2EnterprisesItemGroupsWithScim_group_ItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[V2EnterprisesItemGroupsWithScim_group_ItemRequestBuilderGetQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ScimEnterpriseGroupResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -90,7 +90,7 @@ func (m *V2EnterprisesItemGroupsWithScim_group_ItemRequestBuilder) Get(ctx conte
 // returns a ScimError error when the service returns a 500 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/scim#update-an-attribute-for-a-scim-enterprise-group
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/scim#update-an-attribute-for-a-scim-enterprise-group
 func (m *V2EnterprisesItemGroupsWithScim_group_ItemRequestBuilder) Patch(ctx context.Context, body ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.PatchSchemaable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ScimEnterpriseGroupResponseable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -119,7 +119,7 @@ func (m *V2EnterprisesItemGroupsWithScim_group_ItemRequestBuilder) Patch(ctx con
 // returns a ScimError error when the service returns a 500 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/scim#set-scim-information-for-a-provisioned-enterprise-group
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/scim#set-scim-information-for-a-provisioned-enterprise-group
 func (m *V2EnterprisesItemGroupsWithScim_group_ItemRequestBuilder) Put(ctx context.Context, body ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Groupable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ScimEnterpriseGroupResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

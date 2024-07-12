@@ -14,9 +14,9 @@ type ItemItemActionsRunnersRequestBuilder struct {
 type ItemItemActionsRunnersRequestBuilderGetQueryParameters struct {
     // The name of a self-hosted runner.
     Name *string `uriparametername:"name"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByRunner_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.repos.item.item.actions.runners.item collection
@@ -56,7 +56,7 @@ func (m *ItemItemActionsRunnersRequestBuilder) GenerateJitconfig()(*ItemItemActi
 // returns a ItemItemActionsRunnersGetResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/self-hosted-runners#list-self-hosted-runners-for-a-repository
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/actions/self-hosted-runners#list-self-hosted-runners-for-a-repository
 func (m *ItemItemActionsRunnersRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemActionsRunnersRequestBuilderGetQueryParameters])(ItemItemActionsRunnersGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

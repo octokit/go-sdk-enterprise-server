@@ -25,7 +25,7 @@ func NewRawRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee263371cb1c
 // Post you must send Markdown as plain text (using a `Content-Type` header of `text/plain` or `text/x-markdown`) to this endpoint, rather than using JSON format. In raw mode, [GitHub Flavored Markdown](https://github.github.com/gfm/) is not supported and Markdown will be rendered in plain format like a README.md file. Markdown content must be 400 KB or less.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/markdown/markdown#render-a-markdown-document-in-raw-mode
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/markdown/markdown#render-a-markdown-document-in-raw-mode
 func (m *RawRequestBuilder) Post(ctx context.Context, body *string, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

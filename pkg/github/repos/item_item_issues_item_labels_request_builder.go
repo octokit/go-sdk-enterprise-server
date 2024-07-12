@@ -13,9 +13,9 @@ type ItemItemIssuesItemLabelsRequestBuilder struct {
 }
 // ItemItemIssuesItemLabelsRequestBuilderGetQueryParameters lists all labels for an issue.
 type ItemItemIssuesItemLabelsRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // LabelsPostRequestBody composed type wrapper for classes ItemItemIssuesItemLabelsPostRequestBodyMember1able, ItemItemIssuesItemLabelsPostRequestBodyMember2able, string, []ItemItemIssuesItemLabelsPostRequestBodyMember3able
@@ -520,7 +520,7 @@ func NewItemItemIssuesItemLabelsRequestBuilder(rawUrl string, requestAdapter i2a
 // returns a BasicError error when the service returns a 410 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/issues/labels#remove-all-labels-from-an-issue
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/issues/labels#remove-all-labels-from-an-issue
 func (m *ItemItemIssuesItemLabelsRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -542,7 +542,7 @@ func (m *ItemItemIssuesItemLabelsRequestBuilder) Delete(ctx context.Context, req
 // returns a BasicError error when the service returns a 410 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/issues/labels#list-labels-for-an-issue
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/issues/labels#list-labels-for-an-issue
 func (m *ItemItemIssuesItemLabelsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemIssuesItemLabelsRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Labelable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -571,7 +571,7 @@ func (m *ItemItemIssuesItemLabelsRequestBuilder) Get(ctx context.Context, reques
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/issues/labels#add-labels-to-an-issue
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/issues/labels#add-labels-to-an-issue
 func (m *ItemItemIssuesItemLabelsRequestBuilder) Post(ctx context.Context, body LabelsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Labelable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -601,7 +601,7 @@ func (m *ItemItemIssuesItemLabelsRequestBuilder) Post(ctx context.Context, body 
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/issues/labels#set-labels-for-an-issue
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/issues/labels#set-labels-for-an-issue
 func (m *ItemItemIssuesItemLabelsRequestBuilder) Put(ctx context.Context, body LabelsPutRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Labelable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

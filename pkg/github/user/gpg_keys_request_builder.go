@@ -13,9 +13,9 @@ type Gpg_keysRequestBuilder struct {
 }
 // Gpg_keysRequestBuilderGetQueryParameters lists the current user's GPG keys.OAuth app tokens and personal access tokens (classic) need the `read:gpg_key` scope to use this endpoint.
 type Gpg_keysRequestBuilderGetQueryParameters struct {
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // ByGpg_key_id gets an item from the github.com/octokit/go-sdk-enterprise-server/pkg/github.user.gpg_keys.item collection
@@ -48,7 +48,7 @@ func NewGpg_keysRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee26337
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/users/gpg-keys#list-gpg-keys-for-the-authenticated-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/users/gpg-keys#list-gpg-keys-for-the-authenticated-user
 func (m *Gpg_keysRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[Gpg_keysRequestBuilderGetQueryParameters])([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GpgKeyable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -79,7 +79,7 @@ func (m *Gpg_keysRequestBuilder) Get(ctx context.Context, requestConfiguration *
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/users/gpg-keys#create-a-gpg-key-for-the-authenticated-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/users/gpg-keys#create-a-gpg-key-for-the-authenticated-user
 func (m *Gpg_keysRequestBuilder) Post(ctx context.Context, body Gpg_keysPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GpgKeyable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

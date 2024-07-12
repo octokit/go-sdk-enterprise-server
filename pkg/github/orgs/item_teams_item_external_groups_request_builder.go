@@ -23,10 +23,10 @@ func NewItemTeamsItemExternalGroupsRequestBuilder(rawUrl string, requestAdapter 
     urlParams["request-raw-url"] = rawUrl
     return NewItemTeamsItemExternalGroupsRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Delete deletes a connection between a team and an external group.You can manage team membership with your IdP using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
+// Delete deletes a connection between a team and an external group.You can manage team membership with your IdP using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.11/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/teams/external-groups#remove-the-connection-between-an-external-group-and-a-team
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/teams/external-groups#remove-the-connection-between-an-external-group-and-a-team
 func (m *ItemTeamsItemExternalGroupsRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -38,11 +38,11 @@ func (m *ItemTeamsItemExternalGroupsRequestBuilder) Delete(ctx context.Context, 
     }
     return nil
 }
-// Get lists a connection between a team and an external group.You can manage team membership with your identity provider using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see "[GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products)" in the GitHub Help documentation.
+// Get lists a connection between a team and an external group.You can manage team membership with your identity provider using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see "[GitHub's products](https://docs.github.com/enterprise-server@3.11/github/getting-started-with-github/githubs-products)" in the GitHub Help documentation.
 // returns a ExternalGroupsable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/teams/external-groups#list-a-connection-between-an-external-group-and-a-team
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/teams/external-groups#list-a-connection-between-an-external-group-and-a-team
 func (m *ItemTeamsItemExternalGroupsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ExternalGroupsable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -57,11 +57,11 @@ func (m *ItemTeamsItemExternalGroupsRequestBuilder) Get(ctx context.Context, req
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ExternalGroupsable), nil
 }
-// Patch creates a connection between a team and an external group.  Only one external group can be linked to a team.You can manage team membership with your identity provider using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see "[GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products)" in the GitHub Help documentation.
+// Patch creates a connection between a team and an external group.  Only one external group can be linked to a team.You can manage team membership with your identity provider using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see "[GitHub's products](https://docs.github.com/enterprise-server@3.11/github/getting-started-with-github/githubs-products)" in the GitHub Help documentation.
 // returns a ExternalGroupable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/teams/external-groups#update-the-connection-between-an-external-group-and-a-team
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/teams/external-groups#update-the-connection-between-an-external-group-and-a-team
 func (m *ItemTeamsItemExternalGroupsRequestBuilder) Patch(ctx context.Context, body ItemTeamsItemExternalGroupsPatchRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ExternalGroupable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -76,14 +76,14 @@ func (m *ItemTeamsItemExternalGroupsRequestBuilder) Patch(ctx context.Context, b
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.ExternalGroupable), nil
 }
-// ToDeleteRequestInformation deletes a connection between a team and an external group.You can manage team membership with your IdP using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
+// ToDeleteRequestInformation deletes a connection between a team and an external group.You can manage team membership with your IdP using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/enterprise-server@3.11/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 // returns a *RequestInformation when successful
 func (m *ItemTeamsItemExternalGroupsRequestBuilder) ToDeleteRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DELETE, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.ConfigureRequestInformation(requestInfo, requestConfiguration)
     return requestInfo, nil
 }
-// ToGetRequestInformation lists a connection between a team and an external group.You can manage team membership with your identity provider using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see "[GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products)" in the GitHub Help documentation.
+// ToGetRequestInformation lists a connection between a team and an external group.You can manage team membership with your identity provider using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see "[GitHub's products](https://docs.github.com/enterprise-server@3.11/github/getting-started-with-github/githubs-products)" in the GitHub Help documentation.
 // returns a *RequestInformation when successful
 func (m *ItemTeamsItemExternalGroupsRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
@@ -91,7 +91,7 @@ func (m *ItemTeamsItemExternalGroupsRequestBuilder) ToGetRequestInformation(ctx 
     requestInfo.Headers.TryAdd("Accept", "application/json")
     return requestInfo, nil
 }
-// ToPatchRequestInformation creates a connection between a team and an external group.  Only one external group can be linked to a team.You can manage team membership with your identity provider using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see "[GitHub's products](https://docs.github.com/enterprise-server@3.13/github/getting-started-with-github/githubs-products)" in the GitHub Help documentation.
+// ToPatchRequestInformation creates a connection between a team and an external group.  Only one external group can be linked to a team.You can manage team membership with your identity provider using Enterprise Managed Users for GitHub Enterprise Cloud. For more information, see "[GitHub's products](https://docs.github.com/enterprise-server@3.11/github/getting-started-with-github/githubs-products)" in the GitHub Help documentation.
 // returns a *RequestInformation when successful
 func (m *ItemTeamsItemExternalGroupsRequestBuilder) ToPatchRequestInformation(ctx context.Context, body ItemTeamsItemExternalGroupsPatchRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PATCH, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

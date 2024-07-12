@@ -28,7 +28,7 @@ func NewItemItemSecretScanningAlertsWithAlert_numberItemRequestBuilder(rawUrl st
 // returns a SecretScanningAlert503Error error when the service returns a 503 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/secret-scanning/secret-scanning#get-a-secret-scanning-alert
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/secret-scanning/secret-scanning#get-a-secret-scanning-alert
 func (m *ItemItemSecretScanningAlertsWithAlert_numberItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.SecretScanningAlertable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -56,7 +56,7 @@ func (m *ItemItemSecretScanningAlertsWithAlert_numberItemRequestBuilder) Locatio
 // returns a SecretScanningAlert503Error error when the service returns a 503 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/secret-scanning/secret-scanning#update-a-secret-scanning-alert
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/secret-scanning/secret-scanning#update-a-secret-scanning-alert
 func (m *ItemItemSecretScanningAlertsWithAlert_numberItemRequestBuilder) Patch(ctx context.Context, body ItemItemSecretScanningAlertsItemWithAlert_numberPatchRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.SecretScanningAlertable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

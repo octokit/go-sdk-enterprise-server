@@ -26,7 +26,7 @@ func NewItemItemLabelsWithNameItemRequestBuilder(rawUrl string, requestAdapter i
 // Delete deletes a label using the given label name.
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/issues/labels#delete-a-label
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/issues/labels#delete-a-label
 func (m *ItemItemLabelsWithNameItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -43,7 +43,7 @@ func (m *ItemItemLabelsWithNameItemRequestBuilder) Delete(ctx context.Context, r
 // returns a BasicError error when the service returns a 404 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/issues/labels#get-a-label
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/issues/labels#get-a-label
 func (m *ItemItemLabelsWithNameItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Labelable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -65,7 +65,7 @@ func (m *ItemItemLabelsWithNameItemRequestBuilder) Get(ctx context.Context, requ
 // returns a Labelable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/issues/labels#update-a-label
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/issues/labels#update-a-label
 func (m *ItemItemLabelsWithNameItemRequestBuilder) Patch(ctx context.Context, body ItemItemLabelsItemWithNamePatchRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Labelable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {

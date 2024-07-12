@@ -37,7 +37,7 @@ func NewItemHovercardRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee
 // returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/users/users#get-contextual-information-for-a-user
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/users/users#get-contextual-information-for-a-user
 func (m *ItemHovercardRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemHovercardRequestBuilderGetQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Hovercardable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

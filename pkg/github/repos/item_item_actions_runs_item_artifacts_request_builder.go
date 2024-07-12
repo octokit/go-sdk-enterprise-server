@@ -13,9 +13,9 @@ type ItemItemActionsRunsItemArtifactsRequestBuilder struct {
 type ItemItemActionsRunsItemArtifactsRequestBuilderGetQueryParameters struct {
     // The name field of an artifact. When specified, only artifacts with this name will be returned.
     Name *string `uriparametername:"name"`
-    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.13/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Per_page *int32 `uriparametername:"per_page"`
 }
 // NewItemItemActionsRunsItemArtifactsRequestBuilderInternal instantiates a new ItemItemActionsRunsItemArtifactsRequestBuilder and sets the default values.
@@ -35,7 +35,7 @@ func NewItemItemActionsRunsItemArtifactsRequestBuilder(rawUrl string, requestAda
 // returns a ItemItemActionsRunsItemArtifactsGetResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/actions/artifacts#list-workflow-run-artifacts
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/actions/artifacts#list-workflow-run-artifacts
 func (m *ItemItemActionsRunsItemArtifactsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemItemActionsRunsItemArtifactsRequestBuilderGetQueryParameters])(ItemItemActionsRunsItemArtifactsGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

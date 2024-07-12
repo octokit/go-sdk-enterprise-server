@@ -7,7 +7,7 @@ import (
 type Ssh_signing_keysPostRequestBody struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // The public SSH key to add to your GitHub account. For more information, see "[Checking for existing SSH keys](https://docs.github.com/enterprise-server@3.13/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)."
+    // The public SSH key to add to your GitHub account. For more information, see "[Checking for existing SSH keys](https://docs.github.com/enterprise-server@3.11/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)."
     key *string
     // A descriptive name for the new key.
     title *string
@@ -55,7 +55,7 @@ func (m *Ssh_signing_keysPostRequestBody) GetFieldDeserializers()(map[string]fun
     }
     return res
 }
-// GetKey gets the key property value. The public SSH key to add to your GitHub account. For more information, see "[Checking for existing SSH keys](https://docs.github.com/enterprise-server@3.13/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)."
+// GetKey gets the key property value. The public SSH key to add to your GitHub account. For more information, see "[Checking for existing SSH keys](https://docs.github.com/enterprise-server@3.11/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)."
 // returns a *string when successful
 func (m *Ssh_signing_keysPostRequestBody) GetKey()(*string) {
     return m.key
@@ -91,7 +91,7 @@ func (m *Ssh_signing_keysPostRequestBody) Serialize(writer i878a80d2330e89d26896
 func (m *Ssh_signing_keysPostRequestBody) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetKey sets the key property value. The public SSH key to add to your GitHub account. For more information, see "[Checking for existing SSH keys](https://docs.github.com/enterprise-server@3.13/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)."
+// SetKey sets the key property value. The public SSH key to add to your GitHub account. For more information, see "[Checking for existing SSH keys](https://docs.github.com/enterprise-server@3.11/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)."
 func (m *Ssh_signing_keysPostRequestBody) SetKey(value *string)() {
     m.key = value
 }

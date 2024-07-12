@@ -23,28 +23,13 @@ func NewThreadsWithThread_ItemRequestBuilder(rawUrl string, requestAdapter i2ae4
     urlParams["request-raw-url"] = rawUrl
     return NewThreadsWithThread_ItemRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Delete marks a thread as "done." Marking a thread as "done" is equivalent to marking a notification in your notification inbox on GitHub Enterprise Server as done: https://github.com/notifications.
-// [API method documentation]
-// 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/activity/notifications#mark-a-thread-as-done
-func (m *ThreadsWithThread_ItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
-    requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
-    if err != nil {
-        return err
-    }
-    err = m.BaseRequestBuilder.RequestAdapter.SendNoContent(ctx, requestInfo, nil)
-    if err != nil {
-        return err
-    }
-    return nil
-}
 // Get gets information about a notification thread.
 // returns a Threadable when successful
 // returns a BasicError error when the service returns a 401 status code
 // returns a BasicError error when the service returns a 403 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/activity/notifications#get-a-thread
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/activity/notifications#get-a-thread
 func (m *ThreadsWithThread_ItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.Threadable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -67,7 +52,7 @@ func (m *ThreadsWithThread_ItemRequestBuilder) Get(ctx context.Context, requestC
 // returns a BasicError error when the service returns a 403 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/activity/notifications#mark-a-thread-as-read
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/activity/notifications#mark-a-thread-as-read
 func (m *ThreadsWithThread_ItemRequestBuilder) Patch(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -86,13 +71,6 @@ func (m *ThreadsWithThread_ItemRequestBuilder) Patch(ctx context.Context, reques
 // returns a *ThreadsItemSubscriptionRequestBuilder when successful
 func (m *ThreadsWithThread_ItemRequestBuilder) Subscription()(*ThreadsItemSubscriptionRequestBuilder) {
     return NewThreadsItemSubscriptionRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
-// ToDeleteRequestInformation marks a thread as "done." Marking a thread as "done" is equivalent to marking a notification in your notification inbox on GitHub Enterprise Server as done: https://github.com/notifications.
-// returns a *RequestInformation when successful
-func (m *ThreadsWithThread_ItemRequestBuilder) ToDeleteRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
-    requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DELETE, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
-    i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.ConfigureRequestInformation(requestInfo, requestConfiguration)
-    return requestInfo, nil
 }
 // ToGetRequestInformation gets information about a notification thread.
 // returns a *RequestInformation when successful

@@ -29,7 +29,7 @@ func NewRepository_invitationsWithInvitation_ItemRequestBuilder(rawUrl string, r
 // returns a BasicError error when the service returns a 409 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/collaborators/invitations#decline-a-repository-invitation
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/collaborators/invitations#decline-a-repository-invitation
 func (m *Repository_invitationsWithInvitation_ItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -52,7 +52,7 @@ func (m *Repository_invitationsWithInvitation_ItemRequestBuilder) Delete(ctx con
 // returns a BasicError error when the service returns a 409 status code
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/collaborators/invitations#accept-a-repository-invitation
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/collaborators/invitations#accept-a-repository-invitation
 func (m *Repository_invitationsWithInvitation_ItemRequestBuilder) Patch(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, requestConfiguration);
     if err != nil {

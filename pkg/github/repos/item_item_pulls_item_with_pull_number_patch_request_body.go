@@ -11,7 +11,7 @@ type ItemItemPullsItemWithPull_numberPatchRequestBody struct {
     base *string
     // The contents of the pull request.
     body *string
-    // Indicates whether [maintainers can modify](https://docs.github.com/enterprise-server@3.13/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
+    // Indicates whether [maintainers can modify](https://docs.github.com/enterprise-server@3.11/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
     maintainer_can_modify *bool
     // The title of the pull request.
     title *string
@@ -89,7 +89,7 @@ func (m *ItemItemPullsItemWithPull_numberPatchRequestBody) GetFieldDeserializers
     }
     return res
 }
-// GetMaintainerCanModify gets the maintainer_can_modify property value. Indicates whether [maintainers can modify](https://docs.github.com/enterprise-server@3.13/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
+// GetMaintainerCanModify gets the maintainer_can_modify property value. Indicates whether [maintainers can modify](https://docs.github.com/enterprise-server@3.11/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
 // returns a *bool when successful
 func (m *ItemItemPullsItemWithPull_numberPatchRequestBody) GetMaintainerCanModify()(*bool) {
     return m.maintainer_can_modify
@@ -145,7 +145,7 @@ func (m *ItemItemPullsItemWithPull_numberPatchRequestBody) SetBase(value *string
 func (m *ItemItemPullsItemWithPull_numberPatchRequestBody) SetBody(value *string)() {
     m.body = value
 }
-// SetMaintainerCanModify sets the maintainer_can_modify property value. Indicates whether [maintainers can modify](https://docs.github.com/enterprise-server@3.13/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
+// SetMaintainerCanModify sets the maintainer_can_modify property value. Indicates whether [maintainers can modify](https://docs.github.com/enterprise-server@3.11/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
 func (m *ItemItemPullsItemWithPull_numberPatchRequestBody) SetMaintainerCanModify(value *bool)() {
     m.maintainer_can_modify = value
 }

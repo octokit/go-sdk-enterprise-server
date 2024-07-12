@@ -28,11 +28,11 @@ func NewItemDiscussionsWithDiscussion_numberItemRequestBuilder(rawUrl string, re
     urlParams["request-raw-url"] = rawUrl
     return NewItemDiscussionsWithDiscussion_numberItemRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Delete **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Delete a discussion`](https://docs.github.com/enterprise-server@3.13/rest/teams/discussions#delete-a-discussion) endpoint.Delete a discussion from a team's page.OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
+// Delete **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Delete a discussion`](https://docs.github.com/enterprise-server@3.11/rest/teams/discussions#delete-a-discussion) endpoint.Delete a discussion from a team's page.OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
 // Deprecated: 
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/teams/discussions#delete-a-discussion-legacy
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/teams/discussions#delete-a-discussion-legacy
 func (m *ItemDiscussionsWithDiscussion_numberItemRequestBuilder) Delete(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -44,12 +44,12 @@ func (m *ItemDiscussionsWithDiscussion_numberItemRequestBuilder) Delete(ctx cont
     }
     return nil
 }
-// Get **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Get a discussion](https://docs.github.com/enterprise-server@3.13/rest/teams/discussions#get-a-discussion) endpoint.Get a specific discussion on a team's page.OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
+// Get **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Get a discussion](https://docs.github.com/enterprise-server@3.11/rest/teams/discussions#get-a-discussion) endpoint.Get a specific discussion on a team's page.OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
 // Deprecated: 
 // returns a TeamDiscussionable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/teams/discussions#get-a-discussion-legacy
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/teams/discussions#get-a-discussion-legacy
 func (m *ItemDiscussionsWithDiscussion_numberItemRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.TeamDiscussionable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -64,12 +64,12 @@ func (m *ItemDiscussionsWithDiscussion_numberItemRequestBuilder) Get(ctx context
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.TeamDiscussionable), nil
 }
-// Patch **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Update a discussion](https://docs.github.com/enterprise-server@3.13/rest/teams/discussions#update-a-discussion) endpoint.Edits the title and body text of a discussion post. Only the parameters you provide are updated.OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
+// Patch **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Update a discussion](https://docs.github.com/enterprise-server@3.11/rest/teams/discussions#update-a-discussion) endpoint.Edits the title and body text of a discussion post. Only the parameters you provide are updated.OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
 // Deprecated: 
 // returns a TeamDiscussionable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/teams/discussions#update-a-discussion-legacy
+// [API method documentation]: https://docs.github.com/enterprise-server@3.11/rest/teams/discussions#update-a-discussion-legacy
 func (m *ItemDiscussionsWithDiscussion_numberItemRequestBuilder) Patch(ctx context.Context, body ItemDiscussionsItemWithDiscussion_numberPatchRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.TeamDiscussionable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
@@ -89,7 +89,7 @@ func (m *ItemDiscussionsWithDiscussion_numberItemRequestBuilder) Patch(ctx conte
 func (m *ItemDiscussionsWithDiscussion_numberItemRequestBuilder) Reactions()(*ItemDiscussionsItemReactionsRequestBuilder) {
     return NewItemDiscussionsItemReactionsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
-// ToDeleteRequestInformation **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Delete a discussion`](https://docs.github.com/enterprise-server@3.13/rest/teams/discussions#delete-a-discussion) endpoint.Delete a discussion from a team's page.OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
+// ToDeleteRequestInformation **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Delete a discussion`](https://docs.github.com/enterprise-server@3.11/rest/teams/discussions#delete-a-discussion) endpoint.Delete a discussion from a team's page.OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
 // Deprecated: 
 // returns a *RequestInformation when successful
 func (m *ItemDiscussionsWithDiscussion_numberItemRequestBuilder) ToDeleteRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
@@ -97,7 +97,7 @@ func (m *ItemDiscussionsWithDiscussion_numberItemRequestBuilder) ToDeleteRequest
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.ConfigureRequestInformation(requestInfo, requestConfiguration)
     return requestInfo, nil
 }
-// ToGetRequestInformation **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Get a discussion](https://docs.github.com/enterprise-server@3.13/rest/teams/discussions#get-a-discussion) endpoint.Get a specific discussion on a team's page.OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
+// ToGetRequestInformation **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Get a discussion](https://docs.github.com/enterprise-server@3.11/rest/teams/discussions#get-a-discussion) endpoint.Get a specific discussion on a team's page.OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
 // Deprecated: 
 // returns a *RequestInformation when successful
 func (m *ItemDiscussionsWithDiscussion_numberItemRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
@@ -106,7 +106,7 @@ func (m *ItemDiscussionsWithDiscussion_numberItemRequestBuilder) ToGetRequestInf
     requestInfo.Headers.TryAdd("Accept", "application/json")
     return requestInfo, nil
 }
-// ToPatchRequestInformation **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Update a discussion](https://docs.github.com/enterprise-server@3.13/rest/teams/discussions#update-a-discussion) endpoint.Edits the title and body text of a discussion post. Only the parameters you provide are updated.OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
+// ToPatchRequestInformation **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Update a discussion](https://docs.github.com/enterprise-server@3.11/rest/teams/discussions#update-a-discussion) endpoint.Edits the title and body text of a discussion post. Only the parameters you provide are updated.OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
 // Deprecated: 
 // returns a *RequestInformation when successful
 func (m *ItemDiscussionsWithDiscussion_numberItemRequestBuilder) ToPatchRequestInformation(ctx context.Context, body ItemDiscussionsItemWithDiscussion_numberPatchRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
