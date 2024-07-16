@@ -27,11 +27,11 @@ type OrganizationFull struct {
     created_at *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time
     // The default_repository_permission property
     default_repository_permission *string
-    // Whether GitHub Advanced Security is automatically enabled for new repositories and repositories transferred tothis organization.This field is only visible to organization owners or members of a team with the security manager role.
+    // Whether Dependabot alerts are automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
     dependabot_alerts_enabled_for_new_repositories *bool
-    // Whether dependabot security updates are automatically enabled for new repositories and repositories transferredto this organization.This field is only visible to organization owners or members of a team with the security manager role.
+    // Whether Dependabot security updates are automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
     dependabot_security_updates_enabled_for_new_repositories *bool
-    // Whether dependency graph is automatically enabled for new repositories and repositories transferred to thisorganization.This field is only visible to organization owners or members of a team with the security manager role.
+    // Whether dependency graph is automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
     dependency_graph_enabled_for_new_repositories *bool
     // The description property
     description *string
@@ -101,13 +101,13 @@ type OrganizationFull struct {
     public_repos *int32
     // The repos_url property
     repos_url *string
-    // Whether secret scanning is automatically enabled for new repositories and repositories transferred to thisorganization.This field is only visible to organization owners or members of a team with the security manager role.
+    // Whether secret scanning is automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
     secret_scanning_enabled_for_new_repositories *bool
     // An optional URL string to display to contributors who are blocked from pushing a secret.
     secret_scanning_push_protection_custom_link *string
     // Whether a custom link is shown to contributors who are blocked from pushing a secret by push protection.
     secret_scanning_push_protection_custom_link_enabled *bool
-    // Whether secret scanning push protection is automatically enabled for new repositories and repositoriestransferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
+    // Whether secret scanning push protection is automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
     secret_scanning_push_protection_enabled_for_new_repositories *bool
     // The total_private_repos property
     total_private_repos *int32
@@ -186,17 +186,17 @@ func (m *OrganizationFull) GetCreatedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f3
 func (m *OrganizationFull) GetDefaultRepositoryPermission()(*string) {
     return m.default_repository_permission
 }
-// GetDependabotAlertsEnabledForNewRepositories gets the dependabot_alerts_enabled_for_new_repositories property value. Whether GitHub Advanced Security is automatically enabled for new repositories and repositories transferred tothis organization.This field is only visible to organization owners or members of a team with the security manager role.
+// GetDependabotAlertsEnabledForNewRepositories gets the dependabot_alerts_enabled_for_new_repositories property value. Whether Dependabot alerts are automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
 // returns a *bool when successful
 func (m *OrganizationFull) GetDependabotAlertsEnabledForNewRepositories()(*bool) {
     return m.dependabot_alerts_enabled_for_new_repositories
 }
-// GetDependabotSecurityUpdatesEnabledForNewRepositories gets the dependabot_security_updates_enabled_for_new_repositories property value. Whether dependabot security updates are automatically enabled for new repositories and repositories transferredto this organization.This field is only visible to organization owners or members of a team with the security manager role.
+// GetDependabotSecurityUpdatesEnabledForNewRepositories gets the dependabot_security_updates_enabled_for_new_repositories property value. Whether Dependabot security updates are automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
 // returns a *bool when successful
 func (m *OrganizationFull) GetDependabotSecurityUpdatesEnabledForNewRepositories()(*bool) {
     return m.dependabot_security_updates_enabled_for_new_repositories
 }
-// GetDependencyGraphEnabledForNewRepositories gets the dependency_graph_enabled_for_new_repositories property value. Whether dependency graph is automatically enabled for new repositories and repositories transferred to thisorganization.This field is only visible to organization owners or members of a team with the security manager role.
+// GetDependencyGraphEnabledForNewRepositories gets the dependency_graph_enabled_for_new_repositories property value. Whether dependency graph is automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
 // returns a *bool when successful
 func (m *OrganizationFull) GetDependencyGraphEnabledForNewRepositories()(*bool) {
     return m.dependency_graph_enabled_for_new_repositories
@@ -947,7 +947,7 @@ func (m *OrganizationFull) GetPublicRepos()(*int32) {
 func (m *OrganizationFull) GetReposUrl()(*string) {
     return m.repos_url
 }
-// GetSecretScanningEnabledForNewRepositories gets the secret_scanning_enabled_for_new_repositories property value. Whether secret scanning is automatically enabled for new repositories and repositories transferred to thisorganization.This field is only visible to organization owners or members of a team with the security manager role.
+// GetSecretScanningEnabledForNewRepositories gets the secret_scanning_enabled_for_new_repositories property value. Whether secret scanning is automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
 // returns a *bool when successful
 func (m *OrganizationFull) GetSecretScanningEnabledForNewRepositories()(*bool) {
     return m.secret_scanning_enabled_for_new_repositories
@@ -962,7 +962,7 @@ func (m *OrganizationFull) GetSecretScanningPushProtectionCustomLink()(*string) 
 func (m *OrganizationFull) GetSecretScanningPushProtectionCustomLinkEnabled()(*bool) {
     return m.secret_scanning_push_protection_custom_link_enabled
 }
-// GetSecretScanningPushProtectionEnabledForNewRepositories gets the secret_scanning_push_protection_enabled_for_new_repositories property value. Whether secret scanning push protection is automatically enabled for new repositories and repositoriestransferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
+// GetSecretScanningPushProtectionEnabledForNewRepositories gets the secret_scanning_push_protection_enabled_for_new_repositories property value. Whether secret scanning push protection is automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
 // returns a *bool when successful
 func (m *OrganizationFull) GetSecretScanningPushProtectionEnabledForNewRepositories()(*bool) {
     return m.secret_scanning_push_protection_enabled_for_new_repositories
@@ -1394,15 +1394,15 @@ func (m *OrganizationFull) SetCreatedAt(value *i336074805fc853987abe6f7fe3ad97a6
 func (m *OrganizationFull) SetDefaultRepositoryPermission(value *string)() {
     m.default_repository_permission = value
 }
-// SetDependabotAlertsEnabledForNewRepositories sets the dependabot_alerts_enabled_for_new_repositories property value. Whether GitHub Advanced Security is automatically enabled for new repositories and repositories transferred tothis organization.This field is only visible to organization owners or members of a team with the security manager role.
+// SetDependabotAlertsEnabledForNewRepositories sets the dependabot_alerts_enabled_for_new_repositories property value. Whether Dependabot alerts are automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
 func (m *OrganizationFull) SetDependabotAlertsEnabledForNewRepositories(value *bool)() {
     m.dependabot_alerts_enabled_for_new_repositories = value
 }
-// SetDependabotSecurityUpdatesEnabledForNewRepositories sets the dependabot_security_updates_enabled_for_new_repositories property value. Whether dependabot security updates are automatically enabled for new repositories and repositories transferredto this organization.This field is only visible to organization owners or members of a team with the security manager role.
+// SetDependabotSecurityUpdatesEnabledForNewRepositories sets the dependabot_security_updates_enabled_for_new_repositories property value. Whether Dependabot security updates are automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
 func (m *OrganizationFull) SetDependabotSecurityUpdatesEnabledForNewRepositories(value *bool)() {
     m.dependabot_security_updates_enabled_for_new_repositories = value
 }
-// SetDependencyGraphEnabledForNewRepositories sets the dependency_graph_enabled_for_new_repositories property value. Whether dependency graph is automatically enabled for new repositories and repositories transferred to thisorganization.This field is only visible to organization owners or members of a team with the security manager role.
+// SetDependencyGraphEnabledForNewRepositories sets the dependency_graph_enabled_for_new_repositories property value. Whether dependency graph is automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
 func (m *OrganizationFull) SetDependencyGraphEnabledForNewRepositories(value *bool)() {
     m.dependency_graph_enabled_for_new_repositories = value
 }
@@ -1542,7 +1542,7 @@ func (m *OrganizationFull) SetPublicRepos(value *int32)() {
 func (m *OrganizationFull) SetReposUrl(value *string)() {
     m.repos_url = value
 }
-// SetSecretScanningEnabledForNewRepositories sets the secret_scanning_enabled_for_new_repositories property value. Whether secret scanning is automatically enabled for new repositories and repositories transferred to thisorganization.This field is only visible to organization owners or members of a team with the security manager role.
+// SetSecretScanningEnabledForNewRepositories sets the secret_scanning_enabled_for_new_repositories property value. Whether secret scanning is automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
 func (m *OrganizationFull) SetSecretScanningEnabledForNewRepositories(value *bool)() {
     m.secret_scanning_enabled_for_new_repositories = value
 }
@@ -1554,7 +1554,7 @@ func (m *OrganizationFull) SetSecretScanningPushProtectionCustomLink(value *stri
 func (m *OrganizationFull) SetSecretScanningPushProtectionCustomLinkEnabled(value *bool)() {
     m.secret_scanning_push_protection_custom_link_enabled = value
 }
-// SetSecretScanningPushProtectionEnabledForNewRepositories sets the secret_scanning_push_protection_enabled_for_new_repositories property value. Whether secret scanning push protection is automatically enabled for new repositories and repositoriestransferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
+// SetSecretScanningPushProtectionEnabledForNewRepositories sets the secret_scanning_push_protection_enabled_for_new_repositories property value. Whether secret scanning push protection is automatically enabled for new repositories and repositories transferred to this organization.This field is only visible to organization owners or members of a team with the security manager role.
 func (m *OrganizationFull) SetSecretScanningPushProtectionEnabledForNewRepositories(value *bool)() {
     m.secret_scanning_push_protection_enabled_for_new_repositories = value
 }
