@@ -28,7 +28,7 @@ func NewApiSettingsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee26
     urlParams["request-raw-url"] = rawUrl
     return NewApiSettingsRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Get gets the settings for your instance. To change settings, see the [Set settings endpoint](https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/management-console#set-settings).**Note:** You cannot retrieve the management console password with the Enterprise administration API.
+// Get gets the settings for your instance. To change settings, see the [Set settings endpoint](https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/management-console#set-settings).> [!NOTE]> You cannot retrieve the management console password with the Enterprise administration API.
 // returns a EnterpriseSettingsable when successful
 // [API method documentation]
 // 
@@ -62,7 +62,7 @@ func (m *ApiSettingsRequestBuilder) Put(ctx context.Context, body ApiSettingsPut
     }
     return nil
 }
-// ToGetRequestInformation gets the settings for your instance. To change settings, see the [Set settings endpoint](https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/management-console#set-settings).**Note:** You cannot retrieve the management console password with the Enterprise administration API.
+// ToGetRequestInformation gets the settings for your instance. To change settings, see the [Set settings endpoint](https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/management-console#set-settings).> [!NOTE]> You cannot retrieve the management console password with the Enterprise administration API.
 // returns a *RequestInformation when successful
 func (m *ApiSettingsRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
