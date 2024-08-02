@@ -10,7 +10,7 @@ import (
 type V1ConfigLicenseRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// V1ConfigLicenseRequestBuilderPutQueryParameters uploads an enterprise license. This operation does not automatically activate the license.**Note:** The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
+// V1ConfigLicenseRequestBuilderPutQueryParameters uploads an enterprise license. This operation does not automatically activate the license.> [!NOTE]> The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
 type V1ConfigLicenseRequestBuilderPutQueryParameters struct {
     // Whether to apply changes from the license. Uploading a license does not automatically apply changes. To make the changes effective, you can specify to apply the license too.
     Apply *bool `uriparametername:"apply"`
@@ -52,7 +52,7 @@ func (m *V1ConfigLicenseRequestBuilder) Get(ctx context.Context, requestConfigur
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GhesLicenseInfoable), nil
 }
-// Put uploads an enterprise license. This operation does not automatically activate the license.**Note:** The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
+// Put uploads an enterprise license. This operation does not automatically activate the license.> [!NOTE]> The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
 // [API method documentation]
 // 
 // [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/manage-ghes#upload-an-enterprise-license
@@ -75,7 +75,7 @@ func (m *V1ConfigLicenseRequestBuilder) ToGetRequestInformation(ctx context.Cont
     requestInfo.Headers.TryAdd("Accept", "application/json")
     return requestInfo, nil
 }
-// ToPutRequestInformation uploads an enterprise license. This operation does not automatically activate the license.**Note:** The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
+// ToPutRequestInformation uploads an enterprise license. This operation does not automatically activate the license.> [!NOTE]> The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
 // returns a *RequestInformation when successful
 func (m *V1ConfigLicenseRequestBuilder) ToPutRequestInformation(ctx context.Context, body i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.MultipartBody, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[V1ConfigLicenseRequestBuilderPutQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
