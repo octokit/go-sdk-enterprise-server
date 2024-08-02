@@ -31,7 +31,7 @@ func NewV1ConfigApplyEventsRequestBuilder(rawUrl string, requestAdapter i2ae4187
 // returns a V1ConfigApplyEventsGetResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#get-config-apply-events
+// [API method documentation]: https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#list-events-from-ghe-config-apply
 func (m *V1ConfigApplyEventsRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[V1ConfigApplyEventsRequestBuilderGetQueryParameters])(V1ConfigApplyEventsGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {

@@ -12,7 +12,7 @@ import (
 type ItemTeamsItemDiscussionsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ItemTeamsItemDiscussionsRequestBuilderGetQueryParameters list all discussions on a team's page.**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions`.OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
+// ItemTeamsItemDiscussionsRequestBuilderGetQueryParameters list all discussions on a team's page.> [!NOTE]> You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions`.OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
 type ItemTeamsItemDiscussionsRequestBuilderGetQueryParameters struct {
     // The direction to sort the results by.
     Direction *icdf812eda581f55cb72c7533e83f29e577570623131e307cc6b27c25eb256a7b.GetDirectionQueryParameterType `uriparametername:"direction"`
@@ -46,7 +46,7 @@ func NewItemTeamsItemDiscussionsRequestBuilder(rawUrl string, requestAdapter i2a
     urlParams["request-raw-url"] = rawUrl
     return NewItemTeamsItemDiscussionsRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Get list all discussions on a team's page.**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions`.OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
+// Get list all discussions on a team's page.> [!NOTE]> You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions`.OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
 // returns a []TeamDiscussionable when successful
 // [API method documentation]
 // 
@@ -68,7 +68,7 @@ func (m *ItemTeamsItemDiscussionsRequestBuilder) Get(ctx context.Context, reques
     }
     return val, nil
 }
-// Post creates a new discussion post on a team's page.This endpoint triggers [notifications](https://docs.github.com/enterprise-server@3.12/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/enterprise-server@3.12/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/enterprise-server@3.12/rest/guides/best-practices-for-using-the-rest-api)."**Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/{org_id}/team/{team_id}/discussions`.OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
+// Post creates a new discussion post on a team's page.This endpoint triggers [notifications](https://docs.github.com/enterprise-server@3.12/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/enterprise-server@3.12/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/enterprise-server@3.12/rest/guides/best-practices-for-using-the-rest-api)."> [!NOTE]> You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/{org_id}/team/{team_id}/discussions`.OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
 // returns a TeamDiscussionable when successful
 // [API method documentation]
 // 
@@ -87,7 +87,7 @@ func (m *ItemTeamsItemDiscussionsRequestBuilder) Post(ctx context.Context, body 
     }
     return res.(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.TeamDiscussionable), nil
 }
-// ToGetRequestInformation list all discussions on a team's page.**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions`.OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
+// ToGetRequestInformation list all discussions on a team's page.> [!NOTE]> You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions`.OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
 // returns a *RequestInformation when successful
 func (m *ItemTeamsItemDiscussionsRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[ItemTeamsItemDiscussionsRequestBuilderGetQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
@@ -95,7 +95,7 @@ func (m *ItemTeamsItemDiscussionsRequestBuilder) ToGetRequestInformation(ctx con
     requestInfo.Headers.TryAdd("Accept", "application/json")
     return requestInfo, nil
 }
-// ToPostRequestInformation creates a new discussion post on a team's page.This endpoint triggers [notifications](https://docs.github.com/enterprise-server@3.12/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/enterprise-server@3.12/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/enterprise-server@3.12/rest/guides/best-practices-for-using-the-rest-api)."**Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/{org_id}/team/{team_id}/discussions`.OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
+// ToPostRequestInformation creates a new discussion post on a team's page.This endpoint triggers [notifications](https://docs.github.com/enterprise-server@3.12/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/enterprise-server@3.12/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/enterprise-server@3.12/rest/guides/best-practices-for-using-the-rest-api)."> [!NOTE]> You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/{org_id}/team/{team_id}/discussions`.OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
 // returns a *RequestInformation when successful
 func (m *ItemTeamsItemDiscussionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body ItemTeamsItemDiscussionsPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

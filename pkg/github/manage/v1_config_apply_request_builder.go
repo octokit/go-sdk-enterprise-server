@@ -36,7 +36,7 @@ func (m *V1ConfigApplyRequestBuilder) Events()(*V1ConfigApplyEventsRequestBuilde
 // returns a V1ConfigApplyGetResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#get-config-apply-status
+// [API method documentation]: https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#get-the-status-of-a-ghe-config-apply-run
 func (m *V1ConfigApplyRequestBuilder) Get(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[V1ConfigApplyRequestBuilderGetQueryParameters])(V1ConfigApplyGetResponseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
@@ -55,7 +55,7 @@ func (m *V1ConfigApplyRequestBuilder) Get(ctx context.Context, requestConfigurat
 // returns a V1ConfigApplyPostResponseable when successful
 // [API method documentation]
 // 
-// [API method documentation]: https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#run-config-apply
+// [API method documentation]: https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#trigger-a-ghe-config-apply-run
 func (m *V1ConfigApplyRequestBuilder) Post(ctx context.Context, body V1ConfigApplyPostRequestBodyable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(V1ConfigApplyPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
