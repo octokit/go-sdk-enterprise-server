@@ -8,6 +8,11 @@ import (
 type V1RequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
+// Cluster the cluster property
+// returns a *V1ClusterRequestBuilder when successful
+func (m *V1RequestBuilder) Cluster()(*V1ClusterRequestBuilder) {
+    return NewV1ClusterRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+}
 // Config the config property
 // returns a *V1ConfigRequestBuilder when successful
 func (m *V1RequestBuilder) Config()(*V1ConfigRequestBuilder) {

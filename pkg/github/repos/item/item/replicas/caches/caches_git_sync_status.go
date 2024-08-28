@@ -1,7 +1,4 @@
 package caches
-import (
-    "errors"
-)
 type Caches_git_sync_status int
 
 const (
@@ -26,7 +23,7 @@ func ParseCaches_git_sync_status(v string) (any, error) {
         case "not_in_sync":
             result = NOT_IN_SYNC_CACHES_GIT_SYNC_STATUS
         default:
-            return 0, errors.New("Unknown Caches_git_sync_status value: " + v)
+            return nil, nil
     }
     return &result, nil
 }

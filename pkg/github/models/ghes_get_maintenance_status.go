@@ -1,7 +1,4 @@
 package models
-import (
-    "errors"
-)
 type GhesGetMaintenance_status int
 
 const (
@@ -23,7 +20,7 @@ func ParseGhesGetMaintenance_status(v string) (any, error) {
         case "scheduled":
             result = SCHEDULED_GHESGETMAINTENANCE_STATUS
         default:
-            return 0, errors.New("Unknown GhesGetMaintenance_status value: " + v)
+            return nil, nil
     }
     return &result, nil
 }
