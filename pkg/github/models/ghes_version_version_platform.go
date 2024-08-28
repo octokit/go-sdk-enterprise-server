@@ -1,7 +1,4 @@
 package models
-import (
-    "errors"
-)
 type GhesVersion_version_platform int
 
 const (
@@ -32,7 +29,7 @@ func ParseGhesVersion_version_platform(v string) (any, error) {
         case "kvm":
             result = KVM_GHESVERSION_VERSION_PLATFORM
         default:
-            return 0, errors.New("Unknown GhesVersion_version_platform value: " + v)
+            return nil, nil
     }
     return &result, nil
 }

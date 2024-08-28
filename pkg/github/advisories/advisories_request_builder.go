@@ -26,6 +26,10 @@ type AdvisoriesRequestBuilderGetQueryParameters struct {
     Direction *GetDirectionQueryParameterType `uriparametername:"direction"`
     // If specified, only advisories for these ecosystems will be returned.
     Ecosystem *ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.SecurityAdvisoryEcosystems `uriparametername:"ecosystem"`
+    // If specified, only return advisories that have an EPSS percentage score that matches the provided value.The EPSS percentage represents the likelihood of a CVE being exploited.
+    Epss_percentage *string `uriparametername:"epss_percentage"`
+    // If specified, only return advisories that have an EPSS percentile score that matches the provided value.The EPSS percentile represents the relative rank of the CVE's likelihood of being exploited compared to other CVEs.
+    Epss_percentile *string `uriparametername:"epss_percentile"`
     // If specified, only advisories with this GHSA (GitHub Security Advisory) identifier will be returned.
     Ghsa_id *string `uriparametername:"ghsa_id"`
     // Whether to only return advisories that have been withdrawn.
@@ -60,7 +64,7 @@ func (m *AdvisoriesRequestBuilder) ByGhsa_id(ghsa_id string)(*WithGhsa_ItemReque
 // NewAdvisoriesRequestBuilderInternal instantiates a new AdvisoriesRequestBuilder and sets the default values.
 func NewAdvisoriesRequestBuilderInternal(pathParameters map[string]string, requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter)(*AdvisoriesRequestBuilder) {
     m := &AdvisoriesRequestBuilder{
-        BaseRequestBuilder: *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewBaseRequestBuilder(requestAdapter, "{+baseurl}/advisories{?affects*,after*,before*,cve_id*,cwes*,direction*,ecosystem*,ghsa_id*,is_withdrawn*,modified*,per_page*,published*,severity*,sort*,type*,updated*}", pathParameters),
+        BaseRequestBuilder: *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewBaseRequestBuilder(requestAdapter, "{+baseurl}/advisories{?affects*,after*,before*,cve_id*,cwes*,direction*,ecosystem*,epss_percentage*,epss_percentile*,ghsa_id*,is_withdrawn*,modified*,per_page*,published*,severity*,sort*,type*,updated*}", pathParameters),
     }
     return m
 }
