@@ -1,7 +1,4 @@
 package models
-import (
-    "errors"
-)
 // The target of the ruleset.
 type RepositoryRuleset_target int
 
@@ -21,7 +18,7 @@ func ParseRepositoryRuleset_target(v string) (any, error) {
         case "tag":
             result = TAG_REPOSITORYRULESET_TARGET
         default:
-            return 0, errors.New("Unknown RepositoryRuleset_target value: " + v)
+            return nil, nil
     }
     return &result, nil
 }

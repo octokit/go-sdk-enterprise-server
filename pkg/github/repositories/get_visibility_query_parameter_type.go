@@ -1,7 +1,4 @@
 package repositories
-import (
-    "errors"
-)
 type GetVisibilityQueryParameterType int
 
 const (
@@ -20,7 +17,7 @@ func ParseGetVisibilityQueryParameterType(v string) (any, error) {
         case "public":
             result = PUBLIC_GETVISIBILITYQUERYPARAMETERTYPE
         default:
-            return 0, errors.New("Unknown GetVisibilityQueryParameterType value: " + v)
+            return nil, nil
     }
     return &result, nil
 }

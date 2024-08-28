@@ -1,7 +1,4 @@
 package models
-import (
-    "errors"
-)
 type GhesReplicationStatusIndicator int
 
 const (
@@ -26,7 +23,7 @@ func ParseGhesReplicationStatusIndicator(v string) (any, error) {
         case "CRITICAL":
             result = CRITICAL_GHESREPLICATIONSTATUSINDICATOR
         default:
-            return 0, errors.New("Unknown GhesReplicationStatusIndicator value: " + v)
+            return nil, nil
     }
     return &result, nil
 }
