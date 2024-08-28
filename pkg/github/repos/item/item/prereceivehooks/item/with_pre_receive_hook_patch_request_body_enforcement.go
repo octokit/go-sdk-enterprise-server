@@ -1,7 +1,4 @@
 package item
-import (
-    "errors"
-)
 // The state of enforcement for the hook on this repository.
 type WithPre_receive_hook_PatchRequestBody_enforcement int
 
@@ -24,7 +21,7 @@ func ParseWithPre_receive_hook_PatchRequestBody_enforcement(v string) (any, erro
         case "testing":
             result = TESTING_WITHPRE_RECEIVE_HOOK_PATCHREQUESTBODY_ENFORCEMENT
         default:
-            return 0, errors.New("Unknown WithPre_receive_hook_PatchRequestBody_enforcement value: " + v)
+            return nil, nil
     }
     return &result, nil
 }
