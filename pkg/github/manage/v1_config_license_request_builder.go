@@ -56,7 +56,7 @@ func (m *V1ConfigLicenseRequestBuilder) Get(ctx context.Context, requestConfigur
 // [API method documentation]
 // 
 // [API method documentation]: https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/manage-ghes#upload-an-enterprise-license
-func (m *V1ConfigLicenseRequestBuilder) Put(ctx context.Context, body i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.MultipartBody, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[V1ConfigLicenseRequestBuilderPutQueryParameters])(error) {
+func (m *V1ConfigLicenseRequestBuilder) Put(ctx context.Context, body ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GhesUploadLicenseRequestable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[V1ConfigLicenseRequestBuilderPutQueryParameters])(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -77,7 +77,7 @@ func (m *V1ConfigLicenseRequestBuilder) ToGetRequestInformation(ctx context.Cont
 }
 // ToPutRequestInformation uploads an enterprise license. This operation does not automatically activate the license.> [!NOTE]> The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
 // returns a *RequestInformation when successful
-func (m *V1ConfigLicenseRequestBuilder) ToPutRequestInformation(ctx context.Context, body i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.MultipartBody, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[V1ConfigLicenseRequestBuilderPutQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *V1ConfigLicenseRequestBuilder) ToPutRequestInformation(ctx context.Context, body ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.GhesUploadLicenseRequestable, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[V1ConfigLicenseRequestBuilderPutQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.ConfigureRequestInformation(requestInfo, requestConfiguration)
     err := requestInfo.SetContentFromParsable(ctx, m.BaseRequestBuilder.RequestAdapter, "multipart/form-data", body)
