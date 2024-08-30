@@ -1,7 +1,4 @@
 package models
-import (
-    "errors"
-)
 type GhesClusterRoles int
 
 const (
@@ -59,7 +56,7 @@ func ParseGhesClusterRoles(v string) (any, error) {
         case "WebServer":
             result = WEBSERVER_GHESCLUSTERROLES
         default:
-            return 0, errors.New("Unknown GhesClusterRoles value: " + v)
+            return nil, nil
     }
     return &result, nil
 }
