@@ -1,7 +1,4 @@
 package models
-import (
-    "errors"
-)
 type CodeScanningDefaultSetupUpdate_languages int
 
 const (
@@ -35,7 +32,7 @@ func ParseCodeScanningDefaultSetupUpdate_languages(v string) (any, error) {
         case "ruby":
             result = RUBY_CODESCANNINGDEFAULTSETUPUPDATE_LANGUAGES
         default:
-            return 0, errors.New("Unknown CodeScanningDefaultSetupUpdate_languages value: " + v)
+            return nil, nil
     }
     return &result, nil
 }

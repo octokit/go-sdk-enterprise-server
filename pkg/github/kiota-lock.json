@@ -1,14 +1,15 @@
 {
-  "descriptionHash": "1E9090745F594794E8831AA4DC750D61754ADE4C5FB565E302E4CEBECBE23B33C37CA6D93FDA12642CD0315620C10D8A24D539D04CE1FF2897F0FCB58A70F33E",
+  "descriptionHash": "62CC525C7838FB67272327581317265F331C8553ABA002A3F170361F0616A6D3066DDE1016530E241FB9D380F36454C343A2886120A3A65C13FD569E339AFCD8",
   "descriptionLocation": "../../../../../schemas/ghes-3.10.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.14.0",
+  "kiotaVersion": "1.17.0",
   "clientClassName": "ApiClient",
   "clientNamespaceName": "github.com/octokit/go-sdk-enterprise-server/pkg/github",
   "language": "Go",
   "usesBackingStore": false,
   "excludeBackwardCompatible": true,
   "includeAdditionalData": true,
+  "disableSSLValidation": false,
   "serializers": [
     "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",
     "Microsoft.Kiota.Serialization.Text.TextSerializationWriterFactory",
