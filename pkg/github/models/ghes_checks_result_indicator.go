@@ -1,7 +1,4 @@
 package models
-import (
-    "errors"
-)
 type GhesChecksResultIndicator int
 
 const (
@@ -20,7 +17,7 @@ func ParseGhesChecksResultIndicator(v string) (any, error) {
         case "FAILED":
             result = FAILED_GHESCHECKSRESULTINDICATOR
         default:
-            return 0, errors.New("Unknown GhesChecksResultIndicator value: " + v)
+            return nil, nil
     }
     return &result, nil
 }

@@ -1,7 +1,4 @@
 package models
-import (
-    "errors"
-)
 type GhesClusterTopology int
 
 const (
@@ -23,7 +20,7 @@ func ParseGhesClusterTopology(v string) (any, error) {
         case "Cluster":
             result = CLUSTER_GHESCLUSTERTOPOLOGY
         default:
-            return 0, errors.New("Unknown GhesClusterTopology value: " + v)
+            return nil, nil
     }
     return &result, nil
 }

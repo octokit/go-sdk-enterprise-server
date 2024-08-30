@@ -1,7 +1,4 @@
 package item
-import (
-    "errors"
-)
 // The target of the ruleset.
 type WithRuleset_PutRequestBody_target int
 
@@ -21,7 +18,7 @@ func ParseWithRuleset_PutRequestBody_target(v string) (any, error) {
         case "tag":
             result = TAG_WITHRULESET_PUTREQUESTBODY_TARGET
         default:
-            return 0, errors.New("Unknown WithRuleset_PutRequestBody_target value: " + v)
+            return nil, nil
     }
     return &result, nil
 }

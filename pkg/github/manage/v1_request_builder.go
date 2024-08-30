@@ -18,6 +18,11 @@ func (m *V1RequestBuilder) Access()(*V1AccessRequestBuilder) {
 func (m *V1RequestBuilder) Checks()(*V1ChecksRequestBuilder) {
     return NewV1ChecksRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
+// Cluster the cluster property
+// returns a *V1ClusterRequestBuilder when successful
+func (m *V1RequestBuilder) Cluster()(*V1ClusterRequestBuilder) {
+    return NewV1ClusterRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+}
 // Config the config property
 // returns a *V1ConfigRequestBuilder when successful
 func (m *V1RequestBuilder) Config()(*V1ConfigRequestBuilder) {

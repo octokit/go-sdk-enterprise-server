@@ -1,7 +1,4 @@
 package models
-import (
-    "errors"
-)
 // The license status of the currently active enterprise license.
 type GhesLicenseCheck_status int
 
@@ -27,7 +24,7 @@ func ParseGhesLicenseCheck_status(v string) (any, error) {
         case "cluster mode not supported":
             result = CLUSTERMODENOTSUPPORTED_GHESLICENSECHECK_STATUS
         default:
-            return 0, errors.New("Unknown GhesLicenseCheck_status value: " + v)
+            return nil, nil
     }
     return &result, nil
 }

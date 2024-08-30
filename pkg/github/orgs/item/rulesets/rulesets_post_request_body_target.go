@@ -1,7 +1,4 @@
 package rulesets
-import (
-    "errors"
-)
 // The target of the ruleset.
 type RulesetsPostRequestBody_target int
 
@@ -21,7 +18,7 @@ func ParseRulesetsPostRequestBody_target(v string) (any, error) {
         case "tag":
             result = TAG_RULESETSPOSTREQUESTBODY_TARGET
         default:
-            return 0, errors.New("Unknown RulesetsPostRequestBody_target value: " + v)
+            return nil, nil
     }
     return &result, nil
 }
