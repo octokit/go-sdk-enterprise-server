@@ -9,8 +9,6 @@ import (
 type Integration struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // The client_id property
-    client_id *string
     // The client_secret property
     client_secret *string
     // The created_at property
@@ -61,11 +59,6 @@ func CreateIntegrationFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a
 func (m *Integration) GetAdditionalData()(map[string]any) {
     return m.additionalData
 }
-// GetClientId gets the client_id property value. The client_id property
-// returns a *string when successful
-func (m *Integration) GetClientId()(*string) {
-    return m.client_id
-}
 // GetClientSecret gets the client_secret property value. The client_secret property
 // returns a *string when successful
 func (m *Integration) GetClientSecret()(*string) {
@@ -95,16 +88,6 @@ func (m *Integration) GetExternalUrl()(*string) {
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
 func (m *Integration) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
     res := make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
-    res["client_id"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
-        val, err := n.GetStringValue()
-        if err != nil {
-            return err
-        }
-        if val != nil {
-            m.SetClientId(val)
-        }
-        return nil
-    }
     res["client_secret"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
         val, err := n.GetStringValue()
         if err != nil {
@@ -331,12 +314,6 @@ func (m *Integration) GetWebhookSecret()(*string) {
 // Serialize serializes information the current object
 func (m *Integration) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     {
-        err := writer.WriteStringValue("client_id", m.GetClientId())
-        if err != nil {
-            return err
-        }
-    }
-    {
         err := writer.WriteStringValue("client_secret", m.GetClientSecret())
         if err != nil {
             return err
@@ -444,10 +421,6 @@ func (m *Integration) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6
 func (m *Integration) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetClientId sets the client_id property value. The client_id property
-func (m *Integration) SetClientId(value *string)() {
-    m.client_id = value
-}
 // SetClientSecret sets the client_secret property value. The client_secret property
 func (m *Integration) SetClientSecret(value *string)() {
     m.client_secret = value
@@ -515,7 +488,6 @@ func (m *Integration) SetWebhookSecret(value *string)() {
 type Integrationable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.AdditionalDataHolder
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
-    GetClientId()(*string)
     GetClientSecret()(*string)
     GetCreatedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)
     GetDescription()(*string)
@@ -532,7 +504,6 @@ type Integrationable interface {
     GetSlug()(*string)
     GetUpdatedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)
     GetWebhookSecret()(*string)
-    SetClientId(value *string)()
     SetClientSecret(value *string)()
     SetCreatedAt(value *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)()
     SetDescription(value *string)()

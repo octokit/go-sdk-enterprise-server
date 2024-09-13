@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "2DF24DAC47D242803B6DC7F857DD7897A83EEA62AEEA09ADB0BCED51CCDABB93D730D446BCA1DD20EF2CABBECC3CCA54F68306532EA48B2CD1CD9BEF9BE79C78",
+  "descriptionHash": "B65E3348D76FE508F9E60895606F0EF3D564754DF9408E9288C8EC210BCAD022259AE53035CF6B37F4F61C29ABB12132664CAFFD153913094C43A078AE44EFEA",
   "descriptionLocation": "../../../../../schemas/ghes-3.12.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.17.0",
+  "kiotaVersion": "1.18.0",
   "clientClassName": "ApiClient",
   "clientNamespaceName": "github.com/octokit/go-sdk-enterprise-server/pkg/github",
   "language": "Go",
