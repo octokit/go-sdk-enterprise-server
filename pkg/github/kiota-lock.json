@@ -1,0 +1,33 @@
+{
+  "descriptionHash": "12DF1E15BA73305937A12C26C9416358C3B6F5CC2F176595578F1623B747B8B9D28934FBF88839377445093B6979D4BD2FE825F52F224DFC224FADB019BE6F92",
+  "descriptionLocation": "../../../../../schemas/ghes-3.14.json",
+  "lockFileVersion": "1.0.0",
+  "kiotaVersion": "1.18.0",
+  "clientClassName": "ApiClient",
+  "clientNamespaceName": "github.com/octokit/go-sdk-enterprise-server/pkg/github",
+  "language": "Go",
+  "usesBackingStore": false,
+  "excludeBackwardCompatible": true,
+  "includeAdditionalData": true,
+  "disableSSLValidation": false,
+  "serializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Text.TextSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Form.FormSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Multipart.MultipartSerializationWriterFactory"
+  ],
+  "deserializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Text.TextParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Form.FormParseNodeFactory"
+  ],
+  "structuredMimeTypes": [
+    "application/json",
+    "text/plain;q=0.9",
+    "application/x-www-form-urlencoded;q=0.2",
+    "multipart/form-data;q=0.1"
+  ],
+  "includePatterns": [],
+  "excludePatterns": [],
+  "disabledValidationRules": []
+}
