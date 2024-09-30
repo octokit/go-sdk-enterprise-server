@@ -10,7 +10,7 @@ type ItemRulesetsPostRequestBody struct {
     additionalData map[string]any
     // The actors that can bypass the rules in this ruleset
     bypass_actors []ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryRulesetBypassActorable
-    // Conditions for an organization ruleset. The conditions object should contain both `repository_name` and `ref_name` properties or both `repository_id` and `ref_name` properties.
+    // Conditions for an organization ruleset.The branch and tag rulesets conditions object should contain both `repository_name` and `ref_name` properties, or both `repository_id` and `ref_name` properties, or both `repository_property` and `ref_name` properties.The push rulesets conditions object does not require the `ref_name` property.
     conditions ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.OrgRulesetConditionsable
     // The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page.
     enforcement *ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryRuleEnforcement
@@ -41,7 +41,7 @@ func (m *ItemRulesetsPostRequestBody) GetAdditionalData()(map[string]any) {
 func (m *ItemRulesetsPostRequestBody) GetBypassActors()([]ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryRulesetBypassActorable) {
     return m.bypass_actors
 }
-// GetConditions gets the conditions property value. Conditions for an organization ruleset. The conditions object should contain both `repository_name` and `ref_name` properties or both `repository_id` and `ref_name` properties.
+// GetConditions gets the conditions property value. Conditions for an organization ruleset.The branch and tag rulesets conditions object should contain both `repository_name` and `ref_name` properties, or both `repository_id` and `ref_name` properties, or both `repository_property` and `ref_name` properties.The push rulesets conditions object does not require the `ref_name` property.
 // returns a OrgRulesetConditionsable when successful
 func (m *ItemRulesetsPostRequestBody) GetConditions()(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.OrgRulesetConditionsable) {
     return m.conditions
@@ -190,7 +190,7 @@ func (m *ItemRulesetsPostRequestBody) SetAdditionalData(value map[string]any)() 
 func (m *ItemRulesetsPostRequestBody) SetBypassActors(value []ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryRulesetBypassActorable)() {
     m.bypass_actors = value
 }
-// SetConditions sets the conditions property value. Conditions for an organization ruleset. The conditions object should contain both `repository_name` and `ref_name` properties or both `repository_id` and `ref_name` properties.
+// SetConditions sets the conditions property value. Conditions for an organization ruleset.The branch and tag rulesets conditions object should contain both `repository_name` and `ref_name` properties, or both `repository_id` and `ref_name` properties, or both `repository_property` and `ref_name` properties.The push rulesets conditions object does not require the `ref_name` property.
 func (m *ItemRulesetsPostRequestBody) SetConditions(value ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.OrgRulesetConditionsable)() {
     m.conditions = value
 }
