@@ -8,7 +8,7 @@ import (
 type RepositoryRulesetBypassActor struct {
     // The ID of the actor that can bypass a ruleset. If `actor_type` is `OrganizationAdmin`, this should be `1`. If `actor_type` is `DeployKey`, this should be null. `OrganizationAdmin` is not applicable for personal repositories.
     actor_id *int32
-    // The type of actor that can bypass a ruleset.
+    // The type of actor that can bypass a ruleset
     actor_type *RepositoryRulesetBypassActor_actor_type
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
@@ -34,7 +34,7 @@ func CreateRepositoryRulesetBypassActorFromDiscriminatorValue(parseNode i878a80d
 func (m *RepositoryRulesetBypassActor) GetActorId()(*int32) {
     return m.actor_id
 }
-// GetActorType gets the actor_type property value. The type of actor that can bypass a ruleset.
+// GetActorType gets the actor_type property value. The type of actor that can bypass a ruleset
 // returns a *RepositoryRulesetBypassActor_actor_type when successful
 func (m *RepositoryRulesetBypassActor) GetActorType()(*RepositoryRulesetBypassActor_actor_type) {
     return m.actor_type
@@ -119,7 +119,7 @@ func (m *RepositoryRulesetBypassActor) Serialize(writer i878a80d2330e89d26896388
 func (m *RepositoryRulesetBypassActor) SetActorId(value *int32)() {
     m.actor_id = value
 }
-// SetActorType sets the actor_type property value. The type of actor that can bypass a ruleset.
+// SetActorType sets the actor_type property value. The type of actor that can bypass a ruleset
 func (m *RepositoryRulesetBypassActor) SetActorType(value *RepositoryRulesetBypassActor_actor_type)() {
     m.actor_type = value
 }
