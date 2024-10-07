@@ -1,5 +1,5 @@
 package models
-// The type of actor that can bypass a ruleset.
+// The type of actor that can bypass a ruleset
 type RepositoryRulesetBypassActor_actor_type int
 
 const (
