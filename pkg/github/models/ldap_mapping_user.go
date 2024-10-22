@@ -93,6 +93,8 @@ type LdapMappingUser struct {
     updated_at *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time
     // The url property
     url *string
+    // The user_view_type property
+    user_view_type *string
 }
 // NewLdapMappingUser instantiates a new LdapMappingUser and sets the default values.
 func NewLdapMappingUser()(*LdapMappingUser) {
@@ -585,6 +587,16 @@ func (m *LdapMappingUser) GetFieldDeserializers()(map[string]func(i878a80d2330e8
         }
         return nil
     }
+    res["user_view_type"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
+        val, err := n.GetStringValue()
+        if err != nil {
+            return err
+        }
+        if val != nil {
+            m.SetUserViewType(val)
+        }
+        return nil
+    }
     return res
 }
 // GetFollowers gets the followers property value. The followers property
@@ -746,6 +758,11 @@ func (m *LdapMappingUser) GetUpdatedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f30
 // returns a *string when successful
 func (m *LdapMappingUser) GetUrl()(*string) {
     return m.url
+}
+// GetUserViewType gets the user_view_type property value. The user_view_type property
+// returns a *string when successful
+func (m *LdapMappingUser) GetUserViewType()(*string) {
+    return m.user_view_type
 }
 // Serialize serializes information the current object
 func (m *LdapMappingUser) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
@@ -1002,6 +1019,12 @@ func (m *LdapMappingUser) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0
         }
     }
     {
+        err := writer.WriteStringValue("user_view_type", m.GetUserViewType())
+        if err != nil {
+            return err
+        }
+    }
+    {
         err := writer.WriteAdditionalData(m.GetAdditionalData())
         if err != nil {
             return err
@@ -1181,6 +1204,10 @@ func (m *LdapMappingUser) SetUpdatedAt(value *i336074805fc853987abe6f7fe3ad97a6a
 func (m *LdapMappingUser) SetUrl(value *string)() {
     m.url = value
 }
+// SetUserViewType sets the user_view_type property value. The user_view_type property
+func (m *LdapMappingUser) SetUserViewType(value *string)() {
+    m.user_view_type = value
+}
 type LdapMappingUserable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.AdditionalDataHolder
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
@@ -1226,6 +1253,7 @@ type LdapMappingUserable interface {
     GetTypeEscaped()(*string)
     GetUpdatedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)
     GetUrl()(*string)
+    GetUserViewType()(*string)
     SetAvatarUrl(value *string)()
     SetBio(value *string)()
     SetBlog(value *string)()
@@ -1268,4 +1296,5 @@ type LdapMappingUserable interface {
     SetTypeEscaped(value *string)()
     SetUpdatedAt(value *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)()
     SetUrl(value *string)()
+    SetUserViewType(value *string)()
 }
