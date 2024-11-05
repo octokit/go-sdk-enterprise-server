@@ -73,6 +73,7 @@ func (m *FollowingWithUsernameItemRequestBuilder) Get(ctx context.Context, reque
 // returns a BasicError error when the service returns a 401 status code
 // returns a BasicError error when the service returns a 403 status code
 // returns a BasicError error when the service returns a 404 status code
+// returns a ValidationError error when the service returns a 422 status code
 // [API method documentation]
 // 
 // [API method documentation]: https://docs.github.com/enterprise-server@3.12/rest/users/followers#follow-a-user
@@ -85,6 +86,7 @@ func (m *FollowingWithUsernameItemRequestBuilder) Put(ctx context.Context, reque
         "401": ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CreateBasicErrorFromDiscriminatorValue,
         "403": ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CreateBasicErrorFromDiscriminatorValue,
         "404": ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CreateBasicErrorFromDiscriminatorValue,
+        "422": ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CreateValidationErrorFromDiscriminatorValue,
     }
     err = m.BaseRequestBuilder.RequestAdapter.SendNoContent(ctx, requestInfo, errorMapping)
     if err != nil {
