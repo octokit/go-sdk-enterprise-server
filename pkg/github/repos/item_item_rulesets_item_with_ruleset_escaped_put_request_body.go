@@ -12,7 +12,7 @@ type ItemItemRulesetsItemWithRuleset_PutRequestBody struct {
     bypass_actors []ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryRulesetBypassActorable
     // Parameters for a repository ruleset ref name condition
     conditions ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryRulesetConditionsable
-    // The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page.
+    // The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target.
     enforcement *ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryRuleEnforcement
     // The name of the ruleset.
     name *string
@@ -46,7 +46,7 @@ func (m *ItemItemRulesetsItemWithRuleset_PutRequestBody) GetBypassActors()([]ie1
 func (m *ItemItemRulesetsItemWithRuleset_PutRequestBody) GetConditions()(ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryRulesetConditionsable) {
     return m.conditions
 }
-// GetEnforcement gets the enforcement property value. The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page.
+// GetEnforcement gets the enforcement property value. The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target.
 // returns a *RepositoryRuleEnforcement when successful
 func (m *ItemItemRulesetsItemWithRuleset_PutRequestBody) GetEnforcement()(*ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryRuleEnforcement) {
     return m.enforcement
@@ -194,7 +194,7 @@ func (m *ItemItemRulesetsItemWithRuleset_PutRequestBody) SetBypassActors(value [
 func (m *ItemItemRulesetsItemWithRuleset_PutRequestBody) SetConditions(value ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryRulesetConditionsable)() {
     m.conditions = value
 }
-// SetEnforcement sets the enforcement property value. The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page.
+// SetEnforcement sets the enforcement property value. The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target.
 func (m *ItemItemRulesetsItemWithRuleset_PutRequestBody) SetEnforcement(value *ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.RepositoryRuleEnforcement)() {
     m.enforcement = value
 }
