@@ -1,5 +1,5 @@
 package rulesets
-// The target of the ruleset
+// The target of the ruleset.
 type RulesetsPostRequestBody_target int
 
 const (
