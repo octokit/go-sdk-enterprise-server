@@ -1,5 +1,5 @@
 package item
-// The target of the ruleset
+// The target of the ruleset.
 type WithRuleset_PutRequestBody_target int
 
 const (

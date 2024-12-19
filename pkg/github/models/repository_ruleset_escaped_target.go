@@ -1,5 +1,5 @@
 package models
-// The target of the ruleset
+// The target of the ruleset.
 type RepositoryRuleset_target int
 
 const (

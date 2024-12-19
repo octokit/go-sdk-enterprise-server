@@ -19,7 +19,7 @@ type RepositoryRuleset struct {
     created_at *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time
     // The bypass type of the user making the API request for this ruleset. This field is only returned whenquerying the repository-level endpoint.
     current_user_can_bypass *RepositoryRuleset_current_user_can_bypass
-    // The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page.
+    // The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target.
     enforcement *RepositoryRuleEnforcement
     // The ID of the ruleset
     id *int32
@@ -33,7 +33,7 @@ type RepositoryRuleset struct {
     source *string
     // The type of the source of the ruleset
     source_type *RepositoryRuleset_source_type
-    // The target of the ruleset
+    // The target of the ruleset.
     target *RepositoryRuleset_target
     // The updated_at property
     updated_at *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time
@@ -161,7 +161,7 @@ func (m *RepositoryRuleset) GetCreatedAt()(*i336074805fc853987abe6f7fe3ad97a6a6f
 func (m *RepositoryRuleset) GetCurrentUserCanBypass()(*RepositoryRuleset_current_user_can_bypass) {
     return m.current_user_can_bypass
 }
-// GetEnforcement gets the enforcement property value. The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page.
+// GetEnforcement gets the enforcement property value. The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target.
 // returns a *RepositoryRuleEnforcement when successful
 func (m *RepositoryRuleset) GetEnforcement()(*RepositoryRuleEnforcement) {
     return m.enforcement
@@ -359,7 +359,7 @@ func (m *RepositoryRuleset) GetSource()(*string) {
 func (m *RepositoryRuleset) GetSourceType()(*RepositoryRuleset_source_type) {
     return m.source_type
 }
-// GetTarget gets the target property value. The target of the ruleset
+// GetTarget gets the target property value. The target of the ruleset.
 // returns a *RepositoryRuleset_target when successful
 func (m *RepositoryRuleset) GetTarget()(*RepositoryRuleset_target) {
     return m.target
@@ -499,7 +499,7 @@ func (m *RepositoryRuleset) SetCreatedAt(value *i336074805fc853987abe6f7fe3ad97a
 func (m *RepositoryRuleset) SetCurrentUserCanBypass(value *RepositoryRuleset_current_user_can_bypass)() {
     m.current_user_can_bypass = value
 }
-// SetEnforcement sets the enforcement property value. The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page.
+// SetEnforcement sets the enforcement property value. The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target.
 func (m *RepositoryRuleset) SetEnforcement(value *RepositoryRuleEnforcement)() {
     m.enforcement = value
 }
@@ -531,7 +531,7 @@ func (m *RepositoryRuleset) SetSource(value *string)() {
 func (m *RepositoryRuleset) SetSourceType(value *RepositoryRuleset_source_type)() {
     m.source_type = value
 }
-// SetTarget sets the target property value. The target of the ruleset
+// SetTarget sets the target property value. The target of the ruleset.
 func (m *RepositoryRuleset) SetTarget(value *RepositoryRuleset_target)() {
     m.target = value
 }
