@@ -16,7 +16,7 @@ type GhesLicenseInfo struct {
     clusterSupport *bool
     // The company under which the license is issued.
     company *string
-    // Whether the Github Connect feature is enabled.
+    // Whether the GitHub Connect feature is enabled.
     croquetSupport *bool
     // Whether this license is issued under custom terms.
     customTerms *bool
@@ -82,7 +82,7 @@ func (m *GhesLicenseInfo) GetClusterSupport()(*bool) {
 func (m *GhesLicenseInfo) GetCompany()(*string) {
     return m.company
 }
-// GetCroquetSupport gets the croquetSupport property value. Whether the Github Connect feature is enabled.
+// GetCroquetSupport gets the croquetSupport property value. Whether the GitHub Connect feature is enabled.
 // returns a *bool when successful
 func (m *GhesLicenseInfo) GetCroquetSupport()(*bool) {
     return m.croquetSupport
@@ -476,7 +476,7 @@ func (m *GhesLicenseInfo) SetClusterSupport(value *bool)() {
 func (m *GhesLicenseInfo) SetCompany(value *string)() {
     m.company = value
 }
-// SetCroquetSupport sets the croquetSupport property value. Whether the Github Connect feature is enabled.
+// SetCroquetSupport sets the croquetSupport property value. Whether the GitHub Connect feature is enabled.
 func (m *GhesLicenseInfo) SetCroquetSupport(value *bool)() {
     m.croquetSupport = value
 }
