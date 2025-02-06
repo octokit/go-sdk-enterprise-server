@@ -26,6 +26,7 @@ func NewItemActionsRunnersGenerateJitconfigRequestBuilder(rawUrl string, request
 // Post generates a configuration that can be passed to the runner application at startup.OAuth tokens and personal access tokens (classic) need the `manage_runners:enterprise` scope to use this endpoint.
 // returns a ItemActionsRunnersGenerateJitconfigPostResponseable when successful
 // returns a BasicError error when the service returns a 404 status code
+// returns a BasicError error when the service returns a 409 status code
 // returns a ValidationErrorSimple error when the service returns a 422 status code
 // [API method documentation]
 // 
@@ -37,6 +38,7 @@ func (m *ItemActionsRunnersGenerateJitconfigRequestBuilder) Post(ctx context.Con
     }
     errorMapping := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.ErrorMappings {
         "404": ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CreateBasicErrorFromDiscriminatorValue,
+        "409": ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CreateBasicErrorFromDiscriminatorValue,
         "422": ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207.CreateValidationErrorSimpleFromDiscriminatorValue,
     }
     res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, CreateItemActionsRunnersGenerateJitconfigPostResponseFromDiscriminatorValue, errorMapping)
