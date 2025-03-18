@@ -30,11 +30,13 @@ type ItemIssuesRequestBuilderGetQueryParameters struct {
     Sort *i3083f94f4be18e64320f8760210b4acf15c4d28ef8f71a290d3f94effb959392.GetSortQueryParameterType `uriparametername:"sort"`
     // Indicates the state of the issues to return.
     State *i3083f94f4be18e64320f8760210b4acf15c4d28ef8f71a290d3f94effb959392.GetStateQueryParameterType `uriparametername:"state"`
+    // Can be the name of an issue type.
+    Type *string `uriparametername:"type"`
 }
 // NewItemIssuesRequestBuilderInternal instantiates a new ItemIssuesRequestBuilder and sets the default values.
 func NewItemIssuesRequestBuilderInternal(pathParameters map[string]string, requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter)(*ItemIssuesRequestBuilder) {
     m := &ItemIssuesRequestBuilder{
-        BaseRequestBuilder: *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewBaseRequestBuilder(requestAdapter, "{+baseurl}/orgs/{org}/issues{?direction*,filter*,labels*,page*,per_page*,since*,sort*,state*}", pathParameters),
+        BaseRequestBuilder: *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewBaseRequestBuilder(requestAdapter, "{+baseurl}/orgs/{org}/issues{?direction*,filter*,labels*,page*,per_page*,since*,sort*,state*,type*}", pathParameters),
     }
     return m
 }
