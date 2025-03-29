@@ -7,8 +7,6 @@ import (
 type RepositoryRulePullRequest_parameters struct {
     // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     additionalData map[string]any
-    // Array of allowed merge methods. Allowed values include `merge`, `squash`, and `rebase`. At least one option must be enabled.
-    allowed_merge_methods []RepositoryRulePullRequest_parameters_allowed_merge_methods
     // > [!NOTE]> `automatic_copilot_code_review_enabled` is in beta and subject to change.Automatically request review from Copilot for new pull requests, if the author has access to Copilot code review.
     automatic_copilot_code_review_enabled *bool
     // New, reviewable commits pushed will dismiss previous pull request review approvals.
@@ -39,10 +37,10 @@ func CreateRepositoryRulePullRequest_parametersFromDiscriminatorValue(parseNode 
 func (m *RepositoryRulePullRequest_parameters) GetAdditionalData()(map[string]any) {
     return m.additionalData
 }
-// GetAllowedMergeMethods gets the allowed_merge_methods property value. Array of allowed merge methods. Allowed values include `merge`, `squash`, and `rebase`. At least one option must be enabled.
-// returns a []RepositoryRulePullRequest_parameters_allowed_merge_methods when successful
-func (m *RepositoryRulePullRequest_parameters) GetAllowedMergeMethods()([]RepositoryRulePullRequest_parameters_allowed_merge_methods) {
-    return m.allowed_merge_methods
+// GetAutomaticCopilotCodeReviewEnabled gets the automatic_copilot_code_review_enabled property value. > [!NOTE]> `automatic_copilot_code_review_enabled` is in beta and subject to change.Automatically request review from Copilot for new pull requests, if the author has access to Copilot code review.
+// returns a *bool when successful
+func (m *RepositoryRulePullRequest_parameters) GetAutomaticCopilotCodeReviewEnabled()(*bool) {
+    return m.automatic_copilot_code_review_enabled
 }
 // GetAutomaticCopilotCodeReviewEnabled gets the automatic_copilot_code_review_enabled property value. > [!NOTE]> `automatic_copilot_code_review_enabled` is in beta and subject to change.Automatically request review from Copilot for new pull requests, if the author has access to Copilot code review.
 // returns a *bool when successful
@@ -58,19 +56,13 @@ func (m *RepositoryRulePullRequest_parameters) GetDismissStaleReviewsOnPush()(*b
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
 func (m *RepositoryRulePullRequest_parameters) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
     res := make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
-    res["allowed_merge_methods"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
-        val, err := n.GetCollectionOfEnumValues(ParseRepositoryRulePullRequest_parameters_allowed_merge_methods)
+    res["automatic_copilot_code_review_enabled"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
+        val, err := n.GetBoolValue()
         if err != nil {
             return err
         }
         if val != nil {
-            res := make([]RepositoryRulePullRequest_parameters_allowed_merge_methods, len(val))
-            for i, v := range val {
-                if v != nil {
-                    res[i] = *(v.(*RepositoryRulePullRequest_parameters_allowed_merge_methods))
-                }
-            }
-            m.SetAllowedMergeMethods(res)
+            m.SetAutomaticCopilotCodeReviewEnabled(val)
         }
         return nil
     }
@@ -158,12 +150,6 @@ func (m *RepositoryRulePullRequest_parameters) GetRequireLastPushApproval()(*boo
 }
 // Serialize serializes information the current object
 func (m *RepositoryRulePullRequest_parameters) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
-    if m.GetAllowedMergeMethods() != nil {
-        err := writer.WriteCollectionOfStringValues("allowed_merge_methods", SerializeRepositoryRulePullRequest_parameters_allowed_merge_methods(m.GetAllowedMergeMethods()))
-        if err != nil {
-            return err
-        }
-    }
     {
         err := writer.WriteBoolValue("automatic_copilot_code_review_enabled", m.GetAutomaticCopilotCodeReviewEnabled())
         if err != nil {
@@ -212,9 +198,9 @@ func (m *RepositoryRulePullRequest_parameters) Serialize(writer i878a80d2330e89d
 func (m *RepositoryRulePullRequest_parameters) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
 }
-// SetAllowedMergeMethods sets the allowed_merge_methods property value. Array of allowed merge methods. Allowed values include `merge`, `squash`, and `rebase`. At least one option must be enabled.
-func (m *RepositoryRulePullRequest_parameters) SetAllowedMergeMethods(value []RepositoryRulePullRequest_parameters_allowed_merge_methods)() {
-    m.allowed_merge_methods = value
+// SetAutomaticCopilotCodeReviewEnabled sets the automatic_copilot_code_review_enabled property value. > [!NOTE]> `automatic_copilot_code_review_enabled` is in beta and subject to change.Automatically request review from Copilot for new pull requests, if the author has access to Copilot code review.
+func (m *RepositoryRulePullRequest_parameters) SetAutomaticCopilotCodeReviewEnabled(value *bool)() {
+    m.automatic_copilot_code_review_enabled = value
 }
 // SetAutomaticCopilotCodeReviewEnabled sets the automatic_copilot_code_review_enabled property value. > [!NOTE]> `automatic_copilot_code_review_enabled` is in beta and subject to change.Automatically request review from Copilot for new pull requests, if the author has access to Copilot code review.
 func (m *RepositoryRulePullRequest_parameters) SetAutomaticCopilotCodeReviewEnabled(value *bool)() {
@@ -243,14 +229,12 @@ func (m *RepositoryRulePullRequest_parameters) SetRequireLastPushApproval(value 
 type RepositoryRulePullRequest_parametersable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.AdditionalDataHolder
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
-    GetAllowedMergeMethods()([]RepositoryRulePullRequest_parameters_allowed_merge_methods)
     GetAutomaticCopilotCodeReviewEnabled()(*bool)
     GetDismissStaleReviewsOnPush()(*bool)
     GetRequireCodeOwnerReview()(*bool)
     GetRequiredApprovingReviewCount()(*int32)
     GetRequiredReviewThreadResolution()(*bool)
     GetRequireLastPushApproval()(*bool)
-    SetAllowedMergeMethods(value []RepositoryRulePullRequest_parameters_allowed_merge_methods)()
     SetAutomaticCopilotCodeReviewEnabled(value *bool)()
     SetDismissStaleReviewsOnPush(value *bool)()
     SetRequireCodeOwnerReview(value *bool)()
