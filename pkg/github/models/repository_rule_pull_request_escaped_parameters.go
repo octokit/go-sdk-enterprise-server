@@ -42,11 +42,6 @@ func (m *RepositoryRulePullRequest_parameters) GetAdditionalData()(map[string]an
 func (m *RepositoryRulePullRequest_parameters) GetAutomaticCopilotCodeReviewEnabled()(*bool) {
     return m.automatic_copilot_code_review_enabled
 }
-// GetAutomaticCopilotCodeReviewEnabled gets the automatic_copilot_code_review_enabled property value. > [!NOTE]> `automatic_copilot_code_review_enabled` is in beta and subject to change.Automatically request review from Copilot for new pull requests, if the author has access to Copilot code review.
-// returns a *bool when successful
-func (m *RepositoryRulePullRequest_parameters) GetAutomaticCopilotCodeReviewEnabled()(*bool) {
-    return m.automatic_copilot_code_review_enabled
-}
 // GetDismissStaleReviewsOnPush gets the dismiss_stale_reviews_on_push property value. New, reviewable commits pushed will dismiss previous pull request review approvals.
 // returns a *bool when successful
 func (m *RepositoryRulePullRequest_parameters) GetDismissStaleReviewsOnPush()(*bool) {
@@ -56,16 +51,6 @@ func (m *RepositoryRulePullRequest_parameters) GetDismissStaleReviewsOnPush()(*b
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
 func (m *RepositoryRulePullRequest_parameters) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
     res := make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
-    res["automatic_copilot_code_review_enabled"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
-        val, err := n.GetBoolValue()
-        if err != nil {
-            return err
-        }
-        if val != nil {
-            m.SetAutomaticCopilotCodeReviewEnabled(val)
-        }
-        return nil
-    }
     res["automatic_copilot_code_review_enabled"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
         val, err := n.GetBoolValue()
         if err != nil {
@@ -197,10 +182,6 @@ func (m *RepositoryRulePullRequest_parameters) Serialize(writer i878a80d2330e89d
 // SetAdditionalData sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
 func (m *RepositoryRulePullRequest_parameters) SetAdditionalData(value map[string]any)() {
     m.additionalData = value
-}
-// SetAutomaticCopilotCodeReviewEnabled sets the automatic_copilot_code_review_enabled property value. > [!NOTE]> `automatic_copilot_code_review_enabled` is in beta and subject to change.Automatically request review from Copilot for new pull requests, if the author has access to Copilot code review.
-func (m *RepositoryRulePullRequest_parameters) SetAutomaticCopilotCodeReviewEnabled(value *bool)() {
-    m.automatic_copilot_code_review_enabled = value
 }
 // SetAutomaticCopilotCodeReviewEnabled sets the automatic_copilot_code_review_enabled property value. > [!NOTE]> `automatic_copilot_code_review_enabled` is in beta and subject to change.Automatically request review from Copilot for new pull requests, if the author has access to Copilot code review.
 func (m *RepositoryRulePullRequest_parameters) SetAutomaticCopilotCodeReviewEnabled(value *bool)() {
