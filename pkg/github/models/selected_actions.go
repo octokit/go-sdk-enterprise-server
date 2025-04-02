@@ -9,8 +9,10 @@ type SelectedActions struct {
     additionalData map[string]any
     // Whether GitHub-owned actions are allowed. For example, this includes the actions in the `actions` organization.
     github_owned_allowed *bool
-    // Specifies a list of string-matching patterns to allow specific action(s). Wildcards, tags, and SHAs are allowed. For example, `monalisa/octocat@*`, `monalisa/octocat@v2`, `monalisa/*`.
+    // Specifies a list of string-matching patterns to allow specific action(s) and reusable workflow(s). Wildcards, tags, and SHAs are allowed. For example, `monalisa/octocat@*`, `monalisa/octocat@v2`, `monalisa/*`.> [!NOTE]> The `patterns_allowed` setting only applies to public repositories.
     patterns_allowed []string
+    // Whether actions from GitHub Marketplace verified creators are allowed. Set to `true` to allow all actions by GitHub Marketplace verified creators using GitHub Connect.
+    verified_allowed *bool
 }
 // NewSelectedActions instantiates a new SelectedActions and sets the default values.
 func NewSelectedActions()(*SelectedActions) {
@@ -59,6 +61,16 @@ func (m *SelectedActions) GetFieldDeserializers()(map[string]func(i878a80d2330e8
         }
         return nil
     }
+    res["verified_allowed"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
+        val, err := n.GetBoolValue()
+        if err != nil {
+            return err
+        }
+        if val != nil {
+            m.SetVerifiedAllowed(val)
+        }
+        return nil
+    }
     return res
 }
 // GetGithubOwnedAllowed gets the github_owned_allowed property value. Whether GitHub-owned actions are allowed. For example, this includes the actions in the `actions` organization.
@@ -66,10 +78,15 @@ func (m *SelectedActions) GetFieldDeserializers()(map[string]func(i878a80d2330e8
 func (m *SelectedActions) GetGithubOwnedAllowed()(*bool) {
     return m.github_owned_allowed
 }
-// GetPatternsAllowed gets the patterns_allowed property value. Specifies a list of string-matching patterns to allow specific action(s). Wildcards, tags, and SHAs are allowed. For example, `monalisa/octocat@*`, `monalisa/octocat@v2`, `monalisa/*`.
+// GetPatternsAllowed gets the patterns_allowed property value. Specifies a list of string-matching patterns to allow specific action(s) and reusable workflow(s). Wildcards, tags, and SHAs are allowed. For example, `monalisa/octocat@*`, `monalisa/octocat@v2`, `monalisa/*`.> [!NOTE]> The `patterns_allowed` setting only applies to public repositories.
 // returns a []string when successful
 func (m *SelectedActions) GetPatternsAllowed()([]string) {
     return m.patterns_allowed
+}
+// GetVerifiedAllowed gets the verified_allowed property value. Whether actions from GitHub Marketplace verified creators are allowed. Set to `true` to allow all actions by GitHub Marketplace verified creators using GitHub Connect.
+// returns a *bool when successful
+func (m *SelectedActions) GetVerifiedAllowed()(*bool) {
+    return m.verified_allowed
 }
 // Serialize serializes information the current object
 func (m *SelectedActions) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
@@ -81,6 +98,12 @@ func (m *SelectedActions) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0
     }
     if m.GetPatternsAllowed() != nil {
         err := writer.WriteCollectionOfStringValues("patterns_allowed", m.GetPatternsAllowed())
+        if err != nil {
+            return err
+        }
+    }
+    {
+        err := writer.WriteBoolValue("verified_allowed", m.GetVerifiedAllowed())
         if err != nil {
             return err
         }
@@ -101,15 +124,21 @@ func (m *SelectedActions) SetAdditionalData(value map[string]any)() {
 func (m *SelectedActions) SetGithubOwnedAllowed(value *bool)() {
     m.github_owned_allowed = value
 }
-// SetPatternsAllowed sets the patterns_allowed property value. Specifies a list of string-matching patterns to allow specific action(s). Wildcards, tags, and SHAs are allowed. For example, `monalisa/octocat@*`, `monalisa/octocat@v2`, `monalisa/*`.
+// SetPatternsAllowed sets the patterns_allowed property value. Specifies a list of string-matching patterns to allow specific action(s) and reusable workflow(s). Wildcards, tags, and SHAs are allowed. For example, `monalisa/octocat@*`, `monalisa/octocat@v2`, `monalisa/*`.> [!NOTE]> The `patterns_allowed` setting only applies to public repositories.
 func (m *SelectedActions) SetPatternsAllowed(value []string)() {
     m.patterns_allowed = value
+}
+// SetVerifiedAllowed sets the verified_allowed property value. Whether actions from GitHub Marketplace verified creators are allowed. Set to `true` to allow all actions by GitHub Marketplace verified creators using GitHub Connect.
+func (m *SelectedActions) SetVerifiedAllowed(value *bool)() {
+    m.verified_allowed = value
 }
 type SelectedActionsable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.AdditionalDataHolder
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetGithubOwnedAllowed()(*bool)
     GetPatternsAllowed()([]string)
+    GetVerifiedAllowed()(*bool)
     SetGithubOwnedAllowed(value *bool)()
     SetPatternsAllowed(value []string)()
+    SetVerifiedAllowed(value *bool)()
 }
