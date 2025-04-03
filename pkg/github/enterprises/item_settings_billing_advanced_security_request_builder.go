@@ -4,6 +4,7 @@ import (
     "context"
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
     ie1e2072a5a4eb80f74a1387d59644d3f70804e6b7b2f406016da8826571f1207 "github.com/octokit/go-sdk-enterprise-server/pkg/github/models"
+    i87846d712d3bc81f0912196ebf05dea571a59cbb2000dc482750b194281b2199 "github.com/octokit/go-sdk-enterprise-server/pkg/github/enterprises/item/settings/billing/advancedsecurity"
 )
 
 // ItemSettingsBillingAdvancedSecurityRequestBuilder builds and executes requests for operations under \enterprises\{enterprise}\settings\billing\advanced-security
@@ -12,6 +13,8 @@ type ItemSettingsBillingAdvancedSecurityRequestBuilder struct {
 }
 // ItemSettingsBillingAdvancedSecurityRequestBuilderGetQueryParameters gets the GitHub Advanced Security active committers for an enterprise per repository.Each distinct user login across all repositories is counted as a single Advanced Security seat, so the `total_advanced_security_committers` is not the sum of active_users for each repository.The total number of repositories with committer information is tracked by the `total_count` field.
 type ItemSettingsBillingAdvancedSecurityRequestBuilderGetQueryParameters struct {
+    // The security feature to get GitHub Advanced Security active committers for.
+    Advanced_security_product *i87846d712d3bc81f0912196ebf05dea571a59cbb2000dc482750b194281b2199.GetAdvanced_security_productQueryParameterType `uriparametername:"advanced_security_product"`
     // The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.12/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
     Page *int32 `uriparametername:"page"`
     // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.12/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
@@ -20,7 +23,7 @@ type ItemSettingsBillingAdvancedSecurityRequestBuilderGetQueryParameters struct 
 // NewItemSettingsBillingAdvancedSecurityRequestBuilderInternal instantiates a new ItemSettingsBillingAdvancedSecurityRequestBuilder and sets the default values.
 func NewItemSettingsBillingAdvancedSecurityRequestBuilderInternal(pathParameters map[string]string, requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter)(*ItemSettingsBillingAdvancedSecurityRequestBuilder) {
     m := &ItemSettingsBillingAdvancedSecurityRequestBuilder{
-        BaseRequestBuilder: *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewBaseRequestBuilder(requestAdapter, "{+baseurl}/enterprises/{enterprise}/settings/billing/advanced-security{?page*,per_page*}", pathParameters),
+        BaseRequestBuilder: *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewBaseRequestBuilder(requestAdapter, "{+baseurl}/enterprises/{enterprise}/settings/billing/advanced-security{?advanced_security_product*,page*,per_page*}", pathParameters),
     }
     return m
 }
