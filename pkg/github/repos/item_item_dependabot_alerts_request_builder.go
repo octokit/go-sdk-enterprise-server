@@ -14,33 +14,19 @@ type ItemItemDependabotAlertsRequestBuilder struct {
 }
 // ItemItemDependabotAlertsRequestBuilderGetQueryParameters oAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
 type ItemItemDependabotAlertsRequestBuilderGetQueryParameters struct {
-    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.11/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-    After *string `uriparametername:"after"`
-    // A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.11/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-    Before *string `uriparametername:"before"`
     // The direction to sort the results by.
     Direction *i8393e6fbe49565baf8cec2bd146fda3d83f1a474d09b264e9b4a52c3a16b03f1.GetDirectionQueryParameterType `uriparametername:"direction"`
     // A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.Can be: `composer`, `go`, `maven`, `npm`, `nuget`, `pip`, `pub`, `rubygems`, `rust`
     Ecosystem *string `uriparametername:"ecosystem"`
-    // **Deprecated**. The number of results per page (max 100), starting from the first matching result.This parameter must not be used in combination with `last`.Instead, use `per_page` in combination with `after` to fetch the first page of results.
-    First *int32 `uriparametername:"first"`
-    // **Deprecated**. The number of results per page (max 100), starting from the last matching result.This parameter must not be used in combination with `first`.Instead, use `per_page` in combination with `before` to fetch the last page of results.
-    Last *int32 `uriparametername:"last"`
     // A comma-separated list of full manifest paths. If specified, only alerts for these manifests will be returned.
     Manifest *string `uriparametername:"manifest"`
     // A comma-separated list of package names. If specified, only alerts for these packages will be returned.
     Package *string `uriparametername:"package"`
-    // **Closing down notice**. Page number of the results to fetch. Use cursor-based pagination with `before` or `after` instead.
-    // Deprecated: 
-    Page *int32 `uriparametername:"page"`
-    // The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-    // Deprecated: 
-    Per_page *int32 `uriparametername:"per_page"`
     // The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
     Scope *i8393e6fbe49565baf8cec2bd146fda3d83f1a474d09b264e9b4a52c3a16b03f1.GetScopeQueryParameterType `uriparametername:"scope"`
     // A comma-separated list of severities. If specified, only alerts with these severities will be returned.Can be: `low`, `medium`, `high`, `critical`
     Severity *string `uriparametername:"severity"`
-    // The property by which to sort the results.`created` means when the alert was created.`updated` means when the alert's state last changed.
+    // The property by which to sort the results.`created` means when the alert was created.`updated` means when the alert's state last changed.`epss_percentage` sorts alerts by the Exploit Prediction Scoring System (EPSS) percentage.
     Sort *i8393e6fbe49565baf8cec2bd146fda3d83f1a474d09b264e9b4a52c3a16b03f1.GetSortQueryParameterType `uriparametername:"sort"`
     // A comma-separated list of states. If specified, only alerts with these states will be returned.Can be: `auto_dismissed`, `dismissed`, `fixed`, `open`
     State *string `uriparametername:"state"`
@@ -58,7 +44,7 @@ func (m *ItemItemDependabotAlertsRequestBuilder) ByAlert_number(alert_number int
 // NewItemItemDependabotAlertsRequestBuilderInternal instantiates a new ItemItemDependabotAlertsRequestBuilder and sets the default values.
 func NewItemItemDependabotAlertsRequestBuilderInternal(pathParameters map[string]string, requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter)(*ItemItemDependabotAlertsRequestBuilder) {
     m := &ItemItemDependabotAlertsRequestBuilder{
-        BaseRequestBuilder: *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewBaseRequestBuilder(requestAdapter, "{+baseurl}/repos/{owner%2Did}/{repo%2Did}/dependabot/alerts{?after*,before*,direction*,ecosystem*,first*,last*,manifest*,package*,page*,per_page*,scope*,severity*,sort*,state*}", pathParameters),
+        BaseRequestBuilder: *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewBaseRequestBuilder(requestAdapter, "{+baseurl}/repos/{owner%2Did}/{repo%2Did}/dependabot/alerts{?direction*,ecosystem*,manifest*,package*,scope*,severity*,sort*,state*}", pathParameters),
     }
     return m
 }
